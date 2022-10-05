@@ -1,0 +1,38 @@
+[{
+	"side": "L",
+	"functions": [
+		{"name": "58", "style": "physicalPin"},
+		{"name": "PB5", "style": "portPin"},
+		{"name": "SPI3 MOSI", "style": "serialPin"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "59", "style": "physicalPin"},
+		{"name": "PB6", "style": "portPin"},
+		{"name": "USART1 TX", "style": "serialPin"},
+		{"name": "COMP4OUT", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "60", "style": "physicalPin"},
+		{"name": "PB7", "style": "portPin"},
+		{"name": "USART1 RX", "style": "serialPin"},
+		{"name": "COMP3OUT", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "61", "style": "physicalPin"},
+		{"name": "PB8", "style": "portPin"},
+		{"name": "FDCAN RX", "style": "serialPin"},
+		{"name": "COMP1OUT", "style": "default"}]
+}]

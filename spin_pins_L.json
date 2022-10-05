@@ -5,14 +5,14 @@
 		{"name": "PB11", "style": "portPin"},
 		{"name": "ADC12 CH14", "style": "analog"},
 		{"name": "COMP6+", "style": "default"},
-		{"name": "OPAMP6OUT_DAC3CH1", "style": "default"}]
+		{"name": "OPAMP6OUT_DAC3CH1", "style": "DAC"}]
 },{
 	"side": "L",
 	"functions": [
 		{"name": "34", "style": "physicalPin"},
-		{"name": "PB12", "style": "default"},
+		{"name": "PB12", "style": "portPin"},
 		{"name": "HRTIM C1", "style": "default"},
-		{"name": "OPAMP4OUT_DAC4CH1", "style": "default"}]
+		{"name": "OPAMP4OUT_DAC4CH1", "style": "DAC"}]
 },{
 	"side": "L",
 	"functions": [
@@ -78,7 +78,7 @@
 		{"name": "42", "style": "physicalPin"},
 		{"name": "PA8", "style": "portPin"},
 		{"name": "HRTIM A1", "style": "default"},
-		{"name": "OPAMP5OUT_DAC4CH2", "style": "default"},
+		{"name": "OPAMP5OUT_DAC4CH2", "style": "DAC"},
 		{"name": "COMP7OUT", "style": "default"}]
 },{
 	"side": "L",

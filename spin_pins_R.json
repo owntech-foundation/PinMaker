@@ -1,0 +1,125 @@
+[{
+	"side": "R",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "VIN", "style": "power"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "VBAT", "style": "power"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "25", "style": "physicalPin"},
+		{"name": "PB1", "style": "portPin"},
+		{"name": "ADC3 IN1", "style": "analog"},
+		{"name": "OPAMP3OUT_DAC3CH2", "style": "DAC"},
+		{"name": "COMP4OUT", "style": "default"},
+		{"name": "COMP1+", "style": "default"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "+3.3V", "style": "power"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "22", "style": "physicalPin"},
+		{"name": "PC4", "style": "portPin"},
+		{"name": "SPI3 CS2", "style": "serialPin"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "20", "style": "physicalPin"},
+		{"name": "PA6", "style": "portPin"},
+		{"name": "DAC2OUT", "style": "DAC"},
+		{"name": "COMP1OUT", "style": "default"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "19", "style": "physicalPin"},
+		{"name": "PA5", "style": "portPin"},
+		{"name": "LED BUILTIN", "style": "default"},
+		{"name": "DAC1OUT", "style": "DAC"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "24", "style": "physicalPin"},
+		{"name": "PB0", "style": "portPin"},
+		{"name": "COMP4+", "style": "default"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "13", "style": "physicalPin"},
+		{"name": "PA1", "style": "portPin"},
+		{"name": "ADC12 CH2", "style": "analog"},
+		{"name": "COMP1+", "style": "default"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "12", "style": "physicalPin"},
+		{"name": "PA0", "style": "portPin"},
+		{"name": "ADC12 CH1", "style": "analog"},
+		{"name": "COMP1OUT", "style": "default"},
+		{"name": "COMP3+", "style": "default"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "11", "style": "physicalPin"},
+		{"name": "PC3", "style": "portPin"},
+		{"name": "ADC12 CH9", "style": "analog"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "10", "style": "physicalPin"},
+		{"name": "PC2", "style": "portPin"},
+		{"name": "ADC12 CH8", "style": "analog"},
+		{"name": "COMP3OUT", "style": "default"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "9", "style": "physicalPin"},
+		{"name": "PC1", "style": "portPin"},
+		{"name": "ADC12 CH7", "style": "analog"},
+		{"name": "COMP3+", "style": "default"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "8", "style": "physicalPin"},
+		{"name": "PC0", "style": "portPin"},
+		{"name": "ADC12 CH6", "style": "analog"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "2", "style": "physicalPin"},
+		{"name": "PC13", "style": "portPin"},
+		{"name": "FDCAN STB", "style": "serialPin"}]
+},{
+	"side": "R",
+	"functions": [
+		{"name": "62", "style": "physicalPin"},
+		{"name": "PB9", "style": "portPin"},
+		{"name": "FDCAN TX", "style": "serialPin"},
+		{"name": "COMP2OUT", "style": "default"}]
+}]
