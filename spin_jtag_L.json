@@ -1,0 +1,29 @@
+[{
+	"side": "L",
+	"functions": [
+		{"name": "NC", "style": "greyOut"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "+3V3", "style": "power"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "NC", "style": "greyOut"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "GNDDetect", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "STLINK_RX", "style": "serial"}]
+}]

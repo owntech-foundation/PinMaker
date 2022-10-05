@@ -5,6 +5,12 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#ffffff"
 		},
+	"igonrePin" : {
+			"isSkewed": true,
+			"textColor" : "#000000",
+			"strokeColor" : "#424242",
+			"fillColor" : "#ffffff"
+			},
 	"greyOut" : {
 			"isSkewed": true,
 			"textColor" : "#c2c2c2",
@@ -35,7 +41,7 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#1f1f1f"
 		},
-	"serialPin" : {
+	"serial" : {
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",

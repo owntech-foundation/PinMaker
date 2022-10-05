@@ -130,6 +130,19 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
 
     s.addElement(pinsvg)
 
+def legend_maker(s):
+    svg = Svg("legend")
+    function_label(svg, 10, 10, "    ", styles["control"], 0)
+    function_label(svg, 100, 10, "Je suis une légende", styles["dummy"], 0)
+
+    
+    # for stl in styles:
+    #     #print()
+    #     #function_label(svg, 10, 10, "AAAA", stl, 0)
+
+    s.addElement(svg)
+
+
 def load_pins_file(filepath, svg, x, y):
     f = open(filepath)
     board_data = json.load(f)
@@ -150,8 +163,16 @@ if __name__ == '__main__':
 
     load_pins_file('spin_pins_L.json', s, 200, 50)
     load_pins_file('spin_pins_R.json', s, 250, 50)
+
     load_pins_file('spin_pins_B.json', s, 200, 300)
 
+    load_pins_file('spin_pins_L2.json', s, 200, 400)
+    load_pins_file('spin_pins_L3.json', s, 200, 450)
+
+    load_pins_file('spin_jtag_L.json', s, 300, 300)
+    load_pins_file('spin_jtag_R.json', s, 350, 300)
+    
+    legend_maker(s)
 
     s.save('./testoutput/pinout.svg')
     show_svg('testoutput/pinout.svg')

@@ -15,96 +15,214 @@
 		{"name": "GND", "style": "GND"}]
 },{
 	"side": "R",
-	"isPWM": true,
 	"functions": [
 		{"name": "25", "style": "physicalPin"},
 		{"name": "PB1", "style": "portPin"},
-		{"name": "ADC3 IN1", "style": "analog"},
-		{"name": "OPAMP3OUT_DAC3CH2", "style": "DAC"},
-		{"name": "COMP4OUT", "style": "default"},
-		{"name": "COMP1+", "style": "default"}]
+
+		{"name": "TIM3_CH4", "style": "default", "category": "alternate"},
+		{"name": "TIM8_CH3N", "style": "default", "category": "alternate"},
+		{"name": "TIM1_CH3N", "style": "default", "category": "alternate"},
+		{"name": "COMP4_OUT", "style": "default", "category": "alternate"},
+		{"name": "QUADSPI1_BK1_IO0", "style": "default", "category": "alternate"},
+		{"name": "LPUART1_RTS_DE", "style": "default", "category": "alternate"},
+		{"name": "HRTIM1_SCOUT", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+
+		{"name": "ADC3_IN1/ADC1_IN12", "style": "analog", "category": "additional"},
+		{"name": "COMP1_INP", "style": "analog", "category": "additional"},
+		{"name": "OPAMP3_VOUT", "style": "analog", "category": "additional"},
+		{"name": "OPAMP6_VINM", "style": "analog", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "XX", "style": "dummy"},
-		{"name": "+3V3", "style": "power"}]
+		{"name": "+3V3", "style": "power"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "22", "style": "physicalPin"},
 		{"name": "PC4", "style": "portPin"},
-		{"name": "SPI3 CS2", "style": "serialPin"}]
+		{"name": "TIM1_ETR", "style": "default", "category": "alternate"},
+		{"name": "I2C2_SCL", "style": "serial", "category": "alternate"},
+		{"name": "USART1_TX", "style": "serial", "category": "alternate"},
+		{"name": "QUADSPI1_BK2_IO3", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+
+		{"name": "ADC2_IN5", "style": "analog", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "20", "style": "physicalPin"},
 		{"name": "PA6", "style": "portPin"},
-		{"name": "DAC2OUT", "style": "DAC"},
-		{"name": "COMP1OUT", "style": "default"}]
+
+		{"name": "TIM16_CH1", "style": "default", "category": "alternate"},
+		{"name": "TIM3_CH1", "style": "default", "category": "alternate"},
+		{"name": "TIM8_BKIN", "style": "default", "category": "alternate"},
+		{"name": "SPI1_MISO", "style": "default", "category": "alternate"},
+		{"name": "TIM1_BKIN", "style": "default", "category": "alternate"},
+		{"name": "COMP1_OUT", "style": "default", "category": "alternate"},
+		{"name": "QUADSPI1_BK1_IO3", "style": "default", "category": "alternate"},
+		{"name": "LPUART1_CTS", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+		
+		{"name": "ADC2_IN3", "style": "default", "category": "additional"},
+		{"name": "DAC2_OUT1", "style": "default", "category": "additional"},
+		{"name": "OPAMP2_VOUT", "style": "default", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "XX", "style": "dummy"},
-		{"name": "GND", "style": "GND"}]
+		{"name": "GND", "style": "GND"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "19", "style": "physicalPin"},
 		{"name": "PA5", "style": "portPin"},
 		{"name": "LED BUILTIN", "style": "default"},
-		{"name": "DAC1OUT", "style": "DAC"}]
+
+		{"name": "TIM2_CH1", "style": "default", "category": "alternate"},
+		{"name": "TIM2_ETR", "style": "default", "category": "alternate"},
+		{"name": "SPI1_SCK", "style": "default", "category": "alternate"},
+		{"name": "UCPD1_FRSTX", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+
+		{"name": "ADC2_IN13", "style": "default", "category": "additional"},
+		{"name": "DAC1_OUT2", "style": "default", "category": "additional"},
+		{"name": "COMP2_INM", "style": "default", "category": "additional"},
+		{"name": "OPAMP2_VINM", "style": "default", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "24", "style": "physicalPin"},
 		{"name": "PB0", "style": "portPin"},
-		{"name": "COMP4+", "style": "default"}]
+
+		{"name": "TIM3_CH3", "style": "default", "category": "alternate"},
+		{"name": "TIM8_CH2N", "style": "default", "category": "alternate"},
+		{"name": "TIM1_CH2N", "style": "default", "category": "alternate"},
+		{"name": "QUADSPI1_BK1_IO1", "style": "default", "category": "alternate"},
+		{"name": "HRTIM1_FLT5", "style": "default", "category": "alternate"},
+		{"name": "UCPD1_FRSTX", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+		
+		{"name": "ADC3_IN12/ADC1_IN15", "style": "default", "category": "additional"},
+		{"name": "COMP4_INP", "style": "default", "category": "additional"},
+		{"name": "OPAMP2_VINP", "style": "default", "category": "additional"},
+		{"name": "OPAMP3_VINP", "style": "default", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "13", "style": "physicalPin"},
 		{"name": "PA1", "style": "portPin"},
-		{"name": "ADC12 CH2", "style": "analog"},
-		{"name": "COMP1+", "style": "default"}]
+
+		{"name": "RTC_REFIN", "style": "default", "category": "alternate"},
+		{"name": "TIM2_CH2", "style": "default", "category": "alternate"},
+		{"name": "TIM5_CH2", "style": "default", "category": "alternate"},
+		{"name": "USART2_RTS_DE", "style": "default", "category": "alternate"},
+		{"name": "TIM15_CH1N", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+
+		{"name": "ADC12 IN2", "style": "analog", "category": "additional"},
+		{"name": "COMP1+", "style": "default", "category": "additional"},
+		{"name": "OPAMP1+", "style": "default", "category": "additional"},
+		{"name": "OPAMP3+", "style": "default", "category": "additional"},
+		{"name": "OPAMP6-", "style": "default", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "12", "style": "physicalPin"},
 		{"name": "PA0", "style": "portPin"},
-		{"name": "ADC12 CH1", "style": "analog"},
-		{"name": "COMP1OUT", "style": "default"},
-		{"name": "COMP3+", "style": "default"}]
+
+		{"name": "TIM2_CH1", "style": "default", "category": "alternate"},
+		{"name": "TIM5_CH1", "style": "default", "category": "alternate"},
+		{"name": "USART2_CTS", "style": "default", "category": "alternate"},
+		{"name": "COMP1_OUT", "style": "default", "category": "alternate"},
+		{"name": "TIM8_BKIN", "style": "default", "category": "alternate"},
+		{"name": "TIM8_ETR", "style": "default", "category": "alternate"},
+		{"name": "TIM2_ETR", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+
+		{"name": "ADC12 IN1", "style": "analog", "category": "additional"},
+		{"name": "COMP1-", "style": "default", "category": "additional"},
+		{"name": "COMP3+", "style": "default", "category": "additional"},
+		{"name": "RTC_TAMP2", "style": "default", "category": "additional"},
+		{"name": "WK", "style": "default", "category": "additional"},
+		{"name": "UP1", "style": "default", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "XX", "style": "dummy"},
-		{"name": "GND", "style": "GND"}]
+		{"name": "GND", "style": "GND"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "11", "style": "physicalPin"},
 		{"name": "PC3", "style": "portPin"},
-		{"name": "ADC12 CH9", "style": "analog"}]
+		{"name": "LPTIM1_ETR", "style": "default", "category": "alternate"},
+		{"name": "TIM1_CH4", "style": "default", "category": "alternate"},
+		{"name": "SAI1_D1", "style": "default", "category": "alternate"},
+		{"name": "TIM1_BKIN2", "style": "default", "category": "alternate"},
+		{"name": "QUADSPI1_BK2_IO2", "style": "serial", "category": "alternate"},
+		{"name": "SAI1_SD_A", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+			
+		{"name": "ADC12_IN9", "style": "analog", "category": "additional"},
+		{"name": "OPAMP5_VINP", "style": "analog", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "10", "style": "physicalPin"},
 		{"name": "PC2", "style": "portPin"},
-		{"name": "ADC12 CH8", "style": "analog"},
-		{"name": "COMP3OUT", "style": "default"}]
+
+		{"name": "LPTIM1_IN2", "style": "default", "category": "alternate"},
+		{"name": "TIM1_CH3", "style": "default", "category": "alternate"},
+		{"name": "COMP3_OUT", "style": "serial", "category": "alternate"},
+		{"name": "TIM20_CH2", "style": "default", "category": "alternate"},
+		{"name": "QUADSPI1_BK2_IO1", "style": "serial", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+		
+		{"name": "ADC12_IN8", "style": "analog", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "9", "style": "physicalPin"},
 		{"name": "PC1", "style": "portPin"},
-		{"name": "ADC12 CH7", "style": "analog"},
-		{"name": "COMP3+", "style": "default"}]
+
+		{"name": "LPTIM1_OUT", "style": "default", "category": "alternate"},
+		{"name": "TIM1_CH2", "style": "default", "category": "alternate"},
+		{"name": "LPUART1_TX", "style": "serial", "category": "alternate"},
+		{"name": "QUADSPI1_BK2_IO0", "style": "serial", "category": "alternate"},
+		{"name": "SAI1_SD_A", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+
+		{"name": "ADC12_IN7", "style": "analog", "category": "additional"},
+		{"name": "COMP3_INP", "style": "analog", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "8", "style": "physicalPin"},
 		{"name": "PC0", "style": "portPin"},
-		{"name": "ADC12 CH6", "style": "analog"}]
+
+		{"name": "LPTIM1_IN1", "style": "default", "category": "alternate"},
+		{"name": "TIM1_CH1", "style": "default", "category": "alternate"},
+		{"name": "LPUART1_RX", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+
+		{"name": "ADC12_IN6", "style": "analog", "category": "additional"},
+		{"name": "COMP3_INM", "style": "analog", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
@@ -115,12 +233,35 @@
 	"functions": [
 		{"name": "2", "style": "physicalPin"},
 		{"name": "PC13", "style": "portPin"},
-		{"name": "FDCAN STB", "style": "serialPin"}]
+		
+		{"name": "TIM1_BKIN", "style": "default", "category": "alternate"},
+		{"name": "TIM1_CH1N", "style": "default", "category": "alternate"},
+		{"name": "TIM8_CH4N", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"},
+
+		{"name": "WKUP2", "style": "default", "category": "additional"},
+		{"name": "RTC_TAMP1", "style": "default", "category": "additional"},
+		{"name": "RTC_TS", "style": "default", "category": "additional"},
+		{"name": "RTC_OUT1", "style": "default", "category": "additional"}
+	]
 },{
 	"side": "R",
 	"functions": [
 		{"name": "62", "style": "physicalPin"},
 		{"name": "PB9", "style": "portPin"},
-		{"name": "FDCAN TX", "style": "serialPin"},
-		{"name": "COMP2OUT", "style": "default"}]
+
+		{"name": "TIM17_CH1", "style": "default", "category": "alternate"},
+		{"name": "TIM4_CH4", "style": "default", "category": "alternate"},
+		{"name": "SAI1_D2", "style": "default", "category": "alternate"},
+		{"name": "I2C1_SDA", "style": "default", "category": "alternate"},
+		{"name": "IR_OUT", "style": "default", "category": "alternate"}, 
+		{"name": "USART3_TX", "style": "default", "category": "alternate"},
+		{"name": "COMP2_OUT", "style": "default", "category": "alternate"},
+		{"name": "FDCAN1_TX", "style": "default", "category": "alternate"},
+		{"name": "TIM8_CH3", "style": "default", "category": "alternate"},
+		{"name": "TIM1_CH3N", "style": "default", "category": "alternate"},
+		{"name": "HRTIM1_EEV5", "style": "default", "category": "alternate"},
+		{"name": "SAI1_FS_A", "style": "default", "category": "alternate"},
+		{"name": "EVENTOUT", "style": "default", "category": "alternate"}
+	]
 }]
