@@ -1,20 +1,24 @@
 [{
 	"side": "R",
+	"isPWM": true,
 	"functions": [
 		{"name": "XX", "style": "dummy"},
 		{"name": "VIN", "style": "power"}]
 },{
 	"side": "R",
+	"isPWM": true,
 	"functions": [
 		{"name": "XX", "style": "dummy"},
 		{"name": "VBAT", "style": "power"}]
 },{
 	"side": "R",
+	"isPWM": true,
 	"functions": [
 		{"name": "XX", "style": "dummy"},
 		{"name": "GND", "style": "GND"}]
 },{
 	"side": "R",
+	"isPWM": true,
 	"functions": [
 		{"name": "25", "style": "physicalPin"},
 		{"name": "PB1", "style": "portPin"},

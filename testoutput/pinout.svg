@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" height="500" width="500"  >
-<circle cx="200" cy="55.84" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="55.84" x2="18" y2="55.84" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="55.84" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="177" y="55.84"  >
+<path d="m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0 " style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+</svg>
+<line x1="200" y1="55.84" x2="195" y2="55.84" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+<line x1="177" y1="55.84" x2="18" y2="55.84" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="168.87534903542326" y="52" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -18,8 +22,8 @@ COMP6+</text>
 <text x="15.058999999999997" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 OPAMP6OUT_DAC3CH1</text>
 </svg>
-<circle cx="200" cy="65.44" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="65.44" x2="51" y2="65.44" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="65.44" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="65.44" x2="51" y2="65.44" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="170.5680880502245" y="61.6" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="67.28" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -34,15 +38,15 @@ HRTIM C1</text>
 <text x="48.059" y="67.28" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 OPAMP4OUT_DAC4CH1</text>
 </svg>
-<circle cx="200" cy="75.04" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="75.04" x2="147" y2="75.04" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="75.04" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="75.04" x2="147" y2="75.04" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="154.26082706502578" y="71.2" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="144.059" y="76.88" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="200" cy="84.64" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="84.64" x2="84" y2="84.64" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="84.64" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="84.64" x2="84" y2="84.64" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="173.95356607982703" y="80.8" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="86.47999999999999" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -57,8 +61,8 @@ HRTIM C2</text>
 <text x="81.059" y="86.47999999999999" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP5+</text>
 </svg>
-<circle cx="200" cy="94.24" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="94.24" x2="51" y2="94.24" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="94.24" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="94.24" x2="51" y2="94.24" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="175.6463050946283" y="90.39999999999999" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="96.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -76,8 +80,8 @@ COMP4OUT</text>
 <text x="48.059" y="96.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP7+</text>
 </svg>
-<circle cx="200" cy="103.83999999999999" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="103.83999999999999" x2="78" y2="103.83999999999999" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="103.83999999999999" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="103.83999999999999" x2="78" y2="103.83999999999999" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="177.33904410942955" y="99.99999999999999" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -92,8 +96,8 @@ HRTIM D2</text>
 <text x="75.059" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP3OUT</text>
 </svg>
-<circle cx="200" cy="113.43999999999998" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="113.43999999999998" x2="78" y2="113.43999999999998" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="113.43999999999998" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="113.43999999999998" x2="78" y2="113.43999999999998" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="179.03178312423083" y="109.59999999999998" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="115.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -108,15 +112,15 @@ HRTIM F1</text>
 <text x="75.059" y="115.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP6OUT</text>
 </svg>
-<circle cx="200" cy="123.03999999999998" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="123.03999999999998" x2="147" y2="123.03999999999998" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="123.03999999999998" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="123.03999999999998" x2="147" y2="123.03999999999998" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="162.7245221390321" y="119.19999999999997" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="144.059" y="124.87999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="200" cy="132.63999999999996" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="132.63999999999996" x2="78" y2="132.63999999999996" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="132.63999999999996" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="132.63999999999996" x2="78" y2="132.63999999999996" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="182.41726115383335" y="128.79999999999995" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="134.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -131,8 +135,8 @@ HRTIM F2</text>
 <text x="75.059" y="134.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP5OUT</text>
 </svg>
-<circle cx="200" cy="142.23999999999998" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="142.23999999999998" x2="78" y2="142.23999999999998" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="142.23999999999998" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="142.23999999999998" x2="78" y2="142.23999999999998" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="184.11000016863463" y="138.39999999999998" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="144.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -147,8 +151,8 @@ HRTIM E1</text>
 <text x="75.059" y="144.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP7OUT</text>
 </svg>
-<circle cx="200" cy="151.83999999999997" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="151.83999999999997" x2="111" y2="151.83999999999997" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="151.83999999999997" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="151.83999999999997" x2="111" y2="151.83999999999997" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="185.80273918343588" y="147.99999999999997" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="153.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -160,8 +164,8 @@ PC9</text>
 <text x="108.059" y="153.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 HRTIM E2</text>
 </svg>
-<circle cx="200" cy="161.43999999999997" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="161.43999999999997" x2="18" y2="161.43999999999997" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="161.43999999999997" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="161.43999999999997" x2="18" y2="161.43999999999997" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="187.49547819823715" y="157.59999999999997" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -179,15 +183,15 @@ OPAMP5OUT_DAC4CH2</text>
 <text x="15.058999999999997" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP7OUT</text>
 </svg>
-<circle cx="200" cy="171.03999999999996" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="171.03999999999996" x2="147" y2="171.03999999999996" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="171.03999999999996" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="171.03999999999996" x2="147" y2="171.03999999999996" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="171.1882172130384" y="167.19999999999996" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="144.059" y="172.87999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="200" cy="180.63999999999996" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="180.63999999999996" x2="78" y2="180.63999999999996" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="180.63999999999996" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="180.63999999999996" x2="78" y2="180.63999999999996" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="190.88095622783968" y="176.79999999999995" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="182.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -202,8 +206,8 @@ HRTIM A2</text>
 <text x="75.059" y="182.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP5OUT</text>
 </svg>
-<circle cx="200" cy="190.23999999999995" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="190.23999999999995" x2="111" y2="190.23999999999995" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="190.23999999999995" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="190.23999999999995" x2="111" y2="190.23999999999995" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="192.57369524264092" y="186.39999999999995" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="192.07999999999996" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -215,8 +219,8 @@ PA10</text>
 <text x="108.059" y="192.07999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP6OUT</text>
 </svg>
-<circle cx="200" cy="199.83999999999995" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="199.83999999999995" x2="144" y2="199.83999999999995" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="199.83999999999995" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="199.83999999999995" x2="144" y2="199.83999999999995" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="194.2664342574422" y="195.99999999999994" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="201.67999999999995" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -225,8 +229,8 @@ COMP6OUT</text>
 <text x="141.059" y="201.67999999999995" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 PC10</text>
 </svg>
-<circle cx="200" cy="209.43999999999994" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="209.43999999999994" x2="144" y2="209.43999999999994" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="209.43999999999994" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="209.43999999999994" x2="144" y2="209.43999999999994" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="195.95917327224345" y="205.59999999999994" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="211.27999999999994" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -235,15 +239,15 @@ PC10</text>
 <text x="141.059" y="211.27999999999994" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 PC11</text>
 </svg>
-<circle cx="200" cy="219.03999999999994" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="219.03999999999994" x2="147" y2="219.03999999999994" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="219.03999999999994" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="219.03999999999994" x2="147" y2="219.03999999999994" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="179.65191228704472" y="215.19999999999993" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="144.059" y="220.87999999999994" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="200" cy="228.63999999999993" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="228.63999999999993" x2="144" y2="228.63999999999993" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="228.63999999999993" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="228.63999999999993" x2="144" y2="228.63999999999993" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="199.344651301846" y="224.79999999999993" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -252,8 +256,8 @@ GND</text>
 <text x="141.059" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 PC12</text>
 </svg>
-<circle cx="200" cy="238.23999999999992" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="200" y1="238.23999999999992" x2="108" y2="238.23999999999992" style="stroke:#212121; fill:#212121; "  />
+<circle cx="200" cy="238.23999999999992" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="200" y1="238.23999999999992" x2="108" y2="238.23999999999992" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="201.03739031664725" y="234.39999999999992" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="162.059" y="240.07999999999993" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -265,29 +269,45 @@ PB4</text>
 <text x="105.059" y="240.07999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 SPI3 MISO</text>
 </svg>
-<circle cx="250" cy="55.84" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="55.84" x2="303" y2="55.84" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="55.84" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="255" y="55.84"  >
+<path d="m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0 " style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+</svg>
+<line x1="250" y1="55.84" x2="255" y2="55.84" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+<line x1="273" y1="55.84" x2="303" y2="55.84" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="303.81634903542323" y="52" height="7.68" width="15" rx="2" ry="2" style="fill:#b9282e; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="297.0" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 VIN</text>
 </svg>
-<circle cx="250" cy="65.44" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="65.44" x2="306" y2="65.44" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="65.44" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="255" y="65.44"  >
+<path d="m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0 " style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+</svg>
+<line x1="250" y1="65.44" x2="255" y2="65.44" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+<line x1="273" y1="65.44" x2="306" y2="65.44" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="305.50908805022453" y="61.6" height="7.68" width="18" rx="2" ry="2" style="fill:#b9282e; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="297.0" y="67.28" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 VBAT</text>
 </svg>
-<circle cx="250" cy="75.04" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="75.04" x2="303" y2="75.04" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="75.04" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="255" y="75.04"  >
+<path d="m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0 " style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+</svg>
+<line x1="250" y1="75.04" x2="255" y2="75.04" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+<line x1="273" y1="75.04" x2="303" y2="75.04" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="307.2018270650258" y="71.2" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="297.0" y="76.88" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="250" cy="84.64" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="84.64" x2="459" y2="84.64" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="84.64" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="255" y="84.64"  >
+<path d="m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0 " style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+</svg>
+<line x1="250" y1="84.64" x2="255" y2="84.64" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
+<line x1="273" y1="84.64" x2="459" y2="84.64" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="293.89456607982703" y="80.8" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="86.47999999999999" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -308,15 +328,15 @@ COMP4OUT</text>
 <text x="444.0" y="86.47999999999999" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP1+</text>
 </svg>
-<circle cx="250" cy="94.24" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="94.24" x2="309" y2="94.24" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="94.24" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="94.24" x2="309" y2="94.24" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="310.5873050946283" y="90.39999999999999" height="7.68" width="21" rx="2" ry="2" style="fill:#b9282e; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="297.0" y="96.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 +3.3V</text>
 </svg>
-<circle cx="250" cy="103.83999999999999" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="103.83999999999999" x2="339" y2="103.83999999999999" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="103.83999999999999" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="103.83999999999999" x2="339" y2="103.83999999999999" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="297.2800441094296" y="99.99999999999999" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -328,8 +348,8 @@ PC4</text>
 <text x="318.0" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 SPI3 CS2</text>
 </svg>
-<circle cx="250" cy="113.43999999999998" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="113.43999999999998" x2="369" y2="113.43999999999998" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="113.43999999999998" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="113.43999999999998" x2="369" y2="113.43999999999998" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="298.97278312423083" y="109.59999999999998" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="115.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -344,15 +364,15 @@ DAC2OUT</text>
 <text x="348.0" y="115.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP1OUT</text>
 </svg>
-<circle cx="250" cy="123.03999999999998" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="123.03999999999998" x2="303" y2="123.03999999999998" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="123.03999999999998" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="123.03999999999998" x2="303" y2="123.03999999999998" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="315.6655221390321" y="119.19999999999997" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="297.0" y="124.87999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="250" cy="132.63999999999996" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="132.63999999999996" x2="378" y2="132.63999999999996" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="132.63999999999996" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="132.63999999999996" x2="378" y2="132.63999999999996" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="302.3582611538334" y="128.79999999999995" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="134.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -367,8 +387,8 @@ LED BUILTIN</text>
 <text x="360.0" y="134.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 DAC1OUT</text>
 </svg>
-<circle cx="250" cy="142.23999999999998" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="142.23999999999998" x2="333" y2="142.23999999999998" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="142.23999999999998" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="142.23999999999998" x2="333" y2="142.23999999999998" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="304.05100016863463" y="138.39999999999998" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="144.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -380,8 +400,8 @@ PB0</text>
 <text x="318.0" y="144.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP4+</text>
 </svg>
-<circle cx="250" cy="151.83999999999997" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="151.83999999999997" x2="369" y2="151.83999999999997" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="151.83999999999997" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="151.83999999999997" x2="369" y2="151.83999999999997" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="305.7437391834359" y="147.99999999999997" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="153.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -396,8 +416,8 @@ ADC12 CH2</text>
 <text x="354.0" y="153.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP1+</text>
 </svg>
-<circle cx="250" cy="161.43999999999997" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="161.43999999999997" x2="402" y2="161.43999999999997" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="161.43999999999997" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="161.43999999999997" x2="402" y2="161.43999999999997" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="307.4364781982371" y="157.59999999999997" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -415,15 +435,15 @@ COMP1OUT</text>
 <text x="387.0" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP3+</text>
 </svg>
-<circle cx="250" cy="171.03999999999996" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="171.03999999999996" x2="303" y2="171.03999999999996" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="171.03999999999996" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="171.03999999999996" x2="303" y2="171.03999999999996" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="324.12921721303843" y="167.19999999999996" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="297.0" y="172.87999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="250" cy="180.63999999999996" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="180.63999999999996" x2="342" y2="180.63999999999996" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="180.63999999999996" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="180.63999999999996" x2="342" y2="180.63999999999996" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="310.8219562278397" y="176.79999999999995" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="182.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -435,8 +455,8 @@ PC3</text>
 <text x="318.0" y="182.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 ADC12 CH9</text>
 </svg>
-<circle cx="250" cy="190.23999999999995" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="190.23999999999995" x2="375" y2="190.23999999999995" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="190.23999999999995" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="190.23999999999995" x2="375" y2="190.23999999999995" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="312.5146952426409" y="186.39999999999995" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="192.07999999999996" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -451,8 +471,8 @@ ADC12 CH8</text>
 <text x="354.0" y="192.07999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP3OUT</text>
 </svg>
-<circle cx="250" cy="199.83999999999995" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="199.83999999999995" x2="369" y2="199.83999999999995" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="199.83999999999995" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="199.83999999999995" x2="369" y2="199.83999999999995" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="314.2074342574422" y="195.99999999999994" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="283.5" y="201.67999999999995" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -467,8 +487,8 @@ ADC12 CH7</text>
 <text x="354.0" y="201.67999999999995" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP3+</text>
 </svg>
-<circle cx="250" cy="209.43999999999994" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="209.43999999999994" x2="342" y2="209.43999999999994" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="209.43999999999994" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="209.43999999999994" x2="342" y2="209.43999999999994" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="315.9001732722435" y="205.59999999999994" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="283.5" y="211.27999999999994" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -480,15 +500,15 @@ PC0</text>
 <text x="318.0" y="211.27999999999994" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 ADC12 CH6</text>
 </svg>
-<circle cx="250" cy="219.03999999999994" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="219.03999999999994" x2="303" y2="219.03999999999994" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="219.03999999999994" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="219.03999999999994" x2="303" y2="219.03999999999994" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="332.5929122870447" y="215.19999999999993" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="297.0" y="220.87999999999994" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="250" cy="228.63999999999993" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="228.63999999999993" x2="342" y2="228.63999999999993" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="228.63999999999993" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="228.63999999999993" x2="342" y2="228.63999999999993" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="319.285651301846" y="224.79999999999993" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="283.5" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -500,8 +520,8 @@ PC13</text>
 <text x="318.0" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 FDCAN STB</text>
 </svg>
-<circle cx="250" cy="238.23999999999992" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="238.23999999999992" x2="372" y2="238.23999999999992" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="238.23999999999992" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="238.23999999999992" x2="372" y2="238.23999999999992" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="320.9783903166473" y="234.39999999999992" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="282.0" y="240.07999999999993" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -516,8 +536,8 @@ FDCAN TX</text>
 <text x="351.0" y="240.07999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP2OUT</text>
 </svg>
-<circle cx="250" cy="305.84" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="305.84" x2="158" y2="305.84" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="305.84" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="305.84" x2="158" y2="305.84" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="262.9570942125395" y="302" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="212.059" y="307.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -529,15 +549,15 @@ PB5</text>
 <text x="155.059" y="307.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 SPI3 MOSI</text>
 </svg>
-<circle cx="250" cy="315.44" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="315.44" x2="197" y2="315.44" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="315.44" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="315.44" x2="197" y2="315.44" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="246.64983322734076" y="311.6" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="194.059" y="317.28000000000003" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="250" cy="325.04" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="325.04" x2="125" y2="325.04" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="325.04" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="325.04" x2="125" y2="325.04" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="266.342572242142" y="321.20000000000005" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="212.059" y="326.88000000000005" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -552,8 +572,8 @@ USART1 TX</text>
 <text x="122.059" y="326.88000000000005" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP4OUT</text>
 </svg>
-<circle cx="250" cy="334.64000000000004" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="334.64000000000004" x2="125" y2="334.64000000000004" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="334.64000000000004" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="334.64000000000004" x2="125" y2="334.64000000000004" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="268.0353112569433" y="330.80000000000007" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="212.059" y="336.4800000000001" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
@@ -568,15 +588,15 @@ USART1 RX</text>
 <text x="122.059" y="336.4800000000001" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP3OUT</text>
 </svg>
-<circle cx="250" cy="344.24000000000007" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="344.24000000000007" x2="197" y2="344.24000000000007" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="344.24000000000007" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="344.24000000000007" x2="197" y2="344.24000000000007" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="251.72805027174456" y="340.4000000000001" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="194.059" y="346.0800000000001" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND</text>
 </svg>
-<circle cx="250" cy="353.8400000000001" r="1.92" style="stroke:#212121; fill:#212121; "  />
-<line x1="250" y1="353.8400000000001" x2="128" y2="353.8400000000001" style="stroke:#212121; fill:#212121; "  />
+<circle cx="250" cy="353.8400000000001" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="250" y1="353.8400000000001" x2="128" y2="353.8400000000001" style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
 <rect x="271.4207892865458" y="350.0000000000001" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="212.059" y="355.6800000000001" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >

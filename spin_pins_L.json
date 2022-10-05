@@ -1,5 +1,6 @@
 [{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "33", "style": "physicalPin"},
 		{"name": "PB11", "style": "portPin"},

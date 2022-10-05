@@ -72,12 +72,17 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
     if (pin_data["side"] == "L"):
         sign = -1
     line_style = StyleBuilder()
-    #line_style.setStrokeWidth(1.92) #0.02in
+    line_style.setStrokeWidth(1.92/2) #0.02in
     line_style.setStroke('#212121')
-    line_style.setFilling('#212121')
+    line_style.setFilling('none')
+
+    dot_style = StyleBuilder()
+    dot_style.setStrokeWidth(1.92/2) #0.02in
+    dot_style.setStroke('#212121')
+    dot_style.setFilling('#212121')
 
     c = Circle(x_origin_offset, (height/2 + 2) + y_origin_offset, 1.92)
-    c.set_style(line_style.getStyle())
+    c.set_style(dot_style.getStyle())
     s.addElement(c)
 
     x_offset = 20 #length of the line before the 1st pin indicator
@@ -98,9 +103,31 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
 
         prev_width = prev_width + pr + 3
 
-    l = Line(x_origin_offset, (height/2 + 2) + y_origin_offset, (sign * (prev_width + x_offset)) + x_origin_offset, (height/2 + 2) + y_origin_offset)
-    l.set_style(line_style.getStyle())
-    s.addElement(l)
+    pwm_offeset = 0
+    if ("isPWM" in pin_data):
+        print("yes")
+        if (pin_data["isPWM"] == True):
+            pwm_path = Path('m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0', style=line_style.getStyle())
+            
+            pwmLength = 0
+            if (pin_data["side"] == "L"):
+                pwmLength = 18 #lenght of the path
+            
+            pwm = Svg(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08)
+            pwm.addElement(pwm_path)
+
+            s.addElement(pwm)
+
+            pwm_offeset = 18 + 5
+
+            small_line = Line(x_origin_offset, (height/2 + 2) + y_origin_offset, x_origin_offset + sign * 5, (height/2 + 2) + y_origin_offset)
+            small_line.set_style(line_style.getStyle())
+            s.addElement(small_line)
+
+    big_line = Line(x_origin_offset + (sign * pwm_offeset), (height/2 + 2) + y_origin_offset, (sign * (prev_width + x_offset)) + x_origin_offset, (height/2 + 2) + y_origin_offset)
+    big_line.set_style(line_style.getStyle())
+    s.addElement(big_line)
+
     s.addElement(pinsvg)
 
 if __name__ == '__main__': 
