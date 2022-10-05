@@ -21,7 +21,7 @@
 },{
 	"side": "L",
 	"functions": [
-		{"name": "GNDDetect", "style": "default"}]
+		{"name": "GNDDetect", "style": "jtag"}]
 },{
 	"side": "L",
 	"functions": [

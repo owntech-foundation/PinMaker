@@ -1,33 +1,48 @@
 {
 	"default" : {
 		"isSkewed": true,
+		"legend": false,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#ffffff"
 		},
-	"igonrePin" : {
-			"isSkewed": true,
-			"textColor" : "#000000",
-			"strokeColor" : "#424242",
-			"fillColor" : "#ffffff"
-			},
+	"hidden" : {
+		"special": "hidden",
+		"legend": false,
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#000000",
+		"fillColor" : "#000000"
+		},
+	"dummy" : {
+		"special": "dummy",
+		"legend": false,
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#000000",
+		"fillColor" : "#000000"
+		},
+	"onlyText" : {
+		"special": "onlyText",
+		"legend": false,
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#000000",
+		"fillColor" : "#000000"
+		},
 	"greyOut" : {
-			"isSkewed": true,
-			"textColor" : "#c2c2c2",
-			"strokeColor" : "#424242",
-			"fillColor" : "#ffffff"
-			},
+		"isSkewed": true,
+		"legend": false,
+		"textColor" : "#c2c2c2",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ffffff"
+		},
     "notSkuwed" : {
 		"isSkewed": false,
+		"legend": false,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#ffffff"
-		},
-    "dummy" : {
-		"isSkewed": true,
-		"textColor" : "#ffffff00",
-		"strokeColor" : "#ffffff00",
-		"fillColor" : "#ffffff00"
 		},
 	"power" : {
 		"isSkewed": true,
@@ -41,11 +56,41 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#1f1f1f"
 		},
+	"led" : {
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#FF6961"
+		},
+	"usb" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ECC5FB"
+		},
 	"serial" : {
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#cfe6ed"
+		},	
+	"i2c" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#68A7AD"
+		},
+	"spi" : {
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#8F4068"
+		},
+	"audio" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#EEE4AB"
 		},
 	"analog" : {
 		"isSkewed": true,
@@ -91,7 +136,7 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#d1d1df"
 		},
-	"interruptPin" : {
+	"timer" : {
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",

@@ -16,7 +16,7 @@ import cairosvg
 from PIL import Image
 
 def show_svg(svg_data):
-	cairosvg.svg2png(url=svg_data, write_to='testoutput/test.png', output_width=1000, output_height=1000)
+	cairosvg.svg2png(url=svg_data, write_to='testoutput/test.png', output_width=1500, output_height=600)
 	i = Image.open('testoutput/test.png')
 	i.show()
 
@@ -61,21 +61,36 @@ def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=
     rwidth = (margins * 2) + missing_number_offset + (len(text) * em_size)
     r = Rect(pos_x + 10 + skew_error, pos_y + 2, rwidth ,  height, 2, 2, **rect_args)
 
-    if (style["fillColor"] != "#ffffff00"): #dummy
-        s.addElement(r)
-        s.addElement(t)
+    if ("special" in style):
+        if (style["special"] == "hidden"):
+            return 0
+        elif (style["special"] == "dummy"):
+            return rwidth
+        elif (style["special"] == "onlyText"):
+            s.addElement(t)
+            return rwidth
+
+    s.addElement(r)
+    s.addElement(t)
     return rwidth
+
+def pwm_indicator(x, y):
+    line_style = StyleBuilder()
+    line_style.setStrokeWidth(1.92/2) #0.02in
+    line_style.setStroke('#212121')
+    line_style.setFilling('none')
+
+    pwm_path = Path('m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0', style=line_style.getStyle())
+    pwm = Svg(x, y)
+    pwm.addElement(pwm_path)
+    return (pwm)
 
 def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
     height = 7.680
     sign = 1
     if (pin_data["side"] == "L"):
         sign = -1
-    line_style = StyleBuilder()
-    line_style.setStrokeWidth(1.92/2) #0.02in
-    line_style.setStroke('#212121')
-    line_style.setFilling('none')
-
+    
     dot_style = StyleBuilder()
     dot_style.setStrokeWidth(1.92/2) #0.02in
     dot_style.setStroke('#212121')
@@ -101,44 +116,48 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
 
         pr = function_label(pinsvg, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles[f['style']], 0, sign)
 
-        prev_width = prev_width + pr + 3
+        if (pr != 0): #for the hidden tag
+            prev_width = prev_width + pr + 3
 
     pwm_offeset = 0
     if ("isPWM" in pin_data):
-        print("yes")
         if (pin_data["isPWM"] == True):
-            pwm_path = Path('m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0', style=line_style.getStyle())
             
             pwmLength = 0
             if (pin_data["side"] == "L"):
                 pwmLength = 18 #lenght of the path
-            
-            pwm = Svg(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08)
-            pwm.addElement(pwm_path)
 
-            s.addElement(pwm)
+            s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
 
             pwm_offeset = 18 + 5
 
             small_line = Line(x_origin_offset, (height/2 + 2) + y_origin_offset, x_origin_offset + sign * 5, (height/2 + 2) + y_origin_offset)
-            small_line.set_style(line_style.getStyle())
+            small_line.set_style(dot_style.getStyle())
             s.addElement(small_line)
 
     big_line = Line(x_origin_offset + (sign * pwm_offeset), (height/2 + 2) + y_origin_offset, (sign * (prev_width + x_offset)) + x_origin_offset, (height/2 + 2) + y_origin_offset)
-    big_line.set_style(line_style.getStyle())
+    big_line.set_style(dot_style.getStyle())
     s.addElement(big_line)
 
     s.addElement(pinsvg)
 
 def legend_maker(s):
     svg = Svg("legend")
-    function_label(svg, 10, 10, "    ", styles["control"], 0)
-    function_label(svg, 100, 10, "Je suis une légende", styles["dummy"], 0)
 
+    off = 10
+    for styl in styles:
+        if ("legend" in styles[styl]):
+            if (styles[styl]["legend"] == True):
+                pass
+        else:
+            w = function_label(svg, 10, off, "    ", styles[styl], 0)
+            function_label(svg, 10 + w, off, styl, styles["onlyText"], 0)
+            off = off + 10
     
-    # for stl in styles:
-    #     #print()
-    #     #function_label(svg, 10, 10, "AAAA", stl, 0)
+    #s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
+    svg.addElement(pwm_indicator(13 + 5.92 - 0.08, off + 10))
+    function_label(svg, 23 + 5.92 - 0.08, off + 4, "HRTIM PWM", styles["onlyText"], 0)
+
 
     s.addElement(svg)
 
@@ -154,23 +173,23 @@ def load_pins_file(filepath, svg, x, y):
 if __name__ == '__main__': 
     global styles
 
-    s = Svg(0, 0, 500, 500)
+    s = Svg(0, 0, 1500, 600)
     
     # Opening JSON file
     fstyles = open('styles.json')
     styles = json.load(fstyles)
     fstyles.close()
 
-    load_pins_file('spin_pins_L.json', s, 200, 50)
-    load_pins_file('spin_pins_R.json', s, 250, 50)
+    load_pins_file('spin_pins_L.json', s, 700, 50)
+    load_pins_file('spin_pins_R.json', s, 800, 50)
 
-    load_pins_file('spin_pins_B.json', s, 200, 300)
+    load_pins_file('spin_pins_B.json', s, 700, 300)
 
-    load_pins_file('spin_pins_L2.json', s, 200, 400)
-    load_pins_file('spin_pins_L3.json', s, 200, 450)
+    load_pins_file('spin_pins_L2.json', s, 700, 380)
+    load_pins_file('spin_pins_L3.json', s, 700, 450)
 
-    load_pins_file('spin_jtag_L.json', s, 300, 300)
-    load_pins_file('spin_jtag_R.json', s, 350, 300)
+    load_pins_file('spin_jtag_L.json', s, 1100, 300)
+    load_pins_file('spin_jtag_R.json', s, 1150, 300)
     
     legend_maker(s)
 
