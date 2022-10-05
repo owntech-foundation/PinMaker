@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" height="500" width="500"  >
+<circle cx="3.84" cy="55.84" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="55.84" x2="182" y2="55.84" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="38.81634903542325" y="52" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+33</text>
+<rect x="53.81634903542325" y="52" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PB11</text>
+<rect x="74.81634903542324" y="52" height="7.68" width="36" rx="2" ry="2" style="fill:#97b756; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="68" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+ADC12 CH14</text>
+<rect x="113.81634903542324" y="52" height="7.68" width="24" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="107" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP6+</text>
+<rect x="140.81634903542326" y="52" height="7.68" width="57" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="134" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+OPAMP6OUT_DAC3CH1</text>
+</svg>
+<circle cx="3.84" cy="65.44" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="65.44" x2="149" y2="65.44" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="40.50908805022451" y="61.6" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="67.28" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+34</text>
+<rect x="55.50908805022451" y="61.6" height="7.68" width="18" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="67.28" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PB12</text>
+<rect x="76.5090880502245" y="61.6" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="68" y="67.28" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM C1</text>
+<rect x="109.5090880502245" y="61.6" height="7.68" width="57" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="101" y="67.28" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+OPAMP4OUT_DAC4CH1</text>
+</svg>
+<circle cx="3.84" cy="75.04" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="75.04" x2="53" y2="75.04" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="57.201827065025775" y="71.2" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="76.88" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+GND</text>
+</svg>
+<circle cx="3.84" cy="84.64" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="84.64" x2="116" y2="84.64" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="43.894566079827044" y="80.8" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="86.47999999999999" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+35</text>
+<rect x="58.894566079827044" y="80.8" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="86.47999999999999" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PB13</text>
+<rect x="79.89456607982704" y="80.8" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="68" y="86.47999999999999" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM C2</text>
+<rect x="112.89456607982704" y="80.8" height="7.68" width="24" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="101" y="86.47999999999999" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP5+</text>
+</svg>
+<circle cx="3.84" cy="94.24" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="94.24" x2="149" y2="94.24" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="45.587305094628306" y="90.39999999999999" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="96.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+36</text>
+<rect x="60.587305094628306" y="90.39999999999999" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="96.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PB14</text>
+<rect x="81.5873050946283" y="90.39999999999999" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="68" y="96.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM D1</text>
+<rect x="114.5873050946283" y="90.39999999999999" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="101" y="96.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP4OUT</text>
+<rect x="147.5873050946283" y="90.39999999999999" height="7.68" width="24" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="134" y="96.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP7+</text>
+</svg>
+<circle cx="3.84" cy="103.83999999999999" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="103.83999999999999" x2="122" y2="103.83999999999999" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="47.28004410942957" y="99.99999999999999" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+37</text>
+<rect x="62.28004410942957" y="99.99999999999999" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PB15</text>
+<rect x="83.28004410942957" y="99.99999999999999" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="68" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM D2</text>
+<rect x="116.28004410942957" y="99.99999999999999" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="101" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP3OUT</text>
+</svg>
+<circle cx="3.84" cy="113.43999999999998" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="113.43999999999998" x2="119" y2="113.43999999999998" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="48.97278312423083" y="109.59999999999998" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="115.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+38</text>
+<rect x="63.97278312423083" y="109.59999999999998" height="7.68" width="15" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="115.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PC6</text>
+<rect x="81.97278312423083" y="109.59999999999998" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="65" y="115.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM F1</text>
+<rect x="114.97278312423083" y="109.59999999999998" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="98" y="115.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP6OUT</text>
+</svg>
+<circle cx="3.84" cy="123.03999999999998" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="123.03999999999998" x2="53" y2="123.03999999999998" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="65.66552213903209" y="119.19999999999997" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="124.87999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+GND</text>
+</svg>
+<circle cx="3.84" cy="132.63999999999996" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="132.63999999999996" x2="119" y2="132.63999999999996" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="52.358261153833354" y="128.79999999999995" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="134.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+39</text>
+<rect x="67.35826115383335" y="128.79999999999995" height="7.68" width="15" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="134.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PC7</text>
+<rect x="85.35826115383335" y="128.79999999999995" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="65" y="134.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM F2</text>
+<rect x="118.35826115383335" y="128.79999999999995" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="98" y="134.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP5OUT</text>
+</svg>
+<circle cx="3.84" cy="142.23999999999998" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="142.23999999999998" x2="119" y2="142.23999999999998" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="54.051000168634616" y="138.39999999999998" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="144.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+40</text>
+<rect x="69.05100016863462" y="138.39999999999998" height="7.68" width="15" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="144.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PC8</text>
+<rect x="87.05100016863462" y="138.39999999999998" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="65" y="144.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM E1</text>
+<rect x="120.05100016863462" y="138.39999999999998" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="98" y="144.07999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP7OUT</text>
+</svg>
+<circle cx="3.84" cy="151.83999999999997" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="151.83999999999997" x2="86" y2="151.83999999999997" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="55.74373918343588" y="147.99999999999997" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="153.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+41</text>
+<rect x="70.74373918343588" y="147.99999999999997" height="7.68" width="15" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="153.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PC9</text>
+<rect x="88.74373918343588" y="147.99999999999997" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="65" y="153.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM E2</text>
+</svg>
+<circle cx="3.84" cy="161.43999999999997" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="161.43999999999997" x2="179" y2="161.43999999999997" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="57.43647819823715" y="157.59999999999997" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+42</text>
+<rect x="72.43647819823715" y="157.59999999999997" height="7.68" width="15" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PA8</text>
+<rect x="90.43647819823715" y="157.59999999999997" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="65" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM A1</text>
+<rect x="123.43647819823715" y="157.59999999999997" height="7.68" width="57" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="98" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+OPAMP5OUT_DAC4CH2</text>
+<rect x="183.43647819823715" y="157.59999999999997" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="158" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP7OUT</text>
+</svg>
+<circle cx="3.84" cy="171.03999999999996" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="171.03999999999996" x2="53" y2="171.03999999999996" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="74.1292172130384" y="167.19999999999996" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="172.87999999999997" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+GND</text>
+</svg>
+<circle cx="3.84" cy="180.63999999999996" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="180.63999999999996" x2="119" y2="180.63999999999996" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="60.82195622783967" y="176.79999999999995" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="182.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+43</text>
+<rect x="75.82195622783968" y="176.79999999999995" height="7.68" width="15" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="182.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PA9</text>
+<rect x="93.82195622783968" y="176.79999999999995" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="65" y="182.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM A2</text>
+<rect x="126.82195622783968" y="176.79999999999995" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="98" y="182.47999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP5OUT</text>
+</svg>
+<circle cx="3.84" cy="190.23999999999995" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="190.23999999999995" x2="89" y2="190.23999999999995" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="62.51469524264093" y="186.39999999999995" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="192.07999999999996" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+44</text>
+<rect x="77.51469524264093" y="186.39999999999995" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="192.07999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PA10</text>
+<rect x="98.51469524264093" y="186.39999999999995" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="68" y="192.07999999999996" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+COMP6OUT</text>
+</svg>
+<circle cx="3.84" cy="199.83999999999995" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="199.83999999999995" x2="56" y2="199.83999999999995" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="64.2074342574422" y="195.99999999999994" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="201.67999999999995" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+52</text>
+<rect x="79.2074342574422" y="195.99999999999994" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="201.67999999999995" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PC10</text>
+</svg>
+<circle cx="3.84" cy="209.43999999999994" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="209.43999999999994" x2="56" y2="209.43999999999994" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="65.90017327224345" y="205.59999999999994" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="211.27999999999994" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+53</text>
+<rect x="80.90017327224345" y="205.59999999999994" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="211.27999999999994" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PC11</text>
+</svg>
+<circle cx="3.84" cy="219.03999999999994" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="219.03999999999994" x2="53" y2="219.03999999999994" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="82.59291228704473" y="215.19999999999993" height="7.68" width="15" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="220.87999999999994" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+GND</text>
+</svg>
+<circle cx="3.84" cy="228.63999999999993" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="228.63999999999993" x2="56" y2="228.63999999999993" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="69.28565130184599" y="224.79999999999993" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+54</text>
+<rect x="84.28565130184599" y="224.79999999999993" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PC12</text>
+</svg>
+<circle cx="3.84" cy="238.23999999999992" r="1.92" style="stroke:#212121; fill:#212121; "  />
+<line x1="1.92" y1="238.23999999999992" x2="89" y2="238.23999999999992" style="stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="70.97839031664725" y="234.39999999999992" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="32" y="240.07999999999993" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+57</text>
+<rect x="85.97839031664725" y="234.39999999999992" height="7.68" width="15" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="47" y="240.07999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+PB4</text>
+<rect x="103.97839031664725" y="234.39999999999992" height="7.68" width="33" rx="2" ry="2" style="fill:#cfe6ed; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="65" y="240.07999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+SPI3 MISO</text>
+</svg>
+</svg>

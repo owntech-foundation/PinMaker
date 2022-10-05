@@ -1,0 +1,74 @@
+{
+	"default" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ffffff"
+		},
+    "notSkuwed" : {
+		"isSkewed": false,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ffffff"
+		},
+    "dummy" : {
+		"isSkewed": true,
+		"textColor" : "#ffffff00",
+		"strokeColor" : "#ffffff00",
+		"fillColor" : "#ffffff00"
+		},
+	"power" : {
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#b9282e"
+		},
+	"GND" : {
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#1f1f1f"
+		},
+	"serialPin" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#cfe6ed"
+		},
+	"analog" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#97b756"
+	},
+	"control" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#f9e339"
+	},
+	"physicalPin" : {
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#828584"
+		},
+	"portPin" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#d3c8bb"
+		},
+	"pinFunction" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#d1d1df"
+		},
+	"interruptPin" : {
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#e6c3bb"
+		}
+}

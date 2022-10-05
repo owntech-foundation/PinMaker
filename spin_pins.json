@@ -1,0 +1,127 @@
+[{
+	"side": "L",
+	"functions": [
+		{"name": "33", "style": "physicalPin"},
+		{"name": "PB11", "style": "portPin"},
+		{"name": "ADC12 CH14", "style": "analog"},
+		{"name": "COMP6+", "style": "default"},
+		{"name": "OPAMP6OUT_DAC3CH1", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "34", "style": "physicalPin"},
+		{"name": "PB12", "style": "default"},
+		{"name": "HRTIM C1", "style": "default"},
+		{"name": "OPAMP4OUT_DAC4CH1", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "35", "style": "physicalPin"},
+		{"name": "PB13", "style": "portPin"},
+		{"name": "HRTIM C2", "style": "default"},
+		{"name": "COMP5+", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "36", "style": "physicalPin"},
+		{"name": "PB14", "style": "portPin"},
+		{"name": "HRTIM D1", "style": "default"},
+		{"name": "COMP4OUT", "style": "default"},
+		{"name": "COMP7+", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "37", "style": "physicalPin"},
+		{"name": "PB15", "style": "portPin"},
+		{"name": "HRTIM D2", "style": "default"},
+		{"name": "COMP3OUT", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "38", "style": "physicalPin"},
+		{"name": "PC6", "style": "portPin"},
+		{"name": "HRTIM F1", "style": "default"},
+		{"name": "COMP6OUT", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "39", "style": "physicalPin"},
+		{"name": "PC7", "style": "portPin"},
+		{"name": "HRTIM F2", "style": "default"},
+		{"name": "COMP5OUT", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "40", "style": "physicalPin"},
+		{"name": "PC8", "style": "portPin"},
+		{"name": "HRTIM E1", "style": "default"},
+		{"name": "COMP7OUT", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "41", "style": "physicalPin"},
+		{"name": "PC9", "style": "portPin"},
+		{"name": "HRTIM E2", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "42", "style": "physicalPin"},
+		{"name": "PA8", "style": "portPin"},
+		{"name": "HRTIM A1", "style": "default"},
+		{"name": "OPAMP5OUT_DAC4CH2", "style": "default"},
+		{"name": "COMP7OUT", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "43", "style": "physicalPin"},
+		{"name": "PA9", "style": "portPin"},
+		{"name": "HRTIM A2", "style": "default"},
+		{"name": "COMP5OUT", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "44", "style": "physicalPin"},
+		{"name": "PA10", "style": "portPin"},
+		{"name": "COMP6OUT", "style": "default"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "52", "style": "physicalPin"},
+		{"name": "PC10", "style": "portPin"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "53", "style": "physicalPin"},
+		{"name": "PC11", "style": "portPin"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "54", "style": "physicalPin"},
+		{"name": "PC12", "style": "portPin"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "57", "style": "physicalPin"},
+		{"name": "PB4", "style": "portPin"},
+		{"name": "SPI3 MISO", "style": "serialPin"}]
+}]

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" height="500" width="500"  >
+<line x1="3" y1="15.0" x2="300" y2="15.0" style="stroke-width:2; stroke:#212121; fill:#212121; "  />
+<circle cx="6" cy="15.0" r="3" style="stroke-width:2; stroke:#212121; fill:#212121; "  />
+<rect x="50" y="2" height="26" width="40" rx="2" ry="2" style="fill:#828584; stroke-width:1; stroke:#424242; " transform="skewX(-10)"  />
+<text x="62" y="20" style="font-size:1em; font-family:Verdana; fill:#ffffff; font-style:italic; "  >
+1</text>
+<rect x="100" y="2" height="26" width="60" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:1; stroke:#424242; " transform="skewX(-10)"  />
+<text x="112" y="20" style="font-size:1em; font-family:Verdana; fill:#000000; font-style:italic; "  >
+PA0</text>
+<rect x="170" y="2" height="26" width="70" rx="2" ry="2" style="fill:#97b756; stroke-width:1; stroke:#424242; " transform="skewX(-10)"  />
+<text x="182" y="20" style="font-size:1em; font-family:Verdana; fill:#000000; font-style:italic; "  >
+ADC0</text>
+</svg>
