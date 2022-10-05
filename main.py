@@ -130,9 +130,15 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
 
     s.addElement(pinsvg)
 
+def load_pins_file(filepath, svg, x, y):
+    f = open(filepath)
+    board_data = json.load(f)
+    for b in board_data:
+        pin_maker(b, svg, x, y)
+        y = y + 9.6 #0.1in
+    f.close()
+
 if __name__ == '__main__': 
-    #tutorialChain()
-    #load_tutorial()
     global styles
 
     s = Svg(0, 0, 500, 500)
@@ -142,34 +148,10 @@ if __name__ == '__main__':
     styles = json.load(fstyles)
     fstyles.close()
 
-    y_origin_offset = 50
-    x_origin_offset = 200
-    fl = open('spin_pins_L.json')
-    board_data = json.load(fl)
-    for b in board_data:
-        pin_maker(b, s, x_origin_offset, y_origin_offset)
-        y_origin_offset = y_origin_offset + 9.6 #0.1in
-    fl.close()
+    load_pins_file('spin_pins_L.json', s, 200, 50)
+    load_pins_file('spin_pins_R.json', s, 250, 50)
+    load_pins_file('spin_pins_B.json', s, 200, 300)
 
-    y_origin_offset = 50
-    x_origin_offset = 250
-
-    fr = open('spin_pins_R.json')
-    board_data = json.load(fr)
-    for b in board_data:
-        pin_maker(b, s, x_origin_offset, y_origin_offset)
-        y_origin_offset = y_origin_offset + 9.6 #0.1in
-    fr.close()
-
-    y_origin_offset = 300
-    x_origin_offset = 250
-
-    fb = open('spin_pins_B.json')
-    board_data = json.load(fb)
-    for b in board_data:
-        pin_maker(b, s, x_origin_offset, y_origin_offset)
-        y_origin_offset = y_origin_offset + 9.6 #0.1in
-    fb.close()
 
     s.save('./testoutput/pinout.svg')
     show_svg('testoutput/pinout.svg')

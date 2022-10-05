@@ -5,6 +5,12 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#ffffff"
 		},
+	"greyOut" : {
+			"isSkewed": true,
+			"textColor" : "#c2c2c2",
+			"strokeColor" : "#424242",
+			"fillColor" : "#ffffff"
+			},
     "notSkuwed" : {
 		"isSkewed": false,
 		"textColor" : "#000000",
@@ -47,13 +53,17 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#eb8b2c"
 	},
-
-	
 	"control" : {
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#f9e339"
+	},
+	"jtag" : {
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#006fbe"
 	},
 	"physicalPin" : {
 		"isSkewed": true,

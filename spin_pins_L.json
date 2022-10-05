@@ -9,6 +9,7 @@
 		{"name": "OPAMP6OUT_DAC3CH1", "style": "DAC"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "34", "style": "physicalPin"},
 		{"name": "PB12", "style": "portPin"},
@@ -21,6 +22,7 @@
 		{"name": "GND", "style": "GND"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "35", "style": "physicalPin"},
 		{"name": "PB13", "style": "portPin"},
@@ -28,6 +30,7 @@
 		{"name": "COMP5+", "style": "default"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "36", "style": "physicalPin"},
 		{"name": "PB14", "style": "portPin"},
@@ -36,6 +39,7 @@
 		{"name": "COMP7+", "style": "default"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "37", "style": "physicalPin"},
 		{"name": "PB15", "style": "portPin"},
@@ -43,6 +47,7 @@
 		{"name": "COMP3OUT", "style": "default"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "38", "style": "physicalPin"},
 		{"name": "PC6", "style": "portPin"},
@@ -50,11 +55,13 @@
 		{"name": "COMP6OUT", "style": "default"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "XX", "style": "dummy"},
 		{"name": "GND", "style": "GND"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "39", "style": "physicalPin"},
 		{"name": "PC7", "style": "portPin"},
@@ -62,6 +69,7 @@
 		{"name": "COMP5OUT", "style": "default"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "40", "style": "physicalPin"},
 		{"name": "PC8", "style": "portPin"},
@@ -69,12 +77,14 @@
 		{"name": "COMP7OUT", "style": "default"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "41", "style": "physicalPin"},
 		{"name": "PC9", "style": "portPin"},
 		{"name": "HRTIM E2", "style": "default"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "42", "style": "physicalPin"},
 		{"name": "PA8", "style": "portPin"},
@@ -88,6 +98,7 @@
 		{"name": "GND", "style": "GND"}]
 },{
 	"side": "L",
+	"isPWM": true,
 	"functions": [
 		{"name": "43", "style": "physicalPin"},
 		{"name": "PA9", "style": "portPin"},
