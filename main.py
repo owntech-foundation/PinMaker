@@ -25,9 +25,8 @@ def function_label_lenght_helper(text, style, added_width, is_italic=True):
     margins = 3
     missing_number_offset = 0
 
-    if ("fixed_width_chars" in style):
-        if (style["fixed_width_chars"] > len(text)):
-            missing_number_offset = em_size * abs(style["fixed_width_chars"] - len(text)) # width of digit * number of missing digits
+    if (("fixed_width_chars" in style) and (style["fixed_width_chars"] > len(text))):
+        missing_number_offset = em_size * abs(style["fixed_width_chars"] - len(text)) # width of digit * number of missing digits
     return ((margins * 2) + missing_number_offset + (len(text) * em_size))
 
 def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=True):
@@ -86,6 +85,10 @@ def pwm_indicator(x, y):
     pwm.addElement(pwm_path)
     return (pwm)
 
+def intersection(lst1, lst2):
+    lst3 = [value for value in lst1 if value in lst2]
+    return lst3
+
 def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
     height = 7.680
     sign = 1
@@ -108,7 +111,7 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
     pinsvg = Svg()
 
     for f in pin_data['functions']:
-        if (("category" in f) and f["category"] in omit_categories):
+        if (("categories" in f) and intersection(f["categories"], omit_categories)):
             pass
         elif (("style" in f) and f["style"] in omit_styles):
             pass
@@ -127,20 +130,19 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
 
     pwm_offeset = 0
 
-    if ("isPWM" in pin_data):
-        if (pin_data["isPWM"] == True):
-            
-            pwmLength = 0
-            if (pin_data["side"] == "L"):
-                pwmLength = 18 #lenght of the path
+    if (("isPWM" in pin_data) and (pin_data["isPWM"] == True)):
+        
+        pwmLength = 0
+        if (pin_data["side"] == "L"):
+            pwmLength = 18 #lenght of the path
 
-            s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
+        s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
 
-            pwm_offeset = 18 + 5
+        pwm_offeset = 18 + 5
 
-            small_line = Line(x_origin_offset, (height/2 + 2) + y_origin_offset, x_origin_offset + sign * 5, (height/2 + 2) + y_origin_offset)
-            small_line.set_style(dot_style.getStyle())
-            s.addElement(small_line)
+        small_line = Line(x_origin_offset, (height/2 + 2) + y_origin_offset, x_origin_offset + sign * 5, (height/2 + 2) + y_origin_offset)
+        small_line.set_style(dot_style.getStyle())
+        s.addElement(small_line)
 
     big_line = Line(x_origin_offset + (sign * pwm_offeset), (height/2 + 2) + y_origin_offset, (sign * (prev_width + x_offset)) + x_origin_offset, (height/2 + 2) + y_origin_offset)
     big_line.set_style(dot_style.getStyle())
@@ -177,7 +179,6 @@ def legend_maker(s):
     svg.addElement(pwm_indicator(13 + 5.92 - 0.08, off + 10))
     function_label(svg, 23 + 5.92 - 0.08, off + 4, "HRTIM PWM", styles["onlyText"], 0)
 
-
     s.addElement(svg)
 
 def customSort(k):
@@ -210,8 +211,8 @@ if __name__ == '__main__':
 
     s = Svg(0, 0, 1500, 600)
     
-    omit_categories = [] #["alternate", "additional"]
-    omit_styles = [] #["timer"]
+    omit_categories = ["additional"] #["alternate", "additional"]
+    omit_styles = ["timer", "audio", "usb"] #["timer"]
 
     fstyles = open('styles.json')
     styles = json.load(fstyles)

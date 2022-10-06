@@ -15,24 +15,23 @@
 		{"name": "GND", "style": "GND"}]
 },{
 	"side": "R",
-	"isPWM": true,
 	"functions": [
 		{"name": "25", "style": "physicalPin"},
 		{"name": "PB1", "style": "portPin"},
 
-		{"name": "TIM3_CH4", "style": "timer", "category": "alternate"},
-		{"name": "TIM8_CH3N", "style": "timer", "category": "alternate"},
-		{"name": "TIM1_CH3N", "style": "timer", "category": "alternate"},
-		{"name": "COMP4_OUT", "style": "analog", "category": "alternate"},
-		{"name": "QUADSPI1_BK1_IO0", "style": "spi", "category": "alternate"},
-		{"name": "LPUART1_RTS_DE", "style": "serial", "category": "alternate"},
-		{"name": "HRTIM1_SCOUT", "style": "timer", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "TIM3_CH4", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM8_CH3N", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM1_CH3N", "style": "timer", "categories": ["alternate"]},
+		{"name": "COMP4_OUT", "style": "analog", "categories": ["alternate"]},
+		{"name": "QUADSPI1_BK1_IO0", "style": "spi", "categories": ["alternate"]},
+		{"name": "LPUART1_RTS_DE", "style": "serial", "categories": ["alternate"]},
+		{"name": "HRTIM1_SCOUT", "style": "hrtimer", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 
-		{"name": "ADC3_IN1/ADC1_IN12", "style": "analog", "category": "additional"},
-		{"name": "COMP1+", "style": "analog", "category": "additional"},
-		{"name": "OPAMP3_VOUT", "style": "analog", "category": "additional"},
-		{"name": "OPAMP6_V-", "style": "analog", "category": "additional"}
+		{"name": "ADC3_IN1/ADC1_IN12", "style": "analog", "categories": ["additional"]},
+		{"name": "COMP1+", "style": "analog", "categories": ["additional"]},
+		{"name": "OPAMP3_VOUT", "style": "analog", "categories": ["additional"]},
+		{"name": "OPAMP6_V-", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -46,13 +45,13 @@
 		{"name": "22", "style": "physicalPin"},
 		{"name": "PC4", "style": "portPin"},
 
-		{"name": "TIM1_ETR", "style": "timer", "category": "alternate"},
-		{"name": "I2C2_SCL", "style": "i2c", "category": "alternate"},
-		{"name": "USART1_TX", "style": "serial", "category": "alternate"},
-		{"name": "QUADSPI1_BK2_IO3", "style": "spi", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "TIM1_ETR", "style": "timer", "categories": ["alternate"]},
+		{"name": "I2C2_SCL", "style": "i2c", "categories": ["alternate"]},
+		{"name": "USART1_TX", "style": "serial", "categories": ["alternate"]},
+		{"name": "QUADSPI1_BK2_IO3", "style": "spi", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 
-		{"name": "ADC2_IN5", "style": "analog", "category": "additional"}
+		{"name": "ADC2_IN5", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -60,19 +59,19 @@
 		{"name": "20", "style": "physicalPin"},
 		{"name": "PA6", "style": "portPin"},
 
-		{"name": "TIM16_CH1", "style": "timer", "category": "alternate"},
-		{"name": "TIM3_CH1", "style": "timer", "category": "alternate"},
-		{"name": "TIM8_BKIN", "style": "timer", "category": "alternate"},
-		{"name": "SPI1_MISO", "style": "spi", "category": "alternate"},
-		{"name": "TIM1_BKIN", "style": "timer", "category": "alternate"},
-		{"name": "COMP1_OUT", "style": "analog", "category": "alternate"},
-		{"name": "QUADSPI1_BK1_IO3", "style": "spi", "category": "alternate"},
-		{"name": "LPUART1_CTS", "style": "serial", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "TIM16_CH1", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM3_CH1", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM8_BKIN", "style": "timer", "categories": ["alternate"]},
+		{"name": "SPI1_MISO", "style": "spi", "categories": ["alternate"]},
+		{"name": "TIM1_BKIN", "style": "timer", "categories": ["alternate"]},
+		{"name": "COMP1_OUT", "style": "analog", "categories": ["alternate"]},
+		{"name": "QUADSPI1_BK1_IO3", "style": "spi", "categories": ["alternate"]},
+		{"name": "LPUART1_CTS", "style": "serial", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 		
-		{"name": "ADC2_IN3", "style": "analog", "category": "additional"},
-		{"name": "DAC2_OUT1", "style": "DAC", "category": "additional"},
-		{"name": "OPAMP2_VOUT", "style": "analog", "category": "additional"}
+		{"name": "ADC2_IN3", "style": "analog", "categories": ["additional"]},
+		{"name": "DAC2_OUT1", "style": "DAC", "categories": ["additional"]},
+		{"name": "OPAMP2_VOUT", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -87,36 +86,35 @@
 		{"name": "PA5", "style": "portPin"},
 		{"name": "LED BUILTIN", "style": "led"},
 
-		{"name": "TIM2_CH1", "style": "timer", "category": "alternate"},
-		{"name": "TIM2_ETR", "style": "timer", "category": "alternate"},
-		{"name": "SPI1_SCK", "style": "spi", "category": "alternate"},
-		{"name": "UCPD1_FRSTX", "style": "usb", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "TIM2_CH1", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM2_ETR", "style": "timer", "categories": ["alternate"]},
+		{"name": "SPI1_SCK", "style": "spi", "categories": ["alternate"]},
+		{"name": "UCPD1_FRSTX", "style": "usb", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 
-		{"name": "ADC2_IN13", "style": "analog", "category": "additional"},
-		{"name": "DAC1_OUT2", "style": "DAC", "category": "additional"},
-		{"name": "COMP2-", "style": "analog", "category": "additional"},
-		{"name": "OPAMP2_V-", "style": "analog", "category": "additional"}
+		{"name": "ADC2_IN13", "style": "analog", "categories": ["additional"]},
+		{"name": "DAC1_OUT2", "style": "DAC", "categories": ["additional"]},
+		{"name": "COMP2-", "style": "analog", "categories": ["additional"]},
+		{"name": "OPAMP2_V-", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
-	"isPWM": true,
 	"functions": [
 		{"name": "24", "style": "physicalPin"},
 		{"name": "PB0", "style": "portPin"},
 
-		{"name": "TIM3_CH3", "style": "timer", "category": "alternate"},
-		{"name": "TIM8_CH2N", "style": "timer", "category": "alternate"},
-		{"name": "TIM1_CH2N", "style": "timer", "category": "alternate"},
-		{"name": "QUADSPI1_BK1_IO1", "style": "spi", "category": "alternate"},
-		{"name": "HRTIM1_FLT5", "style": "timer", "category": "alternate"},
-		{"name": "UCPD1_FRSTX", "style": "usb", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "TIM3_CH3", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM8_CH2N", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM1_CH2N", "style": "timer", "categories": ["alternate"]},
+		{"name": "QUADSPI1_BK1_IO1", "style": "spi", "categories": ["alternate"]},
+		{"name": "HRTIM1_FLT5", "style": "hrtimer", "categories": ["alternate"]},
+		{"name": "UCPD1_FRSTX", "style": "usb", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 		
-		{"name": "ADC3_IN12/ADC1_IN15", "style": "analog", "category": "additional"},
-		{"name": "COMP4+", "style": "analog", "category": "additional"},
-		{"name": "OPAMP2+", "style": "analog", "category": "additional"},
-		{"name": "OPAMP3+", "style": "analog", "category": "additional"}
+		{"name": "ADC3_IN12/ADC1_IN15", "style": "analog", "categories": ["additional"]},
+		{"name": "COMP4+", "style": "analog", "categories": ["additional"]},
+		{"name": "OPAMP2+", "style": "analog", "categories": ["additional"]},
+		{"name": "OPAMP3+", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -124,18 +122,18 @@
 		{"name": "13", "style": "physicalPin"},
 		{"name": "PA1", "style": "portPin"},
 
-		{"name": "RTC_REFIN", "style": "rtc", "category": "alternate"},
-		{"name": "TIM2_CH2", "style": "timer", "category": "alternate"},
-		{"name": "TIM5_CH2", "style": "timer", "category": "alternate"},
-		{"name": "USART2_RTS_DE", "style": "serial", "category": "alternate"},
-		{"name": "TIM15_CH1N", "style": "timer", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "RTC_REFIN", "style": "rtc", "categories": ["alternate"]},
+		{"name": "TIM2_CH2", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM5_CH2", "style": "timer", "categories": ["alternate"]},
+		{"name": "USART2_RTS_DE", "style": "serial", "categories": ["alternate"]},
+		{"name": "TIM15_CH1N", "style": "timer", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 
-		{"name": "ADC12 IN2", "style": "analog", "category": "additional"},
-		{"name": "COMP1+", "style": "analog", "category": "additional"},
-		{"name": "OPAMP1+", "style": "analog", "category": "additional"},
-		{"name": "OPAMP3+", "style": "analog", "category": "additional"},
-		{"name": "OPAMP6-", "style": "analog", "category": "additional"}
+		{"name": "ADC12 IN2", "style": "analog", "categories": ["additional"]},
+		{"name": "COMP1+", "style": "analog", "categories": ["additional"]},
+		{"name": "OPAMP1+", "style": "analog", "categories": ["additional"]},
+		{"name": "OPAMP3+", "style": "analog", "categories": ["additional"]},
+		{"name": "OPAMP6-", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -143,20 +141,20 @@
 		{"name": "12", "style": "physicalPin"},
 		{"name": "PA0", "style": "portPin"},
 
-		{"name": "TIM2_CH1", "style": "timer", "category": "alternate"},
-		{"name": "TIM5_CH1", "style": "timer", "category": "alternate"},
-		{"name": "USART2_CTS", "style": "serial", "category": "alternate"},
-		{"name": "COMP1_OUT", "style": "analog", "category": "alternate"},
-		{"name": "TIM8_BKIN", "style": "timer", "category": "alternate"},
-		{"name": "TIM8_ETR", "style": "timer", "category": "alternate"},
-		{"name": "TIM2_ETR", "style": "timer", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "TIM2_CH1", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM5_CH1", "style": "timer", "categories": ["alternate"]},
+		{"name": "USART2_CTS", "style": "serial", "categories": ["alternate"]},
+		{"name": "COMP1_OUT", "style": "analog", "categories": ["alternate"]},
+		{"name": "TIM8_BKIN", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM8_ETR", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM2_ETR", "style": "timer", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 
-		{"name": "ADC12 IN1", "style": "analog", "category": "additional"},
-		{"name": "COMP1-", "style": "analog", "category": "additional"},
-		{"name": "COMP3+", "style": "analog", "category": "additional"},
-		{"name": "RTC_TAMP2", "style": "rtc", "category": "additional"},
-		{"name": "WKUP1", "style": "control", "category": "additional"}
+		{"name": "ADC12 IN1", "style": "analog", "categories": ["additional"]},
+		{"name": "COMP1-", "style": "analog", "categories": ["additional"]},
+		{"name": "COMP3+", "style": "analog", "categories": ["additional"]},
+		{"name": "RTC_TAMP2", "style": "rtc", "categories": ["additional"]},
+		{"name": "WKUP1", "style": "control", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -170,16 +168,16 @@
 		{"name": "11", "style": "physicalPin"},
 		{"name": "PC3", "style": "portPin"},
 
-		{"name": "LPTIM1_ETR", "style": "timer", "category": "alternate"},
-		{"name": "TIM1_CH4", "style": "timer", "category": "alternate"},
-		{"name": "SAI1_D1", "style": "audio", "category": "alternate"},
-		{"name": "TIM1_BKIN2", "style": "timer", "category": "alternate"},
-		{"name": "QUADSPI1_BK2_IO2", "style": "spi", "category": "alternate"},
-		{"name": "SAI1_SD_A", "style": "audio", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "LPTIM1_ETR", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM1_CH4", "style": "timer", "categories": ["alternate"]},
+		{"name": "SAI1_D1", "style": "audio", "categories": ["alternate"]},
+		{"name": "TIM1_BKIN2", "style": "timer", "categories": ["alternate"]},
+		{"name": "QUADSPI1_BK2_IO2", "style": "spi", "categories": ["alternate"]},
+		{"name": "SAI1_SD_A", "style": "audio", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 			
-		{"name": "ADC12_IN9", "style": "analog", "category": "additional"},
-		{"name": "OPAMP5_V+", "style": "analog", "category": "additional"}
+		{"name": "ADC12_IN9", "style": "analog", "categories": ["additional"]},
+		{"name": "OPAMP5_V+", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -187,14 +185,14 @@
 		{"name": "10", "style": "physicalPin"},
 		{"name": "PC2", "style": "portPin"},
 
-		{"name": "LPTIM1_IN2", "style": "timer", "category": "alternate"},
-		{"name": "TIM1_CH3", "style": "timer", "category": "alternate"},
-		{"name": "COMP3_OUT", "style": "analog", "category": "alternate"},
-		{"name": "TIM20_CH2", "style": "timer", "category": "alternate"},
-		{"name": "QUADSPI1_BK2_IO1", "style": "spi", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "LPTIM1_IN2", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM1_CH3", "style": "timer", "categories": ["alternate"]},
+		{"name": "COMP3_OUT", "style": "analog", "categories": ["alternate"]},
+		{"name": "TIM20_CH2", "style": "timer", "categories": ["alternate"]},
+		{"name": "QUADSPI1_BK2_IO1", "style": "spi", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 		
-		{"name": "ADC12_IN8", "style": "analog", "category": "additional"}
+		{"name": "ADC12_IN8", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -202,15 +200,15 @@
 		{"name": "9", "style": "physicalPin"},
 		{"name": "PC1", "style": "portPin"},
 
-		{"name": "LPTIM1_OUT", "style": "timer", "category": "alternate"},
-		{"name": "TIM1_CH2", "style": "timer", "category": "alternate"},
-		{"name": "LPUART1_TX", "style": "serial", "category": "alternate"},
-		{"name": "QUADSPI1_BK2_IO0", "style": "spi", "category": "alternate"},
-		{"name": "SAI1_SD_A", "style": "audio", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "LPTIM1_OUT", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM1_CH2", "style": "timer", "categories": ["alternate"]},
+		{"name": "LPUART1_TX", "style": "serial", "categories": ["alternate"]},
+		{"name": "QUADSPI1_BK2_IO0", "style": "spi", "categories": ["alternate"]},
+		{"name": "SAI1_SD_A", "style": "audio", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 
-		{"name": "ADC12_IN7", "style": "analog", "category": "additional"},
-		{"name": "COMP3+", "style": "analog", "category": "additional"}
+		{"name": "ADC12_IN7", "style": "analog", "categories": ["additional"]},
+		{"name": "COMP3+", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -218,13 +216,13 @@
 		{"name": "8", "style": "physicalPin"},
 		{"name": "PC0", "style": "portPin"},
 
-		{"name": "LPTIM1_IN1", "style": "timer", "category": "alternate"},
-		{"name": "TIM1_CH1", "style": "timer", "category": "alternate"},
-		{"name": "LPUART1_RX", "style": "serial", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "LPTIM1_IN1", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM1_CH1", "style": "timer", "categories": ["alternate"]},
+		{"name": "LPUART1_RX", "style": "serial", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 
-		{"name": "ADC12_IN6", "style": "analog", "category": "additional"},
-		{"name": "COMP3-", "style": "analog", "category": "additional"}
+		{"name": "ADC12_IN6", "style": "analog", "categories": ["additional"]},
+		{"name": "COMP3-", "style": "analog", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
@@ -237,35 +235,34 @@
 		{"name": "2", "style": "physicalPin"},
 		{"name": "PC13", "style": "portPin"},
 		
-		{"name": "TIM1_BKIN", "style": "timer", "category": "alternate"},
-		{"name": "TIM1_CH1N", "style": "timer", "category": "alternate"},
-		{"name": "TIM8_CH4N", "style": "timer", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
+		{"name": "TIM1_BKIN", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM1_CH1N", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM8_CH4N", "style": "timer", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]},
 
-		{"name": "WKUP2", "style": "control", "category": "additional"},
-		{"name": "RTC_TAMP1", "style": "rtc", "category": "additional"},
-		{"name": "RTC_TS", "style": "rtc", "category": "additional"},
-		{"name": "RTC_OUT1", "style": "rtc", "category": "additional"}
+		{"name": "WKUP2", "style": "control", "categories": ["additional"]},
+		{"name": "RTC_TAMP1", "style": "rtc", "categories": ["additional"]},
+		{"name": "RTC_TS", "style": "rtc", "categories": ["additional"]},
+		{"name": "RTC_OUT1", "style": "rtc", "categories": ["additional"]}
 	]
 },{
 	"side": "R",
-	"isPWM": true,
 	"functions": [
 		{"name": "62", "style": "physicalPin"},
 		{"name": "PB9", "style": "portPin"},
 
-		{"name": "TIM17_CH1", "style": "timer", "category": "alternate"},
-		{"name": "TIM4_CH4", "style": "timer", "category": "alternate"},
-		{"name": "SAI1_D2", "style": "audio", "category": "alternate"},
-		{"name": "I2C1_SDA", "style": "i2c", "category": "alternate"},
-		{"name": "IR_OUT", "style": "serial", "category": "alternate"}, 
-		{"name": "USART3_TX", "style": "serial", "category": "alternate"},
-		{"name": "COMP2_OUT", "style": "analog", "category": "alternate"},
-		{"name": "FDCAN1_TX", "style": "serial", "category": "alternate"},
-		{"name": "TIM8_CH3", "style": "timer", "category": "alternate"},
-		{"name": "TIM1_CH3N", "style": "timer", "category": "alternate"},
-		{"name": "HRTIM1_EEV5", "style": "timer", "category": "alternate"},
-		{"name": "SAI1_FS_A", "style": "audio", "category": "alternate"},
-		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"}
+		{"name": "TIM17_CH1", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM4_CH4", "style": "timer", "categories": ["alternate"]},
+		{"name": "SAI1_D2", "style": "audio", "categories": ["alternate"]},
+		{"name": "I2C1_SDA", "style": "i2c", "categories": ["alternate"]},
+		{"name": "IR_OUT", "style": "serial", "categories": ["alternate"]}, 
+		{"name": "USART3_TX", "style": "serial", "categories": ["alternate"]},
+		{"name": "COMP2_OUT", "style": "analog", "categories": ["alternate"]},
+		{"name": "FDCAN1_TX", "style": "serial", "categories": ["alternate"]},
+		{"name": "TIM8_CH3", "style": "timer", "categories": ["alternate"]},
+		{"name": "TIM1_CH3N", "style": "timer", "categories": ["alternate"]},
+		{"name": "HRTIM1_EEV5", "style": "hrtimer", "categories": ["alternate"]},
+		{"name": "SAI1_FS_A", "style": "audio", "categories": ["alternate"]},
+		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]}
 	]
 }]

@@ -141,6 +141,13 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#FFD1D1"
 		},
+	"hrtimer" : {
+		"name": "High Resolution Timer",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#FFAFAF"
+		},
 	"control" : {
 		"name": "Control",
 		"isSkewed": true,
