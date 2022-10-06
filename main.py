@@ -162,9 +162,10 @@ def legend_maker(s):
 
     off = 10
     for styl in styles:
-        if ("legend" in styles[styl]):
-            if (styles[styl]["legend"] == True):
-                pass
+        if (("legend" in styles[styl]) and (styles[styl]["legend"] == False)):
+            pass
+        elif (styl in omit_styles):
+            pass
         else:
             w = function_label(svg, 10, off, "    ", styles[styl], 0)
 
@@ -211,8 +212,8 @@ if __name__ == '__main__':
 
     s = Svg(0, 0, 1500, 600)
     
-    omit_categories = ["additional"] #["alternate", "additional"]
-    omit_styles = ["timer", "audio", "usb"] #["timer"]
+    omit_categories = ["extended"] #["alternate", "additional"]
+    omit_styles = ["timer", "audio", "usb", "rtc"] #["timer"]
 
     fstyles = open('styles.json')
     styles = json.load(fstyles)

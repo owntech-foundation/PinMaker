@@ -58,7 +58,6 @@
 		},
 	"default" : {
 		"isSkewed": true,
-		"legend": false,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#ffffff"
@@ -125,9 +124,16 @@
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
-		"fillColor" : "#97b756"
+		"fillColor" : "#A6CF98"
 	},
-	"DAC" : {
+	"adc" : {
+		"name": "Analog",
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#1C6758"
+	},
+	"dac" : {
 		"name": "DAC",
 		"isSkewed": true,
 		"textColor" : "#000000",
