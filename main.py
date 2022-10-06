@@ -24,6 +24,7 @@ def function_label_lenght_helper(text, style, added_width, is_italic=True):
     em_size = 3
     margins = 3
     missing_number_offset = 0
+
     if ("fixed_width_chars" in style):
         if (style["fixed_width_chars"] > len(text)):
             missing_number_offset = em_size * abs(style["fixed_width_chars"] - len(text)) # width of digit * number of missing digits
@@ -107,19 +108,25 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
     pinsvg = Svg()
 
     for f in pin_data['functions']:
+        if (("category" in f) and f["category"] in omit_categories):
+            pass
+        elif (("style" in f) and f["style"] in omit_styles):
+            pass
+        else:
+            lenght_label = 0
+            error_offset = 0
 
-        lenght_label = 0
-        error_offset = 0
-        if (pin_data["side"] == "L"):
-            lenght_label = function_label_lenght_helper(f['name'], styles[f['style']], 0)
-            error_offset = 17.941 #surely due to the skew thinggy
+            if (pin_data["side"] == "L"):
+                lenght_label = function_label_lenght_helper(f['name'], styles[f['style']], 0)
+                error_offset = 17.941 #surely due to the skew thinggy
 
-        pr = function_label(pinsvg, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles[f['style']], 0, sign)
+            pr = function_label(pinsvg, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles[f['style']], 0, sign)
 
-        if (pr != 0): #for the hidden tag
-            prev_width = prev_width + pr + 3
+            if (pr != 0): #for the hidden tag
+                prev_width = prev_width + pr + 3
 
     pwm_offeset = 0
+
     if ("isPWM" in pin_data):
         if (pin_data["isPWM"] == True):
             
@@ -148,6 +155,7 @@ def legend_maker(s):
     legend_rect_arg['style'] ='fill:#f1f1f1 ; stroke-width:0.5; stroke:#d1d1d1; '
     
     rect = Rect(0, 0, 110, 200, rx=5, ry=5, **legend_rect_arg)
+    #TODO: auto resize the legend
     svg.addElement(rect)
 
     off = 10
@@ -172,10 +180,25 @@ def legend_maker(s):
 
     s.addElement(svg)
 
+def customSort(k):
+    return (style_order.index(k['style']))
+
+def style_order_helper():
+    global style_order
+
+    style_order = []
+    for styl in styles:
+        style_order.append(styl)
 
 def load_pins_file(filepath, svg, x, y):
+    style_order_helper()
     f = open(filepath)
     board_data = json.load(f)
+
+    for pind in board_data:
+        func = pind["functions"]
+        func.sort(key=customSort)
+
     for b in board_data:
         pin_maker(b, svg, x, y)
         y = y + 9.6 #0.1in
@@ -183,10 +206,13 @@ def load_pins_file(filepath, svg, x, y):
 
 if __name__ == '__main__': 
     global styles
+    global omit_categories
 
     s = Svg(0, 0, 1500, 600)
     
-    # Opening JSON file
+    omit_categories = [] #["alternate", "additional"]
+    omit_styles = [] #["timer"]
+
     fstyles = open('styles.json')
     styles = json.load(fstyles)
     fstyles.close()

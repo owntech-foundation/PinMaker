@@ -1,13 +1,7 @@
 {
-	"default" : {
-		"isSkewed": true,
-		"legend": false,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#ffffff"
-		},
 	"hidden" : {
 		"special": "hidden",
+		"desc": "hide the pin and dont take space",
 		"legend": false,
 		"isSkewed": true,
 		"textColor" : "#000000",
@@ -16,6 +10,7 @@
 		},
 	"dummy" : {
 		"special": "dummy",
+		"desc": "hide the pin but take space.",
 		"legend": false,
 		"isSkewed": true,
 		"textColor" : "#000000",
@@ -24,26 +19,12 @@
 		},
 	"onlyText" : {
 		"special": "onlyText",
+		"desc": "only show the test and not the box. take the space of the box",
 		"legend": false,
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#000000",
 		"fillColor" : "#000000"
-		},
-	"greyOut" : {
-		"name": "Greyed Out",
-		"isSkewed": true,
-		"legend": false,
-		"textColor" : "#c2c2c2",
-		"strokeColor" : "#424242",
-		"fillColor" : "#ffffff"
-		},
-    "notSkuwed" : {
-		"isSkewed": false,
-		"legend": false,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#ffffff"
 		},
 	"power" : {
 		"name": "Power",
@@ -59,76 +40,6 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#1f1f1f"
 		},
-	"led" : {
-		"name": "Leds",
-		"isSkewed": true,
-		"textColor" : "#ffffff",
-		"strokeColor" : "#424242",
-		"fillColor" : "#FF6961"
-		},
-	"usb" : {
-		"name": "USB",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#ECC5FB"
-		},
-	"serial" : {
-		"name": "Serial",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#cfe6ed"
-		},	
-	"i2c" : {
-		"name": "I2C",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#68A7AD"
-		},
-	"spi" : {
-		"name": "SPI",
-		"isSkewed": true,
-		"textColor" : "#ffffff",
-		"strokeColor" : "#424242",
-		"fillColor" : "#8F4068"
-		},
-	"audio" : {
-		"name": "Audio",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#EEE4AB"
-		},
-	"analog" : {
-		"name": "Analog",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#97b756"
-	},
-	"DAC" : {
-		"name": "DAC",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#eb8b2c"
-	},
-	"control" : {
-		"name": "Control",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#f9e339"
-	},
-	"jtag" : {
-		"name": "JTAG",
-		"isSkewed": true,
-		"textColor" : "#ffffff",
-		"strokeColor" : "#424242",
-		"fillColor" : "#006fbe"
-	},
 	"physicalPin" : {
 		"name": "Physical Pin",
 		"isSkewed": true,
@@ -145,13 +56,105 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#d3c8bb"
 		},
+	"default" : {
+		"isSkewed": true,
+		"legend": false,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ffffff"
+		},
+	"greyOut" : {
+		"name": "Greyed Out",
+		"isSkewed": true,
+		"legend": false,
+		"textColor" : "#c2c2c2",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ffffff"
+		},
+    "notSkuwed" : {
+		"isSkewed": false,
+		"legend": false,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ffffff"
+		},
+	"led" : {
+		"name": "Leds",
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#FF6961"
+		},
+	"usb" : {
+		"name": "USB",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ECC5FB"
+		},
+	"i2c" : {
+		"name": "I2C",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#68A7AD"
+		},
+	"spi" : {
+		"name": "SPI",
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#8F4068"
+		},
+	"serial" : {
+		"name": "Serial",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#AAC4FF"
+		},	
+	"audio" : {
+		"name": "Audio",
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#5F7161"
+		},
+	"analog" : {
+		"name": "Analog",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#97b756"
+	},
+	"DAC" : {
+		"name": "DAC",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#eb8b2c"
+	},
 	"timer" : {
 		"name": "Timers",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
-		"fillColor" : "#e6c3bb"
+		"fillColor" : "#FFD1D1"
 		},
+	"control" : {
+		"name": "Control",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#f9e339"
+	},
+	"jtag" : {
+		"name": "JTAG",
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#006fbe"
+	},
 	"rtc" : {
 		"name": "RTC",
 		"isSkewed": true,
