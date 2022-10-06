@@ -62,21 +62,6 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#ffffff"
 		},
-	"greyOut" : {
-		"name": "Greyed Out",
-		"isSkewed": true,
-		"legend": false,
-		"textColor" : "#c2c2c2",
-		"strokeColor" : "#424242",
-		"fillColor" : "#ffffff"
-		},
-    "notSkuwed" : {
-		"isSkewed": false,
-		"legend": false,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#ffffff"
-		},
 	"led" : {
 		"name": "Leds",
 		"isSkewed": true,
@@ -84,13 +69,48 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#FF6961"
 		},
-	"usb" : {
-		"name": "USB",
+	"timer" : {
+		"name": "Timers",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
-		"fillColor" : "#ECC5FB"
+		"fillColor" : "#FFD1D1"
 		},
+	"hrtimer" : {
+		"name": "High Resolution Timer",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#FFAFAF"
+	},
+	"adc" : {
+		"name": "Analog",
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#1C6758"
+	},
+	"dac" : {
+		"name": "DAC",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#eb8b2c"
+	},
+	"analog" : {
+		"name": "Analog",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#A6CF98"
+	},
+	"can" : {
+		"name": "CAN",
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#5F6F94"
+	},	
 	"i2c" : {
 		"name": "I2C",
 		"isSkewed": true,
@@ -111,48 +131,13 @@
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#AAC4FF"
-		},	
+		},
 	"audio" : {
 		"name": "Audio",
 		"isSkewed": true,
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
 		"fillColor" : "#5F7161"
-		},
-	"analog" : {
-		"name": "Analog",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#A6CF98"
-	},
-	"adc" : {
-		"name": "Analog",
-		"isSkewed": true,
-		"textColor" : "#ffffff",
-		"strokeColor" : "#424242",
-		"fillColor" : "#1C6758"
-	},
-	"dac" : {
-		"name": "DAC",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#eb8b2c"
-	},
-	"timer" : {
-		"name": "Timers",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#FFD1D1"
-		},
-	"hrtimer" : {
-		"name": "High Resolution Timer",
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#FFAFAF"
 		},
 	"control" : {
 		"name": "Control",
@@ -174,5 +159,27 @@
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#CCF6C8"
+		},
+	"greyOut" : {
+		"name": "Greyed Out",
+		"isSkewed": true,
+		"legend": false,
+		"textColor" : "#c2c2c2",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ffffff"
+		},
+	"notSkuwed" : {
+		"isSkewed": false,
+		"legend": false,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ffffff"
+		},
+	"usb" : {
+		"name": "USB",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#ECC5FB"
 		}
 }

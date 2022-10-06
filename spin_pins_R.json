@@ -258,7 +258,7 @@
 		{"name": "IR_OUT", "style": "serial", "categories": ["alternate", "extended"]}, 
 		{"name": "USART3_TX", "style": "serial", "categories": ["alternate"]},
 		{"name": "COMP2_OUT", "style": "analog", "categories": ["alternate"]},
-		{"name": "FDCAN1_TX", "style": "serial", "categories": ["alternate"]},
+		{"name": "FDCAN1_TX", "style": "can", "categories": ["alternate"]},
 		{"name": "TIM8_CH3", "style": "timer", "categories": ["alternate"]},
 		{"name": "TIM1_CH3N", "style": "timer", "categories": ["alternate"]},
 		{"name": "HRTIM1_EEV5", "style": "hrtimer", "categories": ["alternate", "extended"]},

@@ -46,7 +46,7 @@
 		{"name": "USART2_RX", "style": "serial", "categories": ["alternate"]},
 		{"name": "UART4_RTS_DE", "style": "serial", "categories": ["alternate", "extended"]},
 		{"name": "TIM1_BKIN", "style": "timer", "categories": ["alternate", "extended"]},
-		{"name": "FDCAN3_TX", "style": "serial", "categories": ["alternate"]},
+		{"name": "FDCAN3_TX", "style": "can", "categories": ["alternate"]},
 		{"name": "HRTIM1_FLT2", "style": "hrtimer", "categories": ["alternate", "extended"]},
 		{"name": "TIM2_ETR", "style": "timer", "categories": ["alternate", "extended"]},
 		{"name": "EVENTOUT", "style": "hidden", "categories": ["alternate"]}
@@ -79,7 +79,7 @@
 
 		{"name": "USART2_TX", "style": "serial", "categories": ["alternate"]},
 		{"name": "TIM3_ETR", "style": "timer", "categories": ["alternate", "extended"]},
-		{"name": "FDCAN3_RX", "style": "serial", "categories": ["alternate"]},
+		{"name": "FDCAN3_RX", "style": "can", "categories": ["alternate"]},
 		{"name": "HRTIM1_SCOUT", "style": "hrtimer", "categories": ["alternate"]},
 		{"name": "HRTIM1_EEV9", "style": "hrtimer", "categories": ["alternate", "extended"]},
 		{"name": "SAI1_SCK_B", "style": "audio", "categories": ["alternate"]},

@@ -14,7 +14,7 @@
 
 		{"name": "USART2_CK", "style": "serial", "categories": ["alternate", "extended"]},
 		{"name": "I2C3_SDA", "style": "i2c", "categories": ["alternate"]},
-		{"name": "FDCAN2_RX", "style": "serial", "categories": ["alternate"]},
+		{"name": "FDCAN2_RX", "style": "can", "categories": ["alternate"]},
 		{"name": "TIM17_CH1", "style": "timer", "categories": ["alternate"]},
 		{"name": "LPTIM1_IN1", "style": "timer", "categories": ["alternate"]},
 		{"name": "SAI1_SD_B", "style": "audio", "categories": ["alternate"]},
@@ -86,7 +86,7 @@
 		{"name": "I2C1_SCL", "style": "i2c", "categories": ["alternate"]},
 		{"name": "USART3_RX", "style": "serial", "categories": ["alternate"]},
 		{"name": "COMP1_OUT", "style": "analog", "categories": ["alternate"]},
-		{"name": "FDCAN1_RX", "style": "serial", "categories": ["alternate"]},
+		{"name": "FDCAN1_RX", "style": "can", "categories": ["alternate"]},
 		{"name": "TIM8_CH2", "style": "timer", "categories": ["alternate"]},
 		{"name": "TIM1_BKIN", "style": "timer", "categories": ["alternate", "extended"]},
 		{"name": "HRTIM1_EEV8", "style": "hrtimer", "categories": ["alternate", "extended"]},
