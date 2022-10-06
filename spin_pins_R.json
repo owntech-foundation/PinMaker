@@ -124,7 +124,7 @@
 		{"name": "13", "style": "physicalPin"},
 		{"name": "PA1", "style": "portPin"},
 
-		{"name": "RTC_REFIN", "style": "default", "category": "alternate"},
+		{"name": "RTC_REFIN", "style": "rtc", "category": "alternate"},
 		{"name": "TIM2_CH2", "style": "timer", "category": "alternate"},
 		{"name": "TIM5_CH2", "style": "timer", "category": "alternate"},
 		{"name": "USART2_RTS_DE", "style": "serial", "category": "alternate"},
@@ -155,8 +155,8 @@
 		{"name": "ADC12 IN1", "style": "analog", "category": "additional"},
 		{"name": "COMP1-", "style": "analog", "category": "additional"},
 		{"name": "COMP3+", "style": "analog", "category": "additional"},
-		{"name": "RTC_TAMP2", "style": "default", "category": "additional"},
-		{"name": "WKUP1", "style": "default", "category": "additional"}
+		{"name": "RTC_TAMP2", "style": "rtc", "category": "additional"},
+		{"name": "WKUP1", "style": "control", "category": "additional"}
 	]
 },{
 	"side": "R",
@@ -242,10 +242,10 @@
 		{"name": "TIM8_CH4N", "style": "timer", "category": "alternate"},
 		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"},
 
-		{"name": "WKUP2", "style": "default", "category": "additional"},
-		{"name": "RTC_TAMP1", "style": "default", "category": "additional"},
-		{"name": "RTC_TS", "style": "default", "category": "additional"},
-		{"name": "RTC_OUT1", "style": "default", "category": "additional"}
+		{"name": "WKUP2", "style": "control", "category": "additional"},
+		{"name": "RTC_TAMP1", "style": "rtc", "category": "additional"},
+		{"name": "RTC_TS", "style": "rtc", "category": "additional"},
+		{"name": "RTC_OUT1", "style": "rtc", "category": "additional"}
 	]
 },{
 	"side": "R",

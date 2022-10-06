@@ -31,6 +31,7 @@
 		"fillColor" : "#000000"
 		},
 	"greyOut" : {
+		"name": "Greyed Out",
 		"isSkewed": true,
 		"legend": false,
 		"textColor" : "#c2c2c2",
@@ -45,78 +46,91 @@
 		"fillColor" : "#ffffff"
 		},
 	"power" : {
+		"name": "Power",
 		"isSkewed": true,
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
 		"fillColor" : "#b9282e"
 		},
 	"GND" : {
+		"name": "GND",
 		"isSkewed": true,
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
 		"fillColor" : "#1f1f1f"
 		},
 	"led" : {
+		"name": "Leds",
 		"isSkewed": true,
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
 		"fillColor" : "#FF6961"
 		},
 	"usb" : {
+		"name": "USB",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#ECC5FB"
 		},
 	"serial" : {
+		"name": "Serial",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#cfe6ed"
 		},	
 	"i2c" : {
+		"name": "I2C",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#68A7AD"
 		},
 	"spi" : {
+		"name": "SPI",
 		"isSkewed": true,
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
 		"fillColor" : "#8F4068"
 		},
 	"audio" : {
+		"name": "Audio",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#EEE4AB"
 		},
 	"analog" : {
+		"name": "Analog",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#97b756"
 	},
 	"DAC" : {
+		"name": "DAC",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#eb8b2c"
 	},
 	"control" : {
+		"name": "Control",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#f9e339"
 	},
 	"jtag" : {
+		"name": "JTAG",
 		"isSkewed": true,
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
 		"fillColor" : "#006fbe"
 	},
 	"physicalPin" : {
+		"name": "Physical Pin",
 		"isSkewed": true,
 		"fixed_width_chars": 2,
 		"textColor" : "#ffffff",
@@ -124,22 +138,25 @@
 		"fillColor" : "#828584"
 		},
 	"portPin" : {
+		"name": "Port Pin",
 		"isSkewed": true,
 		"fixed_width_chars": 4,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#d3c8bb"
 		},
-	"pinFunction" : {
-		"isSkewed": true,
-		"textColor" : "#000000",
-		"strokeColor" : "#424242",
-		"fillColor" : "#d1d1df"
-		},
 	"timer" : {
+		"name": "Timers",
 		"isSkewed": true,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#e6c3bb"
+		},
+	"rtc" : {
+		"name": "RTC",
+		"isSkewed": true,
+		"textColor" : "#000000",
+		"strokeColor" : "#424242",
+		"fillColor" : "#CCF6C8"
 		}
 }

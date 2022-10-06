@@ -67,7 +67,7 @@
 		{"name": "COMP3_OUT", "style": "analog", "category": "alternate"},
 		{"name": "TIM3_CH4", "style": "timer", "category": "alternate"},
 		{"name": "LPTIM1_IN2", "style": "timer", "category": "alternate"},
-		{"name": "FMC_NL", "style": "default", "category": "alternate"},
+		{"name": "FMC_NL", "style": "control", "category": "alternate"},
 		{"name": "HRTIM1_EEV3", "style": "timer", "category": "alternate"},
 		{"name": "UART4_CTS", "style": "serial", "category": "alternate"},
 		{"name": "EVENTOUT", "style": "hidden", "category": "alternate"}

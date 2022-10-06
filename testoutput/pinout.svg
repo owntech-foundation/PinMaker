@@ -203,7 +203,7 @@ OPAMP5_VINP</text>
 <rect x="656.3390441094296" y="99.99999999999999" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="641.059" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 PB15</text>
-<rect x="620.3390441094296" y="99.99999999999999" height="7.68" width="33" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="620.3390441094296" y="99.99999999999999" height="7.68" width="33" rx="2" ry="2" style="fill:#CCF6C8; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="605.059" y="105.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 RTC_REFIN</text>
 <rect x="584.3390441094296" y="99.99999999999999" height="7.68" width="33" rx="2" ry="2" style="fill:#e6c3bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
@@ -395,7 +395,7 @@ I2C3_SDA</text>
 <rect x="666.4954781982372" y="157.59999999999997" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="642.559" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 PA8</text>
-<rect x="648.4954781982372" y="157.59999999999997" height="7.68" width="15" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="648.4954781982372" y="157.59999999999997" height="7.68" width="15" rx="2" ry="2" style="fill:#f9e339; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="623.059" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 MCO</text>
 <rect x="615.4954781982372" y="157.59999999999997" height="7.68" width="30" rx="2" ry="2" style="fill:#68A7AD; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
@@ -949,7 +949,7 @@ OPAMP3+</text>
 <rect x="870.7437391834359" y="147.99999999999997" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="848.5" y="153.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 PA1</text>
-<rect x="891.7437391834359" y="147.99999999999997" height="7.68" width="33" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="891.7437391834359" y="147.99999999999997" height="7.68" width="33" rx="2" ry="2" style="fill:#CCF6C8; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="868.0" y="153.67999999999998" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 RTC_REFIN</text>
 <rect x="927.7437391834359" y="147.99999999999997" height="7.68" width="30" rx="2" ry="2" style="fill:#e6c3bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
@@ -1019,10 +1019,10 @@ COMP1-</text>
 <rect x="1199.4364781982372" y="157.59999999999997" height="7.68" width="24" rx="2" ry="2" style="fill:#97b756; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="1174.0" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 COMP3+</text>
-<rect x="1226.4364781982372" y="157.59999999999997" height="7.68" width="33" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="1226.4364781982372" y="157.59999999999997" height="7.68" width="33" rx="2" ry="2" style="fill:#CCF6C8; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="1201.0" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 RTC_TAMP2</text>
-<rect x="1262.4364781982372" y="157.59999999999997" height="7.68" width="21" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="1262.4364781982372" y="157.59999999999997" height="7.68" width="21" rx="2" ry="2" style="fill:#f9e339; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="1237.0" y="163.27999999999997" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 WKUP1</text>
 </svg>
@@ -1176,16 +1176,16 @@ TIM1_CH1N</text>
 <rect x="977.285651301846" y="224.79999999999993" height="7.68" width="33" rx="2" ry="2" style="fill:#e6c3bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="940.0" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 TIM8_CH4N</text>
-<rect x="1013.285651301846" y="224.79999999999993" height="7.68" width="21" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="1013.285651301846" y="224.79999999999993" height="7.68" width="21" rx="2" ry="2" style="fill:#f9e339; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="976.0" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 WKUP2</text>
-<rect x="1037.285651301846" y="224.79999999999993" height="7.68" width="33" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="1037.285651301846" y="224.79999999999993" height="7.68" width="33" rx="2" ry="2" style="fill:#CCF6C8; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="1000.0" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 RTC_TAMP1</text>
-<rect x="1073.285651301846" y="224.79999999999993" height="7.68" width="24" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="1073.285651301846" y="224.79999999999993" height="7.68" width="24" rx="2" ry="2" style="fill:#CCF6C8; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="1036.0" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 RTC_TS</text>
-<rect x="1100.285651301846" y="224.79999999999993" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="1100.285651301846" y="224.79999999999993" height="7.68" width="30" rx="2" ry="2" style="fill:#CCF6C8; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="1063.0" y="230.47999999999993" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 RTC_OUT1</text>
 </svg>
@@ -1398,7 +1398,7 @@ TIM3_CH4</text>
 <rect x="379.0353112569433" y="330.80000000000007" height="7.68" width="36" rx="2" ry="2" style="fill:#e6c3bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="323.059" y="336.4800000000001" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 LPTIM1_IN2</text>
-<rect x="352.0353112569433" y="330.80000000000007" height="7.68" width="24" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="352.0353112569433" y="330.80000000000007" height="7.68" width="24" rx="2" ry="2" style="fill:#f9e339; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="296.059" y="336.4800000000001" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 FMC_NL</text>
 <rect x="310.0353112569433" y="330.80000000000007" height="7.68" width="39" rx="2" ry="2" style="fill:#e6c3bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
@@ -1519,7 +1519,7 @@ OPAMP4_VINM</text>
 <rect x="707.7559916840179" y="391.6" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="642.559" y="397.28000000000003" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 PB2</text>
-<rect x="674.7559916840179" y="391.6" height="7.68" width="30" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="674.7559916840179" y="391.6" height="7.68" width="30" rx="2" ry="2" style="fill:#CCF6C8; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="608.059" y="397.28000000000003" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 RTC_OUT2</text>
 <rect x="635.7559916840179" y="391.6" height="7.68" width="36" rx="2" ry="2" style="fill:#e6c3bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
@@ -1587,7 +1587,7 @@ OPAMP1_VINM</text>
 <rect x="403.44873069881925" y="401.20000000000005" height="7.68" width="39" rx="2" ry="2" style="fill:#97b756; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="335.059" y="406.88000000000005" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 OPAMP2_VINM</text>
-<rect x="379.44873069881925" y="401.20000000000005" height="7.68" width="21" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="379.44873069881925" y="401.20000000000005" height="7.68" width="21" rx="2" ry="2" style="fill:#f9e339; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="311.059" y="406.88000000000005" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 WKUP5</text>
 </svg>
@@ -1912,7 +1912,7 @@ COMP2-</text>
 <rect x="312.8698363928156" y="500.0000000000001" height="7.68" width="39" rx="2" ry="2" style="fill:#97b756; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="227.05900000000003" y="505.6800000000001" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 OPAMP1_VOUT</text>
-<rect x="273.86983639281556" y="500.0000000000001" height="7.68" width="36" rx="2" ry="2" style="fill:#ffffff; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<rect x="273.86983639281556" y="500.0000000000001" height="7.68" width="36" rx="2" ry="2" style="fill:#f9e339; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="188.05899999999997" y="505.6800000000001" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
 WKUP4/LSCO</text>
 </svg>
@@ -2061,11 +2061,12 @@ NRST</text>
 STLINK_TX</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="legend"  >
+<rect x="0" y="0" height="200" width="110" rx="5" ry="5" style="fill:#f1f1f1 ; stroke-width:0.5; stroke:#d1d1d1; "  />
 <rect x="21.76326980708465" y="12" height="7.68" width="18" rx="2" ry="2" style="fill:#b9282e; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="17.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
     </text>
 <text x="40.0" y="17.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-power</text>
+Power</text>
 <rect x="23.526539614169298" y="22" height="7.68" width="18" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="27.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
     </text>
@@ -2075,37 +2076,37 @@ GND</text>
 <text x="22.0" y="37.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
     </text>
 <text x="40.0" y="37.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-led</text>
+Leds</text>
 <rect x="27.0530792283386" y="42" height="7.68" width="18" rx="2" ry="2" style="fill:#ECC5FB; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="47.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
 <text x="40.0" y="47.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-usb</text>
+USB</text>
 <rect x="28.81634903542325" y="52" height="7.68" width="18" rx="2" ry="2" style="fill:#cfe6ed; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
 <text x="40.0" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-serial</text>
+Serial</text>
 <rect x="30.579618842507898" y="62" height="7.68" width="18" rx="2" ry="2" style="fill:#68A7AD; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="67.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
 <text x="40.0" y="67.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-i2c</text>
+I2C</text>
 <rect x="32.34288864959255" y="72" height="7.68" width="18" rx="2" ry="2" style="fill:#8F4068; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="77.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
     </text>
 <text x="40.0" y="77.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-spi</text>
+SPI</text>
 <rect x="34.1061584566772" y="82" height="7.68" width="18" rx="2" ry="2" style="fill:#EEE4AB; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="87.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
 <text x="40.0" y="87.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-audio</text>
+Audio</text>
 <rect x="35.86942826376185" y="92" height="7.68" width="18" rx="2" ry="2" style="fill:#97b756; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="97.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
 <text x="40.0" y="97.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-analog</text>
+Analog</text>
 <rect x="37.6326980708465" y="102" height="7.68" width="18" rx="2" ry="2" style="fill:#eb8b2c; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="107.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
@@ -2115,32 +2116,32 @@ DAC</text>
 <text x="22.0" y="117.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
 <text x="40.0" y="117.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-control</text>
+Control</text>
 <rect x="41.159237685015796" y="122" height="7.68" width="18" rx="2" ry="2" style="fill:#006fbe; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="127.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
     </text>
 <text x="40.0" y="127.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-jtag</text>
+JTAG</text>
 <rect x="42.92250749210045" y="132" height="7.68" width="18" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="137.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
     </text>
 <text x="40.0" y="137.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-physicalPin</text>
+Physical Pin</text>
 <rect x="44.6857772991851" y="142" height="7.68" width="18" rx="2" ry="2" style="fill:#d3c8bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="147.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
 <text x="40.0" y="147.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-portPin</text>
-<rect x="46.449047106269745" y="152" height="7.68" width="18" rx="2" ry="2" style="fill:#d1d1df; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+Port Pin</text>
+<rect x="46.449047106269745" y="152" height="7.68" width="18" rx="2" ry="2" style="fill:#e6c3bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="157.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
 <text x="40.0" y="157.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-pinFunction</text>
-<rect x="48.2123169133544" y="162" height="7.68" width="18" rx="2" ry="2" style="fill:#e6c3bb; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+Timers</text>
+<rect x="48.2123169133544" y="162" height="7.68" width="18" rx="2" ry="2" style="fill:#CCF6C8; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="167.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>
 <text x="40.0" y="167.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-timer</text>
+RTC</text>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="18.840000000000003" y="180"  >
 <path d="m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0 " style="stroke-width:0.96; stroke:#212121; fill:none; "  />
 </svg>

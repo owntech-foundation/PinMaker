@@ -25,7 +25,7 @@
 		{"name": "26", "style": "physicalPin"},
 		{"name": "PB2", "style": "portPin"},
 		
-		{"name": "RTC_OUT2", "style": "default", "category": "alternate"},
+		{"name": "RTC_OUT2", "style": "rtc", "category": "alternate"},
 		{"name": "LPTIM1_OUT", "style": "timer", "category": "alternate"},
 		{"name": "TIM5_CH1", "style": "timer", "category": "alternate"},
 		{"name": "TIM20_CH1", "style": "timer", "category": "alternate"},
@@ -55,7 +55,7 @@
 		{"name": "ADC2_IN11", "style": "analog", "category": "additional"},
 		{"name": "OPAMP1_VINM", "style": "analog", "category": "additional"},
 		{"name": "OPAMP2_VINM", "style": "analog", "category": "additional"},
-		{"name": "WKUP5", "style": "default", "category": "additional"}
+		{"name": "WKUP5", "style": "control", "category": "additional"}
 	]
 },{
 	"side": "L",

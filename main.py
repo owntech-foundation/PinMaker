@@ -144,6 +144,12 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
 def legend_maker(s):
     svg = Svg("legend")
 
+    legend_rect_arg={}
+    legend_rect_arg['style'] ='fill:#f1f1f1 ; stroke-width:0.5; stroke:#d1d1d1; '
+    
+    rect = Rect(0, 0, 110, 200, rx=5, ry=5, **legend_rect_arg)
+    svg.addElement(rect)
+
     off = 10
     for styl in styles:
         if ("legend" in styles[styl]):
@@ -151,7 +157,12 @@ def legend_maker(s):
                 pass
         else:
             w = function_label(svg, 10, off, "    ", styles[styl], 0)
-            function_label(svg, 10 + w, off, styl, styles["onlyText"], 0)
+
+            name = styl
+            if ("name" in styles[styl]):
+                name = styles[styl]['name']
+            
+            function_label(svg, 10 + w, off, name, styles["onlyText"], 0)
             off = off + 10
     
     #s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))

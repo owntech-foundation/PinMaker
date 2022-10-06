@@ -106,7 +106,7 @@
 		{"name": "ADC1_IN3", "style": "analog", "category": "additional"},
 		{"name": "COMP2-", "style": "analog", "category": "additional"},
 		{"name": "OPAMP1_VOUT", "style": "analog", "category": "additional"},
-		{"name": "WKUP4/LSCO", "style": "default", "category": "additional"}
+		{"name": "WKUP4/LSCO", "style": "control", "category": "additional"}
 	]
 },{
 	"side": "L",
