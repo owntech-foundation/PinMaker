@@ -1,0 +1,49 @@
+[{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "8", "style": "physicalPin"},
+		{"name": "GND COM", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "7", "style": "physicalPin"},
+		{"name": "HRTIM1_SCIN", "style": "hrtimer"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "6", "style": "physicalPin"},
+		{"name": "SHARE-", "style": "analog"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "5", "style": "physicalPin"},
+		{"name": "SHARE+", "style": "analog"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "4", "style": "physicalPin"},
+		{"name": "RS485 B", "style": "serial"}]
+},{
+"side": "L",
+"functions": [
+	{"name": "XX", "style": "dummy"},
+	{"name": "3", "style": "physicalPin"},
+	{"name": "RS485 A", "style": "serial"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "2", "style": "physicalPin"},
+		{"name": "CAN_L", "style": "can"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "1", "style": "physicalPin"},
+		{"name": "CAN_H", "style": "can"}]
+}]

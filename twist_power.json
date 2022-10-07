@@ -1,0 +1,59 @@
+[{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "VIHigh", "style": "power"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "VIHigh", "style": "power"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "GND", "style": "GND"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "Neutral", "style": "neutral"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "Neutral", "style": "neutral"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "VI2Low", "style": "power"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "VI2Low", "style": "power"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "VI1Low", "style": "power"}]
+},{
+	"side": "L",
+	"functions": [
+		{"name": "XX", "style": "dummy"},
+		{"name": "VI1Low", "style": "power"}]
+}]
