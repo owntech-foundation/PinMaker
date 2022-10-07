@@ -212,25 +212,27 @@ if __name__ == '__main__':
 
     s = Svg(0, 0, 1500, 600)
     
-    omit_categories = ["extended"] #["alternate", "additional"]
-    omit_styles = ["timer", "audio", "usb", "rtc", "analog"] #["timer"]
+    omit_categories = []#["extended"] #["alternate", "additional"]
+    omit_styles = [] #["timer", "audio", "usb", "rtc", "analog"] #["timer"]
 
     fstyles = open('styles.json')
     styles = json.load(fstyles)
     fstyles.close()
 
-    load_pins_file('spin_pins_L.json', s, 700, 50)
-    load_pins_file('spin_pins_R.json', s, 800, 50)
+    # load_pins_file('spin_pins_L.json', s, 700, 50)
+    # load_pins_file('spin_pins_R.json', s, 800, 50)
 
-    load_pins_file('spin_pins_B.json', s, 700, 300)
+    # load_pins_file('spin_pins_B.json', s, 700, 300)
 
-    load_pins_file('spin_pins_L2.json', s, 700, 380)
-    load_pins_file('spin_pins_L3.json', s, 700, 450)
+    # load_pins_file('spin_pins_L2.json', s, 700, 380)
+    # load_pins_file('spin_pins_L3.json', s, 700, 450)
 
-    load_pins_file('spin_jtag_L.json', s, 1100, 300)
-    load_pins_file('spin_jtag_R.json', s, 1150, 300)
+    # load_pins_file('spin_jtag_L.json', s, 1100, 300)
+    # load_pins_file('spin_jtag_R.json', s, 1150, 300)
     
-    
+    omit_styles = ["power", "portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
+    load_pins_file('twist_RJ485.json', s, 1150, 300)
+
     legend_maker(s)
 
     s.save('./testoutput/pinout.svg')

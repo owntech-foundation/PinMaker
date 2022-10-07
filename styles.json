@@ -26,6 +26,14 @@
 		"strokeColor" : "#000000",
 		"fillColor" : "#000000"
 		},
+	"physicalPin" : {
+		"name": "Physical Pin",
+		"isSkewed": true,
+		"fixed_width_chars": 2,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#828584"
+		},
 	"power" : {
 		"name": "Power",
 		"isSkewed": true,
@@ -39,14 +47,6 @@
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
 		"fillColor" : "#1f1f1f"
-		},
-	"physicalPin" : {
-		"name": "Physical Pin",
-		"isSkewed": true,
-		"fixed_width_chars": 2,
-		"textColor" : "#ffffff",
-		"strokeColor" : "#424242",
-		"fillColor" : "#828584"
 		},
 	"portPin" : {
 		"name": "Port Pin",
@@ -84,7 +84,7 @@
 		"fillColor" : "#FFAFAF"
 	},
 	"adc" : {
-		"name": "Analog",
+		"name": "ADC",
 		"isSkewed": true,
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
