@@ -19,7 +19,7 @@
 		},
 	"onlyText" : {
 		"special": "onlyText",
-		"desc": "only show the test and not the box. take the space of the box",
+		"desc": "only show the text and not the box. take the space of the box",
 		"legend": false,
 		"isSkewed": true,
 		"textColor" : "#000000",
@@ -28,6 +28,7 @@
 		},
 	"physicalPin" : {
 		"name": "Physical Pin",
+		"desc": "pin number on a chip or connector",
 		"isSkewed": true,
 		"fixed_width_chars": 2,
 		"textColor" : "#ffffff",
@@ -36,6 +37,7 @@
 		},
 	"power" : {
 		"name": "Power",
+		"desc": "pin number on a chip or connector",
 		"isSkewed": true,
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
@@ -47,6 +49,13 @@
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
 		"fillColor" : "#1f1f1f"
+		},
+	"neutral" : {
+		"name": "Neutral",
+		"isSkewed": true,
+		"textColor" : "#ffffff",
+		"strokeColor" : "#424242",
+		"fillColor" : "#30c9e0"
 		},
 	"portPin" : {
 		"name": "Port Pin",

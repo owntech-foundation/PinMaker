@@ -97,6 +97,9 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
     
     dot_style = StyleBuilder()
     dot_style.setStrokeWidth(1.92/2) #0.02in
+    if (("lineStyle" in pin_data) and ("stroke" in pin_data["lineStyle"])):
+        dot_style.setStrokeWidth(pin_data["lineStyle"]["stroke"]) #0.02in
+
     dot_style.setStroke('#212121')
     dot_style.setFilling('#212121')
 
@@ -192,7 +195,15 @@ def style_order_helper():
     for styl in styles:
         style_order.append(styl)
 
-def load_pins_file(filepath, svg, x, y):
+def order_chooser(elems, order):
+    if (order == "regular"):
+        return(elems)
+    elif (order == "reversed"):
+        return(reversed(elems))
+    else:
+        raise Exception("order needs to be 'regular' or 'reversed'")
+
+def load_pins_file(filepath, svg, x, y, order="regular"):
     style_order_helper()
     f = open(filepath)
     board_data = json.load(f)
@@ -201,7 +212,7 @@ def load_pins_file(filepath, svg, x, y):
         func = pind["functions"]
         func.sort(key=customSort)
 
-    for b in board_data:
+    for b in order_chooser(board_data, order):
         pin_maker(b, svg, x, y)
         y = y + 9.6 #0.1in
     f.close()
@@ -230,8 +241,14 @@ if __name__ == '__main__':
     # load_pins_file('spin_jtag_L.json', s, 1100, 300)
     # load_pins_file('spin_jtag_R.json', s, 1150, 300)
     
-    omit_styles = ["power", "portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
-    load_pins_file('twist_RJ485.json', s, 1150, 300)
+    # omit_styles = ["portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
+    # load_pins_file('twist_RJ485.json', s, 1150, 300, order="reversed")
+
+    #load_pins_file('twist_psu.json', s, 1150, 300)
+
+
+    omit_styles = ["portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
+    load_pins_file('twist_power.json', s, 100, 300)
 
     legend_maker(s)
 
