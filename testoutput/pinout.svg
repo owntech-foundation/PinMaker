@@ -96,7 +96,7 @@ GND</text>
 <text x="22.0" y="47.68" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
     </text>
 <text x="40.0" y="47.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
-GND</text>
+Neutral</text>
 <rect x="28.81634903542325" y="52" height="7.68" width="18" rx="2" ry="2" style="fill:#FFAFAF; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
 <text x="22.0" y="57.68" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
     </text>

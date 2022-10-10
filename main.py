@@ -11,6 +11,8 @@ from pysvg.parser import parse
 import json
 import math
 
+import argparse
+
 #png viewer
 import cairosvg
 from PIL import Image
@@ -89,10 +91,10 @@ def intersection(lst1, lst2):
     lst3 = [value for value in lst1 if value in lst2]
     return lst3
 
-def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
+def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side):
     height = 7.680
     sign = 1
-    if (pin_data["side"] == "L"):
+    if (side == "L"):
         sign = -1
     
     dot_style = StyleBuilder()
@@ -122,7 +124,7 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
             lenght_label = 0
             error_offset = 0
 
-            if (pin_data["side"] == "L"):
+            if (side == "L"):
                 lenght_label = function_label_lenght_helper(f['name'], styles[f['style']], 0)
                 error_offset = 17.941 #surely due to the skew thinggy
 
@@ -136,7 +138,7 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
     if (("isPWM" in pin_data) and (pin_data["isPWM"] == True)):
         
         pwmLength = 0
-        if (pin_data["side"] == "L"):
+        if (side == "L"):
             pwmLength = 18 #lenght of the path
 
         s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
@@ -154,36 +156,40 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset):
     s.addElement(pinsvg)
 
 def legend_maker(s):
-    svg = Svg("legend")
+    legend_origin = 10, 10 #pixels
+    legend_svg = Svg(x=legend_origin[0], y=legend_origin[1])# "legend")
 
     legend_rect_arg={}
     legend_rect_arg['style'] ='fill:#f1f1f1 ; stroke-width:0.5; stroke:#d1d1d1; '
     
     rect = Rect(0, 0, 110, 200, rx=5, ry=5, **legend_rect_arg)
     #TODO: auto resize the legend
-    svg.addElement(rect)
+    legend_svg.addElement(rect)
 
     off = 10
     for styl in styles:
-        if (("legend" in styles[styl]) and (styles[styl]["legend"] == False)):
+        if (("legend" in styles[styl]) and (styles[styl]["legend"] == False)): #do not add special styles
             pass
-        elif (styl in omit_styles):
+        elif (styl in omit_styles): #do not add the omited styles
+            pass
+        elif 0: #TODO: omit the non present styles of the file
             pass
         else:
-            w = function_label(svg, 10, off, "    ", styles[styl], 0)
+            w = function_label(legend_svg, 10, off, "    ", styles[styl], 0)
 
             name = styl
             if ("name" in styles[styl]):
                 name = styles[styl]['name']
             
-            function_label(svg, 10 + w, off, name, styles["onlyText"], 0)
+            function_label(legend_svg, 10 + w, off, name, styles["onlyText"], 0)
             off = off + 10
     
     #s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
-    svg.addElement(pwm_indicator(13 + 5.92 - 0.08, off + 10))
-    function_label(svg, 23 + 5.92 - 0.08, off + 4, "HRTIM PWM", styles["onlyText"], 0)
+    legend_svg.addElement(pwm_indicator(13 + 5.92 - 0.08, off + 10))
+    function_label(legend_svg, 23 + 5.92 - 0.08, off + 4, "HRTIM PWM", styles["onlyText"], 0)
+    print(legend_svg.get_height())
 
-    s.addElement(svg)
+    s.addElement(legend_svg)
 
 def customSort(k):
     return (style_order.index(k['style']))
@@ -203,54 +209,112 @@ def order_chooser(elems, order):
     else:
         raise Exception("order needs to be 'regular' or 'reversed'")
 
-def load_pins_file(filepath, svg, x, y, order="regular"):
+def inch_to_pixels(inchs):
+    return (inchs * 96)
+
+def mm_to_pixels(mm): # 2.54 = 0.1 in
+    return (inch_to_pixels(mm / 25.4))
+
+def units_to_pixels(number, units="px"):
+    if (units == "px"):
+        return (number)
+    elif (units == "mm"):
+        return (mm_to_pixels(number))
+    elif (units == "cm"):
+        return (mm_to_pixels(number * 10))
+    elif (units == "m"):
+        return (mm_to_pixels(number * 1000))
+    elif (units == "in"):
+        return(inch_to_pixels(number))
+
+def load_pins_file(filepath, svg, order="regular"):
     style_order_helper()
     f = open(filepath)
     board_data = json.load(f)
 
-    for pind in board_data:
-        func = pind["functions"]
-        func.sort(key=customSort)
+    for group in board_data:
+        for pind in group["pins"]:
+            pin_functions = pind["functions"]
+            pin_functions.sort(key=customSort) #sort the label within pin with the order of the styles in the style.json
 
-    for b in order_chooser(board_data, order):
-        pin_maker(b, svg, x, y)
-        y = y + 9.6 #0.1in
+    for group in board_data:
+        units = "px"
+        if ("units" in group["origin"]):
+            units = group["origin"]["units"]
+        
+        x = units_to_pixels(group["origin"]["x"], units)
+        y = units_to_pixels(group["origin"]["y"], units)
+        
+        for b in order_chooser(group["pins"], order):
+            pin_maker(b, svg, x, y, group["side"])
+
+            spacing = inch_to_pixels(0.1)
+            if ("spacing" in group):
+                spacing = group["spacing"]
+                
+            y = y + mm_to_pixels(spacing)
     f.close()
 
 if __name__ == '__main__': 
     global styles
     global omit_categories
+    global sheet_name
 
-    s = Svg(0, 0, 1500, 600)
+    s = Svg(0, 0) # 600, 600) #TODO: auto choose the size of the canvas
     
-    omit_categories = []#["extended"] #["alternate", "additional"]
-    omit_styles = [] #["timer", "audio", "usb", "rtc", "analog"] #["timer"]
+    all_args = argparse.ArgumentParser()
 
-    fstyles = open('styles.json')
+    all_args.add_argument('-p', "--pins", action='append', required=True, help="pins.json file(s)")
+    all_args.add_argument("-s", "--style", required=False, help="style.json file")
+    all_args.add_argument('-os', "--omit_styles", action='append', required=False, help="prevent plotting of a style")
+    all_args.add_argument('-oc', "--omit_categories", action='append', required=False, help="prevent plotting of a category")
+    all_args.add_argument("-l", "--legend", action='store_true', required=False, help="plotting the legend")
+    all_args.add_argument("-o", "--output", required=False, help="name of the output file (pinout.svg is the default value)")
+    all_args.add_argument("-n", "--name", required=False, help="name of the sheet.")
+
+    args = vars(all_args.parse_args())
+    print(args)
+    style_file = 'styles.json'
+    if (args['style']):
+        style_file = args['style']
+
+    fstyles = open(style_file)
     styles = json.load(fstyles)
     fstyles.close()
 
+    omit_categories = []
+    omit_styles = []
+
+    omit_categories = []#["extended"] #["alternate", "additional"]
+    omit_styles = [] #["timer", "audio", "usb", "rtc", "analog"] #["timer"]
+
     # load_pins_file('spin_pins_L.json', s, 700, 50)
     # load_pins_file('spin_pins_R.json', s, 800, 50)
-
     # load_pins_file('spin_pins_B.json', s, 700, 300)
-
     # load_pins_file('spin_pins_L2.json', s, 700, 380)
     # load_pins_file('spin_pins_L3.json', s, 700, 450)
-
     # load_pins_file('spin_jtag_L.json', s, 1100, 300)
     # load_pins_file('spin_jtag_R.json', s, 1150, 300)
-    
+
     # omit_styles = ["portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
     # load_pins_file('twist_RJ485.json', s, 1150, 300, order="reversed")
 
     #load_pins_file('twist_psu.json', s, 1150, 300)
 
 
-    omit_styles = ["portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
-    load_pins_file('twist_power.json', s, 100, 300)
+    if (args['legend']):
+        legend_maker(s)
 
-    legend_maker(s)
+    output_file = "pinout.svg"
+    if (args['output']):
+        output_file = str(args['output'])
 
-    s.save('./testoutput/pinout.svg')
-    show_svg('testoutput/pinout.svg')
+    sheet_name = "LEGEND"
+    if (args['name']):
+        sheet_name = str(args['name'])
+
+    for pin_file in args['pins']:
+        load_pins_file(pin_file, s)
+
+    s.save(output_file)
+    show_svg(output_file)
