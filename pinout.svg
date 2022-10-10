@@ -251,4 +251,84 @@ PWR_COM2</text>
 <text x="325.0117559055118" y="92.87055118110237" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
 GND_COM</text>
 </svg>
+<circle cx="491.3385826771654" cy="81.43055118110237" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="491.3385826771654" y1="81.43055118110237" x2="565.3385826771654" y2="81.43055118110237" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="549.6672363370178" y="77.59055118110237" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="539.8385826771654" y="83.27055118110238" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+1</text>
+<rect x="564.6672363370178" y="77.59055118110237" height="7.68" width="21" rx="2" ry="2" style="fill:#5F6F94; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="553.3385826771654" y="83.27055118110238" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+CAN_H</text>
+</svg>
+<circle cx="491.3385826771654" cy="91.03055118110237" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="491.3385826771654" y1="91.03055118110237" x2="565.3385826771654" y2="91.03055118110237" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="551.3599753518191" y="87.19055118110236" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="539.8385826771654" y="92.87055118110237" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+2</text>
+<rect x="566.3599753518191" y="87.19055118110236" height="7.68" width="21" rx="2" ry="2" style="fill:#5F6F94; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="553.3385826771654" y="92.87055118110237" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+CAN_L</text>
+</svg>
+<circle cx="491.3385826771654" cy="100.63055118110236" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="491.3385826771654" y1="100.63055118110236" x2="571.3385826771654" y2="100.63055118110236" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="553.0527143666204" y="96.79055118110236" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="539.8385826771654" y="102.47055118110237" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+3</text>
+<rect x="568.0527143666204" y="96.79055118110236" height="7.68" width="27" rx="2" ry="2" style="fill:#AAC4FF; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="553.3385826771654" y="102.47055118110237" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+RS485 A</text>
+</svg>
+<circle cx="491.3385826771654" cy="110.23055118110236" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="491.3385826771654" y1="110.23055118110236" x2="571.3385826771654" y2="110.23055118110236" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="554.7454533814216" y="106.39055118110235" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="539.8385826771654" y="112.07055118110236" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+4</text>
+<rect x="569.7454533814216" y="106.39055118110235" height="7.68" width="27" rx="2" ry="2" style="fill:#AAC4FF; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="553.3385826771654" y="112.07055118110236" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+RS485 B</text>
+</svg>
+<circle cx="491.3385826771654" cy="119.83055118110235" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="491.3385826771654" y1="119.83055118110235" x2="568.3385826771654" y2="119.83055118110235" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="556.4381923962229" y="115.99055118110235" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="539.8385826771654" y="121.67055118110235" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+5</text>
+<rect x="571.4381923962229" y="115.99055118110235" height="7.68" width="24" rx="2" ry="2" style="fill:#A6CF98; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="553.3385826771654" y="121.67055118110235" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+SHARE+</text>
+</svg>
+<circle cx="491.3385826771654" cy="129.43055118110235" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="491.3385826771654" y1="129.43055118110235" x2="568.3385826771654" y2="129.43055118110235" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="558.1309314110242" y="125.59055118110234" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="539.8385826771654" y="131.27055118110235" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+6</text>
+<rect x="573.1309314110242" y="125.59055118110234" height="7.68" width="24" rx="2" ry="2" style="fill:#A6CF98; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="553.3385826771654" y="131.27055118110235" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+SHARE-</text>
+</svg>
+<circle cx="491.3385826771654" cy="139.03055118110234" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="491.3385826771654" y1="139.03055118110234" x2="583.3385826771654" y2="139.03055118110234" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="559.8236704258254" y="135.19055118110234" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="539.8385826771654" y="140.87055118110234" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+7</text>
+<rect x="574.8236704258254" y="135.19055118110234" height="7.68" width="39" rx="2" ry="2" style="fill:#FFAFAF; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="553.3385826771654" y="140.87055118110234" style="font-size:0.5em; font-family:Monospace; fill:#000000; font-style:italic; "  >
+HRTIM1_SCIN</text>
+</svg>
+<circle cx="491.3385826771654" cy="148.63055118110233" r="1.92" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<line x1="491.3385826771654" y1="148.63055118110233" x2="571.3385826771654" y2="148.63055118110233" style="stroke-width:0.96; stroke:#212121; fill:#212121; "  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  >
+<rect x="561.5164094406267" y="144.79055118110233" height="7.68" width="12" rx="2" ry="2" style="fill:#828584; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="539.8385826771654" y="150.47055118110234" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+8</text>
+<rect x="576.5164094406267" y="144.79055118110233" height="7.68" width="27" rx="2" ry="2" style="fill:#1f1f1f; stroke-width:0.5; stroke:#424242; " transform="skewX(-10)"  />
+<text x="553.3385826771654" y="150.47055118110234" style="font-size:0.5em; font-family:Monospace; fill:#ffffff; font-style:italic; "  >
+GND COM</text>
+</svg>
 </svg>

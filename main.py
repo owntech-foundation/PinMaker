@@ -227,15 +227,10 @@ def units_to_pixels(number, units="px"):
     elif (units == "in"):
         return(inch_to_pixels(number))
 
-def load_pins_file(filepath, svg, order="regular"):
+def load_pins_file(filepath, svg):
     style_order_helper()
     f = open(filepath)
     board_data = json.load(f)
-
-    for group in board_data:
-        for pind in group["pins"]:
-            pin_functions = pind["functions"]
-            pin_functions.sort(key=customSort) #sort the label within pin with the order of the styles in the style.json
 
     for group in board_data:
         units = "px"
@@ -244,7 +239,15 @@ def load_pins_file(filepath, svg, order="regular"):
         
         x = units_to_pixels(group["origin"]["x"], units)
         y = units_to_pixels(group["origin"]["y"], units)
-        
+
+        order="regular"
+        if ("order" in group):
+            order = group["order"]
+
+        for pind in group["pins"]:
+            pin_functions = pind["functions"]
+            pin_functions.sort(key=customSort) #sort the label within pin with the order of the styles in the style.json
+
         for b in order_chooser(group["pins"], order):
             pin_maker(b, svg, x, y, group["side"])
 
