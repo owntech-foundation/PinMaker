@@ -37,7 +37,7 @@
 		},
 	"power" : {
 		"name": "Power",
-		"desc": "pin number on a chip or connector",
+		"desc": "power pin",
 		"isSkewed": true,
 		"textColor" : "#ffffff",
 		"strokeColor" : "#424242",
