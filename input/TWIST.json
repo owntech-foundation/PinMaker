@@ -1,5 +1,6 @@
 [
     {
+        "name": "Power",
         "origin": {
             "x": 60,
             "y": 20,
@@ -81,6 +82,7 @@
         ]
     },
     {
+        "name": "Power configuration",
         "origin": {
             "x": 65,
             "y": 20,
@@ -127,6 +129,7 @@
         ]
     },
     {
+        "name": "Power sharing",
         "origin": {
             "x": 100,
             "y": 20,

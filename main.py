@@ -17,9 +17,9 @@ import argparse
 import cairosvg
 from PIL import Image
 
-def show_svg(svg_data):
-	cairosvg.svg2png(url=svg_data, write_to='testoutput/test.png', output_width=1500, output_height=600)
-	i = Image.open('testoutput/test.png')
+def show_svg(file_path, width, height):
+	cairosvg.svg2png(url=file_path, write_to=file_path + ".png", output_width=width, output_height=height)
+	i = Image.open(file_path + ".png")
 	i.show()
 
 def function_label_lenght_helper(text, style, added_width, is_italic=True):
@@ -263,7 +263,10 @@ if __name__ == '__main__':
     global omit_categories
     global sheet_name
 
-    s = Svg(0, 0) # 600, 600) #TODO: auto choose the size of the canvas
+    s = Svg(0, 0, mm_to_pixels(297), mm_to_pixels(210)) #TODO: auto choose the size of the canvas
+    # A4 paper = 210 x 297 mm
+
+
     
     all_args = argparse.ArgumentParser()
 
@@ -291,18 +294,7 @@ if __name__ == '__main__':
     omit_categories = []#["extended"] #["alternate", "additional"]
     omit_styles = [] #["timer", "audio", "usb", "rtc", "analog"] #["timer"]
 
-    # load_pins_file('spin_pins_L.json', s, 700, 50)
-    # load_pins_file('spin_pins_R.json', s, 800, 50)
-    # load_pins_file('spin_pins_B.json', s, 700, 300)
-    # load_pins_file('spin_pins_L2.json', s, 700, 380)
-    # load_pins_file('spin_pins_L3.json', s, 700, 450)
-    # load_pins_file('spin_jtag_L.json', s, 1100, 300)
-    # load_pins_file('spin_jtag_R.json', s, 1150, 300)
-
     # omit_styles = ["portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
-    # load_pins_file('twist_RJ485.json', s, 1150, 300, order="reversed")
-
-    #load_pins_file('twist_psu.json', s, 1150, 300)
 
 
     if (args['legend']):
@@ -320,4 +312,4 @@ if __name__ == '__main__':
         load_pins_file(pin_file, s)
 
     s.save(output_file)
-    show_svg(output_file)
+    show_svg(output_file, s.get_width(), s.get_height())
