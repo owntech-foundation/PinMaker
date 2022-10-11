@@ -1,0 +1,221 @@
+[
+    {
+        "name": "Power",
+        "origin": {
+            "x": 60,
+            "y": 20,
+            "units": "mm"
+        },
+        "side": "L",
+        "spacing": 2.54,
+        "pins": [
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "VIHigh", "style": "power" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "VIHigh", "style": "power" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "GND", "style": "GND" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "GND", "style": "GND" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "Neutral", "style": "neutral" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "Neutral", "style": "neutral" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "VI2Low", "style": "power" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "VI2Low", "style": "power" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "VI1Low", "style": "power" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "VI1Low", "style": "power" }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Power configuration",
+        "origin": {
+            "x": 65,
+            "y": 20,
+            "units": "mm"
+        },
+        "side": "R",
+        "spacing": 2.54,
+        "pins": [
+            {
+                "functions": [
+                    { "name": "EXTERNAL", "style": "default" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "FEEDER", "style": "default" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "NC", "style": "greyOut" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "External 6V", "style": "power" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "DGND", "style": "GND" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "GND_COM", "style": "GND" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "PWR_COM1", "style": "power" }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Power sharing",
+        "origin": {
+            "x": 100,
+            "y": 20,
+            "units": "mm"
+        },
+        "side": "L",
+        "spacing": 2.54,
+        "pins": [
+            {
+                "functions": [
+                    { "name": "PWR_COM2", "style": "power" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "GND_COM", "style": "GND" }
+                ]
+            }
+        ]
+    },
+    {
+        "origin": {
+            "x": 130,
+            "y": 20,
+            "units": "mm"
+        },
+        "side": "R",
+        "spacing": 2.54,
+        "order": "regular",
+        "pins": [
+			{
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "1", "style": "physicalPin" },
+                    { "name": "CAN_H", "style": "can" }
+                ]
+            },
+			{
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "2", "style": "physicalPin" },
+                    { "name": "CAN_L", "style": "can" }
+                ]
+            },
+			{
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "3", "style": "physicalPin" },
+                    { "name": "RS485 A", "style": "serial" }
+                ]
+            },
+			{
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "4", "style": "physicalPin" },
+                    { "name": "RS485 B", "style": "serial" }
+                ]
+            },
+            {
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "5", "style": "physicalPin" },
+                    { "name": "SHARE+", "style": "analog" }
+                ]
+            },
+			{
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "6", "style": "physicalPin" },
+                    { "name": "SHARE-", "style": "analog" }
+                ]
+            },
+			{
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "7", "style": "physicalPin" },
+                    { "name": "HRTIM1_SCIN", "style": "hrtimer" }
+                ]
+            },
+			{
+                "functions": [
+                    { "name": "XX", "style": "dummy" },
+                    { "name": "8", "style": "physicalPin" },
+                    { "name": "GND COM", "style": "GND" }
+                ]
+            }
+        ]
+    }
+]
