@@ -1,0 +1,24 @@
+[
+	{
+        "name": "Power configuration",
+        "origin": {
+            "x": 65,
+            "y": 20,
+            "units": "mm"
+        },
+        "side": "R",
+        "spacing": 2.54,
+        "pins": [
+            {
+                "functions": [
+                    { "name": "PinMaker", "style": "adc" }
+                ]
+            },
+			{
+                "functions": [
+                    { "name": "V0.1", "style": "physicalPin" }
+                ]
+            }
+		]
+	}
+]
