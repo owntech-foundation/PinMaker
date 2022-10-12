@@ -1,5 +1,7 @@
 # PinMaker
 
+![PinMaker banner](Images/pinmaker_banner.png "banner")
+
 ## Setup
 
 clone the project `git clone https:/github.com/owntech-foundation/PinMaker.git`
