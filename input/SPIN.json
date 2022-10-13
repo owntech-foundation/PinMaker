@@ -929,33 +929,33 @@
         "spacing": 2.54,
         "pins": [
             {
-                "side": "R",
                 "functions": [
-                    {"name": "NC", "style": "greyOut"}]
+                    {"name": "NC", "style": "greyout"}
+                ]
             },{
-                "side": "R",
                 "functions": [
-                    {"name": "SWDIO", "style": "jtag"}]
+                    {"name": "SWDIO", "style": "jtag"}
+                ]
             },{
-                "side": "R",
                 "functions": [
-                    {"name": "SWDCLK", "style": "jtag"}]
+                    {"name": "SWDCLK", "style": "jtag"}
+                ]
             },{
-                "side": "R",
                 "functions": [
-                    {"name": "SWO", "style": "jtag"}]
+                    {"name": "SWO", "style": "jtag"}
+                ]
             },{
-                "side": "R",
                 "functions": [
-                    {"name": "NC", "style": "greyOut"}]
+                    {"name": "NC", "style": "greyout"}
+                ]
             },{
-                "side": "R",
                 "functions": [
-                    {"name": "NRST", "style": "control"}]
+                    {"name": "NRST", "style": "control"}
+                ]
             },{
-                "side": "R",
                 "functions": [
-                    {"name": "STLINK_TX", "style": "serial"}]
+                    {"name": "STLINK_TX", "style": "serial"}
+                ]
             }
         ]
     },
@@ -971,25 +971,32 @@
         "pins": [
             {
                 "functions": [
-                    {"name": "NC", "style": "greyOut"}]
+                    {"name": "NC", "style": "greyout"}
+                ]
             },{
                 "functions": [
-                    {"name": "+3V3", "style": "power"}]
+                    {"name": "+3V3", "style": "power"}
+                ]
             },{
                 "functions": [
-                    {"name": "GND", "style": "GND"}]
+                    {"name": "GND", "style": "GND"}
+                ]
             },{
                 "functions": [
-                    {"name": "GND", "style": "GND"}]
+                    {"name": "GND", "style": "GND"}
+                ]
             },{
                 "functions": [
-                    {"name": "NC", "style": "greyOut"}]
+                    {"name": "NC", "style": "greyout"}
+                ]
             },{
                 "functions": [
-                    {"name": "GNDDetect", "style": "jtag"}]
+                    {"name": "GNDDetect", "style": "jtag"}
+                ]
             },{
                 "functions": [
-                    {"name": "STLINK_RX", "style": "serial"}]
+                    {"name": "STLINK_RX", "style": "serial"}
+                ]
             }
         ]
     }

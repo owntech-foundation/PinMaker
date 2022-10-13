@@ -60,7 +60,7 @@
 	"portPin" : {
 		"name": "Port Pin",
 		"isSkewed": true,
-		"fixed_width_chars": 4,
+		"fixed_width_chars": 7,
 		"textColor" : "#000000",
 		"strokeColor" : "#424242",
 		"fillColor" : "#d3c8bb"
@@ -169,7 +169,7 @@
 		"strokeColor" : "#424242",
 		"fillColor" : "#CCF6C8"
 		},
-	"greyOut" : {
+	"greyout" : {
 		"name": "Greyed Out",
 		"isSkewed": true,
 		"legend": false,

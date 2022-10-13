@@ -82,8 +82,9 @@ def pwm_indicator(x, y):
     line_style.setStroke('#212121')
     line_style.setFilling('none')
 
-    pwm_path = Path('m 0 0 c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0', style=line_style.getStyle())
-    pwm = Svg(x, y)
+    pwm_path_origin = 0, 5
+    pwm_path = Path('m ' + str(pwm_path_origin[0]) + ' ' + str(pwm_path_origin[1]) + ' c 2 0 2.5 0 3 0 c 1 0 1 -3 3 -3 c 1.5 0 3 3 3 3 c 0 0 1.5 3 3 3 c 2 0 2 -3 3 -3 c 0 0 1 0 3 0', style=line_style.getStyle())
+    pwm = Svg(x - pwm_path_origin[0], y - pwm_path_origin[1])
     pwm.addElement(pwm_path)
     return (pwm)
 
