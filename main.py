@@ -8,19 +8,24 @@ from pysvg.style import *
 from pysvg.text import *
 from pysvg.builders import *
 from pysvg.parser import parse
+
 import json
 import math
-
 import argparse
 
 #png viewer
-import cairosvg
+from svglib.svglib import svg2rlg
+from reportlab.graphics import renderPM
 from PIL import Image
 
 def show_svg(file_path, width, height):
-	cairosvg.svg2png(url=file_path, write_to=file_path + ".png", output_width=width, output_height=height)
-	i = Image.open(file_path + ".png")
-	i.show()
+    drawing = svg2rlg(file_path)
+    scale = 3
+    drawing.scale(scale, scale)
+    renderPM.drawToFile(d=drawing, fn=file_path + ".png", fmt="PNG", dpi=72 * scale)
+    
+    i = Image.open(file_path + ".png")
+    i.show()
 
 def function_label_lenght_helper(text, style, added_width, is_italic=True):
     em_size = 3
@@ -31,7 +36,7 @@ def function_label_lenght_helper(text, style, added_width, is_italic=True):
         missing_number_offset = em_size * abs(style["fixed_width_chars"] - len(text)) # width of digit * number of missing digits
     return ((margins * 2) + missing_number_offset + (len(text) * em_size))
 
-def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=True):
+def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=True, fwco=0):
     #todo: add auto width
     height = 7.680 #0.08in
     em_size = 3
@@ -56,9 +61,12 @@ def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=
         skew_error = pos_y / cot
         text_margin = 9
 
-    if ("fixed_width_chars" in style):
-        if (style["fixed_width_chars"] > len(text)):
-            missing_number_offset = em_size * abs(style["fixed_width_chars"] - len(text)) # width of digit * number of missing digits
+    if (fwco != 0):
+        missing_number_offset = em_size * abs(fwco - len(text)) #overwrite
+    elif (("fixed_width_chars" in style) and (style["fixed_width_chars"] > len(text))):
+        missing_number_offset = em_size * abs(style["fixed_width_chars"] - len(text)) # width of digit * number of missing digits
+
+
     t = Text(str(text), pos_x + text_margin + margins + (missing_number_offset / 2), pos_y + 7.680 , **kw)
     rwidth = (margins * 2) + missing_number_offset + (len(text) * em_size)
     r = Rect(pos_x + 10 + skew_error, pos_y + 2, rwidth ,  height, 2, 2, **rect_args)
@@ -126,10 +134,10 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side):
             error_offset = 0
 
             if (side == "L"):
-                lenght_label = function_label_lenght_helper(f['name'], styles[f['style']], 0)
+                lenght_label = function_label_lenght_helper(f['name'], styles['label'][f['style']], 0)
                 error_offset = 17.941 #surely due to the skew thinggy
 
-            pr = function_label(pinsvg, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles[f['style']], 0, sign)
+            pr = function_label(pinsvg, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles['label'][f['style']], 0, sign)
 
             if (pr != 0): #for the hidden tag
                 prev_width = prev_width + pr + 3
@@ -156,50 +164,92 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side):
 
     s.addElement(pinsvg)
 
+def text_centerer_helper(em, elem, text):
+    #1em = 0.08in height
+    #1em = 6px char width
+    em_width = em * 6
+    em_height = em * inch_to_pixels(0.08)
+    x = (elem[0] / 2) - ((len(text) * em_width) / 2)
+    y = (elem[1] / 2) + (em_height / 2)
+
+    return (x, y)
+
+def legend_title_maker(s, legend_width, legend_title_height, title):
+
+    legend_title_full_rect = Rect(0, 0, legend_width, legend_title_height + 5, rx=int(styles['legend']['cornerRadius']), ry=int(styles['legend']['cornerRadius']))
+    legend_title_clip = ClipPath(id="legend_title_rect_id")
+    legend_title_clip.addElement(legend_title_full_rect)
+    
+    legend_title_rect_arg={}
+    legend_title_rect_arg['style'] ='fill:' + styles['legend']['accentColor'] + ' ; stroke-width:0.5; stroke:' + styles['legend']['strokeColor'] + ';'
+    legend_title_rect_arg['clip_path'] ='url(#legend_title_rect_id)'
+
+    legend_title_rect = Rect(0, 0, legend_width, legend_title_height, **legend_title_rect_arg)
+
+    legend_title_args={}
+    legend_title_args['style'] = 'font-size:1em; font-family:Monospace; fill:' + styles['legend']['titleTextColor']  + '; '
+    text_pos = text_centerer_helper(1, [legend_width, legend_title_height], title)
+
+    legend_title = Text(str(title), text_pos[0], text_pos[1], **legend_title_args)
+
+    s.addElement(legend_title_clip)
+    s.addElement(legend_title_rect)
+    s.addElement(legend_title)
+
+
 def legend_maker(s):
     legend_origin = 10, 10 #pixels
-    legend_svg = Svg(x=legend_origin[0], y=legend_origin[1])# "legend")
+    legend_svg = Svg(x=legend_origin[0], y=legend_origin[1])
 
-    legend_rect_arg={}
-    legend_rect_arg['style'] ='fill:#f1f1f1 ; stroke-width:0.5; stroke:#d1d1d1; '
-    
-    rect = Rect(0, 0, 110, 200, rx=5, ry=5, **legend_rect_arg)
-    #TODO: auto resize the legend
-    legend_svg.addElement(rect)
+    legend_inner_spacing = 10
+    legend_title_height = 30
+    legend_width = 120
+    left_offset = 0
 
-    off = 10
-    for styl in styles:
-        if (("legend" in styles[styl]) and (styles[styl]["legend"] == False)): #do not add special styles
+    legend_title_svg = Svg()
+    legend_title_maker(legend_title_svg, legend_width, legend_title_height, legend_data['title'])
+
+    legend_inner_svg = Svg()
+
+    off = legend_inner_spacing + legend_title_height
+    for styl in styles['label']:
+        if (("legend" in styles['label'][styl]) and (styles['label'][styl]["legend"] == False)): #do not add special styles
             pass
         elif (styl in omit_styles): #do not add the omited styles
             pass
-        elif 0: #TODO: omit the non present styles of the file
+        elif (styl not in styles_in_sheets):
             pass
         else:
-            w = function_label(legend_svg, 10, off, "    ", styles[styl], 0)
+            w = function_label(legend_inner_svg, left_offset, off, "", styles['label'][styl], 0, fwco=4)
 
             name = styl
-            if ("name" in styles[styl]):
-                name = styles[styl]['name']
+            if ("name" in styles['label'][styl]):
+                name = styles['label'][styl]['name']
             
-            function_label(legend_svg, 10 + w, off, name, styles["onlyText"], 0)
-            off = off + 10
+            function_label(legend_inner_svg, left_offset + 5 + w, off, name, styles['label']["onlyText"], 0)
+            off = off + legend_inner_spacing
     
-    #s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
-    legend_svg.addElement(pwm_indicator(13 + 5.92 - 0.08, off + 10))
-    function_label(legend_svg, 23 + 5.92 - 0.08, off + 4, "HRTIM PWM", styles["onlyText"], 0)
-    print(legend_svg.get_height())
+    if (styles['pwm']['show'] == True):
+        legend_inner_svg.addElement(pwm_indicator(left_offset + 3 + 5.92 - 0.08, off + 10))
+        function_label(legend_inner_svg, 5 + w, off + inch_to_pixels(0.04), styles['pwm']['name'], styles['label']["onlyText"], 0)
+        off = off + legend_inner_spacing + 3 #This has to do with the origin of the PWM line
+
+    legend_rect_arg={}
+    legend_rect_arg['style'] ='fill:' + styles['legend']['fillColor'] +' ; stroke-width:0.5; stroke:' + styles['legend']['strokeColor'] + ';'
+
+    legend_rect = Rect(0, 0, legend_width, off + legend_inner_spacing, rx=int(styles['legend']['cornerRadius']), ry=int(styles['legend']['cornerRadius']), **legend_rect_arg)
+
+    legend_svg.addElement(legend_rect)
+    legend_svg.addElement(legend_title_svg)
+    legend_svg.addElement(legend_inner_svg)
 
     s.addElement(legend_svg)
-
-def customSort(k):
-    return (style_order.index(k['style']))
 
 def style_order_helper():
     global style_order
 
     style_order = []
-    for styl in styles:
+    for styl in styles['label']:
         style_order.append(styl)
 
 def order_chooser(elems, order):
@@ -228,27 +278,42 @@ def units_to_pixels(number, units="px"):
     elif (units == "in"):
         return(inch_to_pixels(number))
 
+def style_sort(k):
+    return (style_order.index(k['style']))
+
 def load_pins_file(filepath, svg):
     style_order_helper()
     f = open(filepath)
     board_data = json.load(f)
 
-    for group in board_data:
+    global legend_data
+    legend_data = board_data["legend"]
+    
+    for group in board_data["groups"]:
         units = "px"
         if ("units" in group["origin"]):
             units = group["origin"]["units"]
         
         x = units_to_pixels(group["origin"]["x"], units)
         y = units_to_pixels(group["origin"]["y"], units)
+        
+        #adding all the syles encountered in a list for the legend
+        for pind in group["pins"]:
+            for func in pind["functions"]:
+                if func["style"] not in styles_in_sheets:
+                    styles_in_sheets.append(func["style"]) 
 
+        #choosing the order (from top to bottom aka regular or from bottom to top aka reversed)
         order="regular"
         if ("order" in group):
             order = group["order"]
 
+        #sort the pins with their style
         for pind in group["pins"]:
             pin_functions = pind["functions"]
-            pin_functions.sort(key=customSort) #sort the label within pin with the order of the styles in the style.json
+            pin_functions.sort(key=style_sort) #sort the label within pin with the order of the styles in the style.json
 
+        #make the pin
         for b in order_chooser(group["pins"], order):
             pin_maker(b, svg, x, y, group["side"])
 
@@ -263,12 +328,13 @@ if __name__ == '__main__':
     global styles
     global omit_categories
     global sheet_name
+    global styles_in_sheets
+
+    styles_in_sheets = []
 
     s = Svg(0, 0, mm_to_pixels(297), mm_to_pixels(210)) #TODO: auto choose the size of the canvas
     # A4 paper = 210 x 297 mm
 
-
-    
     all_args = argparse.ArgumentParser()
 
     all_args.add_argument('-p', "--pins", action='append', required=True, help="pins.json file(s)")
@@ -276,8 +342,8 @@ if __name__ == '__main__':
     all_args.add_argument('-os', "--omit_styles", action='append', required=False, help="prevent plotting of a style")
     all_args.add_argument('-oc', "--omit_categories", action='append', required=False, help="prevent plotting of a category")
     all_args.add_argument("-l", "--legend", action='store_true', required=False, help="plotting the legend")
+    all_args.add_argument("-w", "--show", action='store_true', required=False, help="show a preview png file (not 100% accurate).")
     all_args.add_argument("-o", "--output", required=False, help="name of the output file (pinout.svg is the default value)")
-    all_args.add_argument("-n", "--name", required=False, help="name of the sheet.")
 
     args = vars(all_args.parse_args())
     print(args)
@@ -297,6 +363,8 @@ if __name__ == '__main__':
 
     # omit_styles = ["portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
 
+    for pin_file in args['pins']:
+        load_pins_file(pin_file, s)
 
     if (args['legend']):
         legend_maker(s)
@@ -305,12 +373,6 @@ if __name__ == '__main__':
     if (args['output']):
         output_file = str(args['output'])
 
-    sheet_name = "LEGEND"
-    if (args['name']):
-        sheet_name = str(args['name'])
-
-    for pin_file in args['pins']:
-        load_pins_file(pin_file, s)
-
     s.save(output_file)
-    show_svg(output_file, s.get_width(), s.get_height())
+    if (args['show']):
+        show_svg(output_file, s.get_width(), s.get_height())
