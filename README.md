@@ -39,4 +39,4 @@ By default the output file is **pinout.json**
 
 `-oc` or `--omit_categories` followed by the ...
 
-`-l` or `legend` enable the **legend**
+`-l` or `--legend` enable the **legend**
