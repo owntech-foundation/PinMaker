@@ -12,20 +12,11 @@ from pysvg.parser import parse
 import json
 import math
 import argparse
+import os
+from termcolor import colored, cprint
 
-#png viewer
-from svglib.svglib import svg2rlg
-from reportlab.graphics import renderPM
-from PIL import Image
-
-def show_svg(file_path, width, height):
-    drawing = svg2rlg(file_path)
-    scale = 3
-    drawing.scale(scale, scale)
-    renderPM.drawToFile(d=drawing, fn=file_path + ".png", fmt="PNG", dpi=72 * scale)
-    
-    i = Image.open(file_path + ".png")
-    i.show()
+import helpers
+import png_renderer
 
 def function_label_lenght_helper(text, style, added_width, is_italic=True):
     em_size = 3
@@ -37,7 +28,7 @@ def function_label_lenght_helper(text, style, added_width, is_italic=True):
     return ((margins * 2) + missing_number_offset + (len(text) * em_size))
 
 def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=True, fwco=0):
-    #todo: add auto width
+    #TODO: add auto width
     height = 7.680 #0.08in
     em_size = 3
     skew_angle = 10
@@ -96,10 +87,6 @@ def pwm_indicator(x, y):
     pwm.addElement(pwm_path)
     return (pwm)
 
-def intersection(lst1, lst2):
-    lst3 = [value for value in lst1 if value in lst2]
-    return lst3
-
 def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side):
     height = 7.680
     sign = 1
@@ -125,7 +112,7 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side):
     pinsvg = Svg()
 
     for f in pin_data['functions']:
-        if (("categories" in f) and intersection(f["categories"], omit_categories)):
+        if (("categories" in f) and helpers.intersection(f["categories"], omit_categories)):
             pass
         elif (("style" in f) and f["style"] in omit_styles):
             pass
@@ -168,7 +155,7 @@ def text_centerer_helper(em, elem, text):
     #1em = 0.08in height
     #1em = 6px char width
     em_width = em * 6
-    em_height = em * inch_to_pixels(0.08)
+    em_height = em * helpers.inch_to_pixels(0.08)
     x = (elem[0] / 2) - ((len(text) * em_width) / 2)
     y = (elem[1] / 2) + (em_height / 2)
 
@@ -195,7 +182,6 @@ def legend_title_maker(s, legend_width, legend_title_height, title):
     s.addElement(legend_title_clip)
     s.addElement(legend_title_rect)
     s.addElement(legend_title)
-
 
 def legend_maker(s):
     legend_origin = 10, 10 #pixels
@@ -231,7 +217,7 @@ def legend_maker(s):
     
     if (styles['pwm']['show'] == True):
         legend_inner_svg.addElement(pwm_indicator(left_offset + 3 + 5.92 - 0.08, off + 10))
-        function_label(legend_inner_svg, 5 + w, off + inch_to_pixels(0.04), styles['pwm']['name'], styles['label']["onlyText"], 0)
+        function_label(legend_inner_svg, 5 + w, off + helpers.inch_to_pixels(0.04), styles['pwm']['name'], styles['label']["onlyText"], 0)
         off = off + legend_inner_spacing + 3 #This has to do with the origin of the PWM line
 
     legend_rect_arg={}
@@ -260,31 +246,13 @@ def order_chooser(elems, order):
     else:
         raise Exception("order needs to be 'regular' or 'reversed'")
 
-def inch_to_pixels(inchs):
-    return (inchs * 96)
-
-def mm_to_pixels(mm): # 2.54 = 0.1 in
-    return (inch_to_pixels(mm / 25.4))
-
-def units_to_pixels(number, units="px"):
-    if (units == "px"):
-        return (number)
-    elif (units == "mm"):
-        return (mm_to_pixels(number))
-    elif (units == "cm"):
-        return (mm_to_pixels(number * 10))
-    elif (units == "m"):
-        return (mm_to_pixels(number * 1000))
-    elif (units == "in"):
-        return(inch_to_pixels(number))
-
 def style_sort(k):
     return (style_order.index(k['style']))
 
 def load_pins_file(filepath, svg):
-    style_order_helper()
     f = open(filepath)
     board_data = json.load(f)
+    f.close()
 
     global legend_data
     legend_data = board_data["legend"]
@@ -294,8 +262,8 @@ def load_pins_file(filepath, svg):
         if ("units" in group["origin"]):
             units = group["origin"]["units"]
         
-        x = units_to_pixels(group["origin"]["x"], units)
-        y = units_to_pixels(group["origin"]["y"], units)
+        x = helpers.units_to_pixels(group["origin"]["x"], units)
+        y = helpers.units_to_pixels(group["origin"]["y"], units)
         
         #adding all the syles encountered in a list for the legend
         for pind in group["pins"]:
@@ -317,22 +285,31 @@ def load_pins_file(filepath, svg):
         for b in order_chooser(group["pins"], order):
             pin_maker(b, svg, x, y, group["side"])
 
-            spacing = inch_to_pixels(0.1)
+            spacing = helpers.inch_to_pixels(0.1)
             if ("spacing" in group):
                 spacing = group["spacing"]
                 
-            y = y + mm_to_pixels(spacing)
-    f.close()
+            y = y + helpers.mm_to_pixels(spacing)
+
+# def categories_helper(filepath_array):
+#     for (filepath in filepath_array):
+#         f = open(filepath)
+#         board_data = json.load(f)
+#         f.close()
+#         for group in board_data["groups"]:
+#             for f in pin_data['functions']:
+
 
 if __name__ == '__main__': 
-    global styles
+    global styles #all the styles in the json style file
+    global categories #all the categories in the json pin file
     global omit_categories
     global sheet_name
     global styles_in_sheets
 
     styles_in_sheets = []
 
-    s = Svg(0, 0, mm_to_pixels(297), mm_to_pixels(210)) #TODO: auto choose the size of the canvas
+    s = Svg(0, 0, helpers.mm_to_pixels(297), helpers.mm_to_pixels(210)) #TODO: auto choose the size of the canvas
     # A4 paper = 210 x 297 mm
 
     all_args = argparse.ArgumentParser()
@@ -343,6 +320,7 @@ if __name__ == '__main__':
     all_args.add_argument('-oc', "--omit_categories", action='append', required=False, help="prevent plotting of a category")
     all_args.add_argument("-l", "--legend", action='store_true', required=False, help="plotting the legend")
     all_args.add_argument("-w", "--show", action='store_true', required=False, help="show a preview png file (not 100% accurate).")
+    all_args.add_argument('-i', "--inkscape", action='store_true', required=False, help="open inkscape")
     all_args.add_argument("-o", "--output", required=False, help="name of the output file (pinout.svg is the default value)")
 
     args = vars(all_args.parse_args())
@@ -363,6 +341,19 @@ if __name__ == '__main__':
 
     # omit_styles = ["portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
 
+    if (args['omit_styles']):
+        for omit_styles_arg in args['omit_styles']:
+            if (omit_styles_arg not in styles['label']):
+                cprint("Warning: '" + omit_styles_arg + "' is not present in the style file. skipping", "yellow")
+
+            else:
+                omit_styles.append(omit_styles_arg)
+
+    if (args['omit_categories']):
+        for omit_categories_arg in args['omit_categories']:
+            omit_categories.append(omit_categories_arg)
+
+    style_order_helper()
     for pin_file in args['pins']:
         load_pins_file(pin_file, s)
 
@@ -375,4 +366,10 @@ if __name__ == '__main__':
 
     s.save(output_file)
     if (args['show']):
-        show_svg(output_file, s.get_width(), s.get_height())
+        png_renderer.show_svg(output_file, s.get_width(), s.get_height())
+
+    if (args['inkscape']):
+        if (helpers.is_tool("inkscape")):
+            os.system("inkscape " + output_file + " &")
+        else:
+            helpers.inkscape_not_here_helper()

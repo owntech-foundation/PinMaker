@@ -1,1 +1,2 @@
 pysvg-py3
+termcolor
