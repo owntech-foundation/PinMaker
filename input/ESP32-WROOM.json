@@ -1,405 +1,405 @@
 {
-    "legend": {
-        "title": "ESP32 WROOM Pinout"
-    },
-    "groups": [
-        {
-            "name": "Left side",
-            "origin": {
-                "x": 110,
-                "y": 35,
-                "units": "mm"
-            },
-            "side": "L",
-            "spacing": 2.54,
-            "pins": [
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "GND", "style": "GND"}
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "3V3", "style": "power"}
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "9", "style": "physicalPin"},
-                        {"name": "EN", "style": "control"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "5", "style": "physicalPin"},
-                        {"name": "GPI36", "style": "portPin"},
-                        {"name": "SENSOR_VP", "style": "analog"},
-                        {"name": "ADC1_CH0", "style": "adc"},
-                        {"name": "RTC_GPIO0", "style": "rtc"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "8", "style": "physicalPin"},
-                        {"name": "GPI39", "style": "portPin"},
-                        {"name": "SENSOR_VN", "style": "analog"},
-                        {"name": "ADC1_CH3", "style": "adc"},
-                        {"name": "RTC_GPIO3", "style": "rtc"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "10", "style": "physicalPin"},
-                        {"name": "GPI34", "style": "portPin"},
-                        {"name": "ADC1_CH6", "style": "adc"},
-                        {"name": "RTC_GPIO4", "style": "rtc"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "11", "style": "physicalPin"},
-                        {"name": "GPI35", "style": "portPin"},
-                        {"name": "ADC1_CH7", "style": "adc"},
-                        {"name": "RTC_GPIO5", "style": "rtc"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "12", "style": "physicalPin"},
-                        {"name": "GPIO32", "style": "portPin"},
-                        {"name": "XTAL_32K_P", "style": "control"},
-                        {"name": "ADC1_CH4", "style": "adc"},
-                        {"name": "TOUCH9", "style": "touch"},
-                        {"name": "RTC_GPIO9", "style": "rtc"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "13", "style": "physicalPin"},
-                        {"name": "GPIO33", "style": "portPin"},
-                        {"name": "XTAL_32K_N", "style": "control"},
-                        {"name": "ADC1_CH5", "style": "adc"},
-                        {"name": "TOUCH8", "style": "touch"},
-                        {"name": "RTC_GPIO8", "style": "rtc"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "14", "style": "physicalPin"},
-                        {"name": "GPIO25", "style": "portPin"},
-                        {"name": "DAC_1", "style": "dac"},
-                        {"name": "ADC2_CH8", "style": "adc"},
-                        {"name": "RTC_GPIO6", "style": "rtc"},
-                        {"name": "EMAC_RXD0", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "15", "style": "physicalPin"},
-                        {"name": "GPIO26", "style": "portPin"},
-                        {"name": "DAC_2", "style": "dac"},
-                        {"name": "ADC2_CH9", "style": "adc"},
-                        {"name": "RTC_GPIO7", "style": "rtc"},
-                        {"name": "EMAC_RXD1", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "16", "style": "physicalPin"},
-                        {"name": "GPIO27", "style": "portPin"},
-                        {"name": "ADC2_CH7", "style": "adc"},
-                        {"name": "TOUCH7", "style": "touch"},
-                        {"name": "RTC_GPIO17", "style": "rtc"},
-                        {"name": "EMAC_RX_DV", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "17", "style": "physicalPin"},
-                        {"name": "GPIO14", "style": "portPin"},
-                        {"name": "ADC2_CH6", "style": "adc"},
-                        {"name": "TOUCH6", "style": "touch"},
-                        {"name": "RTC_GPIO16", "style": "rtc"},
-                        {"name": "MTMS", "style": "jtag"},
-                        {"name": "SPI2 CLK", "style": "spi"},
-                        {"name": "HS2_CLK", "style": "sdmmc"},
-                        {"name": "SD_CLK", "style": "sd"},
-                        {"name": "EMAC_TXD2", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "18", "style": "physicalPin"},
-                        {"name": "GPIO12", "style": "portPin"},
-                        {"name": "ADC2_CH5", "style": "adc"},
-                        {"name": "TOUCH5", "style": "touch"},
-                        {"name": "RTC_GPIO15", "style": "rtc"},
-                        {"name": "MTDI", "style": "jtag"},
-                        {"name": "SPI2 MISO", "style": "spi"},
-                        {"name": "HS2_DATA2", "style": "sdmmc"},
-                        {"name": "SD_DATA2", "style": "sd"},
-                        {"name": "EMAC_TXD3", "style": "serial"}
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Bottom side",
-            "origin": {
-                "x": 110,
-                "y": 80,
-                "units": "mm"
-            },
-            "side": "L",
-            "spacing": 2.54,
-            "pins": [
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "GND", "style": "GND"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "20", "style": "physicalPin"},
-                        {"name": "GPIO13", "style": "portPin"},
-                        {"name": "ADC2_CH4", "style": "adc"},
-                        {"name": "TOUCH4", "style": "touch"},
-                        {"name": "RTC_GPIO14", "style": "rtc"},
-                        {"name": "MTCK", "style": "jtag"},
-                        {"name": "SPI2 MOSI", "style": "spi"},
-                        {"name": "HS2_DATA3", "style": "sdmmc"},
-                        {"name": "SD_DATA3", "style": "sd"},
-                        {"name": "EMAC_RX_ER", "style": "serial"}
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "NC", "style": "greyout"}
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "NC", "style": "greyout"}
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "NC", "style": "greyout"}
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "NC", "style": "greyout"}
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "NC", "style": "greyout"}
-                    
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "NC", "style": "greyout"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "21", "style": "physicalPin"},
-                        {"name": "GPIO15", "style": "portPin"},
-                        {"name": "ADC2_CH3", "style": "adc"},
-                        {"name": "TOUCH3", "style": "touch"},
-                        {"name": "MTDO", "style": "jtag"},
-                        {"name": "SPI2 CS0", "style": "spi"},
-                        {"name": "RTC_GPIO13", "style": "rtc"},
-                        {"name": "HS2_CMD", "style": "sdmmc"},
-                        {"name": "SD_CMD", "style": "sd"},
-                        {"name": "EMAC_RXD3", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "22", "style": "physicalPin"},
-                        {"name": "GPIO2", "style": "portPin"},
-                        {"name": "ADC2_CH2", "style": "adc"},
-                        {"name": "TOUCH2", "style": "touch"},
-                        {"name": "RTC_GPIO12", "style": "rtc"},
-                        {"name": "SPI2 WP", "style": "spi"},
-                        {"name": "HS2_DATA0", "style": "sdmmc"},
-                        {"name": "SD_DATA0", "style": "sd"}
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Right side",
-            "origin": {
-                "x": 115,
-                "y": 35,
-                "units": "mm"
-            },
-            "side": "R",
-            "spacing": 2.54,
-            "order": "reversed",
-            "pins": [
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "23", "style": "physicalPin"},
-                        {"name": "GPIO0", "style": "portPin"},
-                        {"name": "ADC2_CH1", "style": "adc"},
-                        {"name": "TOUCH1", "style": "touch"},
-                        {"name": "RTC_GPIO11", "style": "rtc"},
-                        {"name": "CLK_OUT1", "style": "i2s"},
-                        {"name": "EMAC_TX_CLK", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "24", "style": "physicalPin"},
-                        {"name": "GPIO4", "style": "portPin"},
-                        {"name": "ADC2_CH0", "style": "adc"},
-                        {"name": "TOUCH0", "style": "touch"},
-                        {"name": "RTC_GPIO10", "style": "rtc"},
-                        {"name": "SPI2 HD", "style": "spi"},
-                        {"name": "HS2_DATA1", "style": "sdmmc"},
-                        {"name": "SD_DATA1", "style": "sd"},
-                        {"name": "EMAC_TX_ER", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "25", "style": "physicalPin"},
-                        {"name": "GPIO16", "style": "portPin"},
-                        {"name": "HS1_DATA4", "style": "sdmmc"},
-                        {"name": "U2RXD", "style": "serial"},
-                        {"name": "EMAC_CLK_OUT", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "27", "style": "physicalPin"},
-                        {"name": "GPIO17", "style": "portPin"},
-                        {"name": "HS1_DATA5", "style": "sdmmc"},
-                        {"name": "U2TXD", "style": "serial"},
-                        {"name": "EMAC_CLK_OUT_180", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "34", "style": "physicalPin"},
-                        {"name": "GPIO5", "style": "portPin"},
-                        {"name": "SPI3 CS0", "style": "spi"},
-                        {"name": "HS1_DATA6", "style": "sdmmc"},
-                        {"name": "EMAC_RX_CLK", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "35", "style": "physicalPin"},
-                        {"name": "GPIO18", "style": "portPin"},
-                        {"name": "SPI3 CLK", "style": "spi"},
-                        {"name": "HS1_DATA7", "style": "sdmmc"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "38", "style": "physicalPin"},
-                        {"name": "GPIO19", "style": "portPin"},
-                        {"name": "SPI3 MISO", "style": "spi"},
-                        {"name": "U0CTS", "style": "serial"},
-                        {"name": "EMAC_TXD0", "style": "serial"}
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "NC", "style": "greyout"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "42", "style": "physicalPin"},
-                        {"name": "GPIO21", "style": "portPin"},
-                        {"name": "SPI3 HD", "style": "spi"},
-                        {"name": "EMAC_TX_EN", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "40", "style": "physicalPin"},
-                        {"name": "GPIO3", "style": "portPin"},
-                        {"name": "U0RXD", "style": "serial"},
-                        {"name": "CLK_OUT2", "style": "i2s"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "41", "style": "physicalPin"},
-                        {"name": "GPIO1", "style": "portPin"},
-                        {"name": "U0TXD", "style": "serial"},
-                        {"name": "CLK_OUT3", "style": "i2s"},
-                        {"name": "EMAC_RXD2", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "39", "style": "physicalPin"},
-                        {"name": "GPIO22", "style": "portPin"},
-                        {"name": "SPI3 WP", "style": "spi"},
-                        {"name": "U0RTS", "style": "serial"},
-                        {"name": "EMAC_TXD1", "style": "serial"}
-                    ]
-                },
-                {
-                    "isPWM": true,
-                    "functions": [
-                        {"name": "36", "style": "physicalPin"},
-                        {"name": "GPIO23", "style": "portPin"},
-                        {"name": "SPI3 MOSI", "style": "spi"},
-                        {"name": "HS1_STROBE", "style": "sdmmc"}
-                    ]
-                },
-                {
-                    "functions": [
-                        {"name": "XX", "style": "dummy"},
-                        {"name": "GND", "style": "GND"}
-                    ]
-                }
-            ]
-        }
-    ]
+	"legend": {
+		"title": "ESP32 WROOM Pinout"
+	},
+	"groups": [
+		{
+			"name": "Left side",
+			"origin": {
+				"x": 110,
+				"y": 35,
+				"units": "mm"
+			},
+			"side": "L",
+			"spacing": 2.54,
+			"pins": [
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "GND", "style": "GND"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "3V3", "style": "power"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "9", "style": "physicalPin"},
+						{"name": "EN", "style": "control"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "5", "style": "physicalPin"},
+						{"name": "GPI36", "style": "portPin"},
+						{"name": "SENSOR_VP", "style": "analog"},
+						{"name": "ADC1_CH0", "style": "adc"},
+						{"name": "RTC_GPIO0", "style": "rtc"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "8", "style": "physicalPin"},
+						{"name": "GPI39", "style": "portPin"},
+						{"name": "SENSOR_VN", "style": "analog"},
+						{"name": "ADC1_CH3", "style": "adc"},
+						{"name": "RTC_GPIO3", "style": "rtc"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "10", "style": "physicalPin"},
+						{"name": "GPI34", "style": "portPin"},
+						{"name": "ADC1_CH6", "style": "adc"},
+						{"name": "RTC_GPIO4", "style": "rtc"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "11", "style": "physicalPin"},
+						{"name": "GPI35", "style": "portPin"},
+						{"name": "ADC1_CH7", "style": "adc"},
+						{"name": "RTC_GPIO5", "style": "rtc"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "12", "style": "physicalPin"},
+						{"name": "GPIO32", "style": "portPin"},
+						{"name": "XTAL_32K_P", "style": "control"},
+						{"name": "ADC1_CH4", "style": "adc"},
+						{"name": "TOUCH9", "style": "touch"},
+						{"name": "RTC_GPIO9", "style": "rtc"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "13", "style": "physicalPin"},
+						{"name": "GPIO33", "style": "portPin"},
+						{"name": "XTAL_32K_N", "style": "control"},
+						{"name": "ADC1_CH5", "style": "adc"},
+						{"name": "TOUCH8", "style": "touch"},
+						{"name": "RTC_GPIO8", "style": "rtc"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "14", "style": "physicalPin"},
+						{"name": "GPIO25", "style": "portPin"},
+						{"name": "DAC_1", "style": "dac"},
+						{"name": "ADC2_CH8", "style": "adc"},
+						{"name": "RTC_GPIO6", "style": "rtc"},
+						{"name": "EMAC_RXD0", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "15", "style": "physicalPin"},
+						{"name": "GPIO26", "style": "portPin"},
+						{"name": "DAC_2", "style": "dac"},
+						{"name": "ADC2_CH9", "style": "adc"},
+						{"name": "RTC_GPIO7", "style": "rtc"},
+						{"name": "EMAC_RXD1", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "16", "style": "physicalPin"},
+						{"name": "GPIO27", "style": "portPin"},
+						{"name": "ADC2_CH7", "style": "adc"},
+						{"name": "TOUCH7", "style": "touch"},
+						{"name": "RTC_GPIO17", "style": "rtc"},
+						{"name": "EMAC_RX_DV", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "17", "style": "physicalPin"},
+						{"name": "GPIO14", "style": "portPin"},
+						{"name": "ADC2_CH6", "style": "adc"},
+						{"name": "TOUCH6", "style": "touch"},
+						{"name": "RTC_GPIO16", "style": "rtc"},
+						{"name": "MTMS", "style": "jtag"},
+						{"name": "SPI2 CLK", "style": "spi"},
+						{"name": "HS2_CLK", "style": "sdmmc"},
+						{"name": "SD_CLK", "style": "sd"},
+						{"name": "EMAC_TXD2", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "18", "style": "physicalPin"},
+						{"name": "GPIO12", "style": "portPin"},
+						{"name": "ADC2_CH5", "style": "adc"},
+						{"name": "TOUCH5", "style": "touch"},
+						{"name": "RTC_GPIO15", "style": "rtc"},
+						{"name": "MTDI", "style": "jtag"},
+						{"name": "SPI2 MISO", "style": "spi"},
+						{"name": "HS2_DATA2", "style": "sdmmc"},
+						{"name": "SD_DATA2", "style": "sd"},
+						{"name": "EMAC_TXD3", "style": "serial"}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bottom side",
+			"origin": {
+				"x": 110,
+				"y": 80,
+				"units": "mm"
+			},
+			"side": "L",
+			"spacing": 2.54,
+			"pins": [
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "GND", "style": "GND"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "20", "style": "physicalPin"},
+						{"name": "GPIO13", "style": "portPin"},
+						{"name": "ADC2_CH4", "style": "adc"},
+						{"name": "TOUCH4", "style": "touch"},
+						{"name": "RTC_GPIO14", "style": "rtc"},
+						{"name": "MTCK", "style": "jtag"},
+						{"name": "SPI2 MOSI", "style": "spi"},
+						{"name": "HS2_DATA3", "style": "sdmmc"},
+						{"name": "SD_DATA3", "style": "sd"},
+						{"name": "EMAC_RX_ER", "style": "serial"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "21", "style": "physicalPin"},
+						{"name": "GPIO15", "style": "portPin"},
+						{"name": "ADC2_CH3", "style": "adc"},
+						{"name": "TOUCH3", "style": "touch"},
+						{"name": "MTDO", "style": "jtag"},
+						{"name": "SPI2 CS0", "style": "spi"},
+						{"name": "RTC_GPIO13", "style": "rtc"},
+						{"name": "HS2_CMD", "style": "sdmmc"},
+						{"name": "SD_CMD", "style": "sd"},
+						{"name": "EMAC_RXD3", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "22", "style": "physicalPin"},
+						{"name": "GPIO2", "style": "portPin"},
+						{"name": "ADC2_CH2", "style": "adc"},
+						{"name": "TOUCH2", "style": "touch"},
+						{"name": "RTC_GPIO12", "style": "rtc"},
+						{"name": "SPI2 WP", "style": "spi"},
+						{"name": "HS2_DATA0", "style": "sdmmc"},
+						{"name": "SD_DATA0", "style": "sd"}
+					]
+				}
+			]
+		},
+		{
+			"name": "Right side",
+			"origin": {
+				"x": 115,
+				"y": 35,
+				"units": "mm"
+			},
+			"side": "R",
+			"spacing": 2.54,
+			"order": "reversed",
+			"pins": [
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "23", "style": "physicalPin"},
+						{"name": "GPIO0", "style": "portPin"},
+						{"name": "ADC2_CH1", "style": "adc"},
+						{"name": "TOUCH1", "style": "touch"},
+						{"name": "RTC_GPIO11", "style": "rtc"},
+						{"name": "CLK_OUT1", "style": "i2s"},
+						{"name": "EMAC_TX_CLK", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "24", "style": "physicalPin"},
+						{"name": "GPIO4", "style": "portPin"},
+						{"name": "ADC2_CH0", "style": "adc"},
+						{"name": "TOUCH0", "style": "touch"},
+						{"name": "RTC_GPIO10", "style": "rtc"},
+						{"name": "SPI2 HD", "style": "spi"},
+						{"name": "HS2_DATA1", "style": "sdmmc"},
+						{"name": "SD_DATA1", "style": "sd"},
+						{"name": "EMAC_TX_ER", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "25", "style": "physicalPin"},
+						{"name": "GPIO16", "style": "portPin"},
+						{"name": "HS1_DATA4", "style": "sdmmc"},
+						{"name": "U2RXD", "style": "serial"},
+						{"name": "EMAC_CLK_OUT", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "27", "style": "physicalPin"},
+						{"name": "GPIO17", "style": "portPin"},
+						{"name": "HS1_DATA5", "style": "sdmmc"},
+						{"name": "U2TXD", "style": "serial"},
+						{"name": "EMAC_CLK_OUT_180", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "34", "style": "physicalPin"},
+						{"name": "GPIO5", "style": "portPin"},
+						{"name": "SPI3 CS0", "style": "spi"},
+						{"name": "HS1_DATA6", "style": "sdmmc"},
+						{"name": "EMAC_RX_CLK", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "35", "style": "physicalPin"},
+						{"name": "GPIO18", "style": "portPin"},
+						{"name": "SPI3 CLK", "style": "spi"},
+						{"name": "HS1_DATA7", "style": "sdmmc"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "38", "style": "physicalPin"},
+						{"name": "GPIO19", "style": "portPin"},
+						{"name": "SPI3 MISO", "style": "spi"},
+						{"name": "U0CTS", "style": "serial"},
+						{"name": "EMAC_TXD0", "style": "serial"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "42", "style": "physicalPin"},
+						{"name": "GPIO21", "style": "portPin"},
+						{"name": "SPI3 HD", "style": "spi"},
+						{"name": "EMAC_TX_EN", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "40", "style": "physicalPin"},
+						{"name": "GPIO3", "style": "portPin"},
+						{"name": "U0RXD", "style": "serial"},
+						{"name": "CLK_OUT2", "style": "i2s"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "41", "style": "physicalPin"},
+						{"name": "GPIO1", "style": "portPin"},
+						{"name": "U0TXD", "style": "serial"},
+						{"name": "CLK_OUT3", "style": "i2s"},
+						{"name": "EMAC_RXD2", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "39", "style": "physicalPin"},
+						{"name": "GPIO22", "style": "portPin"},
+						{"name": "SPI3 WP", "style": "spi"},
+						{"name": "U0RTS", "style": "serial"},
+						{"name": "EMAC_TXD1", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "36", "style": "physicalPin"},
+						{"name": "GPIO23", "style": "portPin"},
+						{"name": "SPI3 MOSI", "style": "spi"},
+						{"name": "HS1_STROBE", "style": "sdmmc"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "GND", "style": "GND"}
+					]
+				}
+			]
+		}
+	]
 }
