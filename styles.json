@@ -72,7 +72,7 @@
 		"portPin" : {
 			"name": "Port Pin",
 			"isSkewed": true,
-			"fixed_width_chars": 7,
+			"fixed_width_chars": 5,
 			"textColor" : "#000000",
 			"strokeColor" : "#424242",
 			"fillColor" : "#d3c8bb"

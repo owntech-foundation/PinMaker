@@ -126,6 +126,7 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side, styles, omit_
 				prev_width = prev_width + pr + 3
 
 	pwm_offeset = 0
+	pwm_overlap = 0 #to ensure there is no gap between the line and pwm sign
 
 	if (("isPWM" in pin_data) and (pin_data["isPWM"] == True)):
 		
@@ -136,12 +137,13 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side, styles, omit_
 		s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
 
 		pwm_offeset = 18 + 5
+		pwm_overlap = 0.1
 
-		small_line = Line(x_origin_offset, (height/2 + 2) + y_origin_offset, x_origin_offset + sign * 5, (height/2 + 2) + y_origin_offset)
+		small_line = Line(x_origin_offset, (height/2 + 2) + y_origin_offset, x_origin_offset + (sign * (5 + pwm_overlap)), (height/2 + 2) + y_origin_offset)
 		small_line.set_style(dot_style.getStyle())
 		s.addElement(small_line)
 
-	big_line = Line(x_origin_offset + (sign * pwm_offeset), (height/2 + 2) + y_origin_offset, (sign * (prev_width + x_offset)) + x_origin_offset, (height/2 + 2) + y_origin_offset)
+	big_line = Line(x_origin_offset + (sign * (pwm_offeset - pwm_overlap)), (height/2 + 2) + y_origin_offset, (sign * (prev_width + x_offset)) + x_origin_offset, (height/2 + 2) + y_origin_offset)
 	big_line.set_style(dot_style.getStyle())
 	s.addElement(big_line)
 
