@@ -15,6 +15,14 @@ def text_centerer_helper(em, elem, text):
 	y = (elem[1] / 2) + (em_height / 2)
 
 	return (x, y)
+
+def kwargs_helper(attr_arr):
+	kwargs={}
+
+	for attr in attr_arr:
+		kwargs[attr[0]] = attr[1]
+	return kwargs
+
 def intersection(lst1, lst2):
 	lst3 = [value for value in lst1 if value in lst2]
 	return lst3
