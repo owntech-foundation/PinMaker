@@ -182,7 +182,7 @@
 			"fillColor" : "#5F7161"
 		},
 		"i2s" : {
-			"name": "Audio",
+			"name": "I2S",
 			"isSkewed": true,
 			"textColor" : "#ffffff",
 			"strokeColor" : "#424242",

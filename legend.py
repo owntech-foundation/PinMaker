@@ -18,17 +18,13 @@ def legend_title_maker(s, legend_width, legend_title_height, title):
 	legend_title_clip = ClipPath(id="legend_title_rect_id")
 	legend_title_clip.addElement(legend_title_full_rect)
 
-	legend_title_rect_arg={}
-	legend_title_rect_arg['style'] ='fill:' + styles['legend']['accentColor'] + ' ; stroke-width:0.5; stroke:' + styles['legend']['strokeColor'] + ';'
-	legend_title_rect_arg['clip_path'] ='url(#legend_title_rect_id)'
+	legend_title_rect = Rect(0, 0, legend_width, legend_title_height, 
+	**helpers.kwargs_helper([("id", "legend_title_background"), ("style", "fill:" + styles['legend']['accentColor'] + " ; stroke-width:0.5; stroke:" + styles['legend']['strokeColor'] + ";"), ("clip_path", "url(#legend_title_rect_id)")]))
 
-	legend_title_rect = Rect(0, 0, legend_width, legend_title_height, **legend_title_rect_arg)
-
-	legend_title_args={}
-	legend_title_args['style'] = 'font-size:1em; font-family:Monospace; fill:' + styles['legend']['titleTextColor']  + '; '
 	text_pos = helpers.text_centerer_helper(1, [legend_width, legend_title_height], title)
 
-	legend_title = Text(str(title), text_pos[0], text_pos[1], **legend_title_args)
+	legend_title = Text(str(title), text_pos[0], text_pos[1], 
+	**helpers.kwargs_helper([("id", "legend_title_text"),("style", "font-size:1em; font-family:Monospace; fill:" + styles['legend']['titleTextColor']  + ";")]))
 
 	s.addElement(legend_title_clip)
 	s.addElement(legend_title_rect)
@@ -41,7 +37,7 @@ def legend_maker(svg, styl, omit_styles, omit_categories, legend_data, styles_in
 
 	legend_origin = 10, 10 #pixels
 
-	legend_group = G(**helpers.kwargs_helper([("id", "legend"), ("transform", "translate(10, 10)")]))
+	legend_group = G(**helpers.kwargs_helper([("id", "legend"), ("transform", "translate(" + str(legend_origin[0]) + ", " + str(legend_origin[1]) + ")")]))
 
 	legend_inner_spacing = 10 #space between lines
 	legend_title_height = 30 #height of the title block
@@ -76,10 +72,8 @@ def legend_maker(svg, styl, omit_styles, omit_categories, legend_data, styles_in
 		labels.function_label(legend_inner_group, 5 + w, off + helpers.inch_to_pixels(0.04), styles['pwm']['name'], styles['label']["onlyText"], 0)
 		off = off + legend_inner_spacing + 3 #This has to do with the origin of the PWM line
 
-	legend_rect_arg={}
-	legend_rect_arg['style'] ='fill:' + styles['legend']['fillColor'] +' ; stroke-width:0.5; stroke:' + styles['legend']['strokeColor'] + ';'
-
-	legend_rect = Rect(0, 0, legend_width, off + legend_inner_spacing + legend_inner_spacing + legend_title_height, rx=int(styles['legend']['cornerRadius']), ry=int(styles['legend']['cornerRadius']), **legend_rect_arg)
+	legend_rect = Rect(0, 0, legend_width, off + legend_inner_spacing + legend_inner_spacing + legend_title_height, rx=int(styles['legend']['cornerRadius']), ry=int(styles['legend']['cornerRadius']), 
+	**helpers.kwargs_helper([("id", "legend_background"), ("style", "fill:" + styles['legend']['fillColor'] + " ; stroke-width:0.5; stroke:" + styles['legend']['strokeColor'] + ";")]))
 
 	legend_group.addElement(legend_rect)
 	legend_group.addElement(legend_title_group)
