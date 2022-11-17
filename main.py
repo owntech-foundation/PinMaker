@@ -54,7 +54,6 @@ def load_pins_file(filepath, svg):
 
 	for index, pin_group in enumerate(board_data["groups"]):
 		group_name = filename + "_" + str(index) + "_" + pin_group["name"]
-		group = G(**helpers.kwargs_helper([("id", group_name)]))
 
 		units = "px"
 		if ("units" in pin_group["origin"]):
@@ -63,6 +62,8 @@ def load_pins_file(filepath, svg):
 		x = helpers.units_to_pixels(pin_group["origin"]["x"], units)
 		y = helpers.units_to_pixels(pin_group["origin"]["y"], units)
 		
+		group = G(**helpers.kwargs_helper([("id", group_name), ("transform", "translate(" + str(x) + ", " + str(y) + ")")]))
+
 		#adding all the syles encountered in a list for the legend excluding the omited categories
 		for pind in pin_group["pins"]:
 			for func in pind["functions"]:
@@ -82,14 +83,15 @@ def load_pins_file(filepath, svg):
 			pin_functions.sort(key=style_sort) #sort the label within pin with the order of the styles in the style.json
 
 		#make the pin
+		y_pin_origin = 0
 		for b in order_chooser(pin_group["pins"], order):
-			labels.pin_maker(b, group, x, y, pin_group["side"], styles, omit_styles, omit_categories)
+			labels.pin_maker(b, group, 0, y_pin_origin, pin_group["side"], styles, omit_styles, omit_categories)
 
 			spacing = helpers.inch_to_pixels(0.1)
 			if ("spacing" in pin_group):
 				spacing = pin_group["spacing"]
 				
-			y = y + helpers.mm_to_pixels(spacing)
+			y_pin_origin = y_pin_origin + helpers.mm_to_pixels(spacing)
 		board.addElement(group)
 	svg.addElement(board)
 # def categories_helper(filepath_array):
