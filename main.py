@@ -49,16 +49,22 @@ def load_pins_file(filepath, svg):
 	global legend_data
 	legend_data = board_data["legend"]
 	
-	for group in board_data["groups"]:
+	filename = os.path.splitext(os.path.basename(filepath))[0]
+	board = G(**helpers.kwargs_helper([("id", filename)]))
+
+	for index, pin_group in enumerate(board_data["groups"]):
+		group_name = filename + "_" + str(index) + "_" + pin_group["name"]
+		group = G(**helpers.kwargs_helper([("id", group_name)]))
+
 		units = "px"
-		if ("units" in group["origin"]):
-			units = group["origin"]["units"]
+		if ("units" in pin_group["origin"]):
+			units = pin_group["origin"]["units"]
 		
-		x = helpers.units_to_pixels(group["origin"]["x"], units)
-		y = helpers.units_to_pixels(group["origin"]["y"], units)
+		x = helpers.units_to_pixels(pin_group["origin"]["x"], units)
+		y = helpers.units_to_pixels(pin_group["origin"]["y"], units)
 		
 		#adding all the syles encountered in a list for the legend excluding the omited categories
-		for pind in group["pins"]:
+		for pind in pin_group["pins"]:
 			for func in pind["functions"]:
 				if ("categories" in func) and any(check in func["categories"] for check in omit_categories):
 					pass
@@ -67,24 +73,25 @@ def load_pins_file(filepath, svg):
 
 		#choosing the order (from top to bottom aka regular or from bottom to top aka reversed)
 		order="regular"
-		if ("order" in group):
-			order = group["order"]
+		if ("order" in pin_group):
+			order = pin_group["order"]
 
 		#sort the pins with their style
-		for pind in group["pins"]:
+		for pind in pin_group["pins"]:
 			pin_functions = pind["functions"]
 			pin_functions.sort(key=style_sort) #sort the label within pin with the order of the styles in the style.json
 
 		#make the pin
-		for b in order_chooser(group["pins"], order):
-			labels.pin_maker(b, svg, x, y, group["side"], styles, omit_styles, omit_categories)
+		for b in order_chooser(pin_group["pins"], order):
+			labels.pin_maker(b, group, x, y, pin_group["side"], styles, omit_styles, omit_categories)
 
 			spacing = helpers.inch_to_pixels(0.1)
-			if ("spacing" in group):
-				spacing = group["spacing"]
+			if ("spacing" in pin_group):
+				spacing = pin_group["spacing"]
 				
 			y = y + helpers.mm_to_pixels(spacing)
-
+		board.addElement(group)
+	svg.addElement(board)
 # def categories_helper(filepath_array):
 #	 for (filepath in filepath_array):
 #		 f = open(filepath)

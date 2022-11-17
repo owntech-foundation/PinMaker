@@ -86,26 +86,29 @@ def pwm_indicator(x, y):
 def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side, styles, omit_styles, omit_categories):
 	height = 7.680
 	sign = 1
+
+	label_group= G()
+	line_group= G()
+	line_label_group = G()
+
 	if (side == "L"):
 		sign = -1
 	
 	dot_style = StyleBuilder()
 	dot_style.setStrokeWidth(1.92/2) #0.02in
 	if (("lineStyle" in pin_data) and ("stroke" in pin_data["lineStyle"])):
-		dot_style.setStrokeWidth(pin_data["lineStyle"]["stroke"]) #0.02in
+		dot_style.setStrokeWidth(pin_data["lineStyle"]["stroke"])
 
 	dot_style.setStroke('#212121')
 	dot_style.setFilling('#212121')
 
 	c = Circle(x_origin_offset, (height/2 + 2) + y_origin_offset, 1.92)
 	c.set_style(dot_style.getStyle())
-	s.addElement(c)
+	line_group.addElement(c)
 
 	x_offset = 20 #length of the line before the 1st pin indicator
 	prev_width = 0
 	pr = 10
-
-	pinsvg = Svg()
 
 	for f in pin_data['functions']:
 		if (("categories" in f) and helpers.intersection(f["categories"], omit_categories)):
@@ -120,13 +123,13 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side, styles, omit_
 				lenght_label = function_label_lenght_helper(f['name'], styles['label'][f['style']], 0)
 				error_offset = 17.941 #surely due to the skew thinggy
 
-			pr = function_label(pinsvg, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles['label'][f['style']], 0, sign)
+			pr = function_label(label_group, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles['label'][f['style']], 0, sign)
 
 			if (pr != 0): #for the hidden tag
 				prev_width = prev_width + pr + 3
 
 	pwm_offeset = 0
-	pwm_overlap = 0 #to ensure there is no gap between the line and pwm sign
+	pwm_overlap = 0 #to ensure there is no gap between the line and pwm sign (only when pwmsign is needed)
 
 	if (("isPWM" in pin_data) and (pin_data["isPWM"] == True)):
 		
@@ -134,17 +137,19 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side, styles, omit_
 		if (side == "L"):
 			pwmLength = 18 #lenght of the path
 
-		s.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
+		line_group.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
 
 		pwm_offeset = 18 + 5
 		pwm_overlap = 0.1
 
 		small_line = Line(x_origin_offset, (height/2 + 2) + y_origin_offset, x_origin_offset + (sign * (5 + pwm_overlap)), (height/2 + 2) + y_origin_offset)
 		small_line.set_style(dot_style.getStyle())
-		s.addElement(small_line)
+		line_group.addElement(small_line)
 
 	big_line = Line(x_origin_offset + (sign * (pwm_offeset - pwm_overlap)), (height/2 + 2) + y_origin_offset, (sign * (prev_width + x_offset)) + x_origin_offset, (height/2 + 2) + y_origin_offset)
 	big_line.set_style(dot_style.getStyle())
-	s.addElement(big_line)
 
-	s.addElement(pinsvg)
+	line_group.addElement(big_line)
+	line_label_group.addElement(line_group)
+	line_label_group.addElement(label_group)
+	s.addElement(line_label_group)
