@@ -8,6 +8,12 @@ clone the project `git clone https:/github.com/owntech-foundation/PinMaker.git`
 
 install the dependencies with `python3 -m pip install -r requirements.txt`
 
+### Adding inkscape to your path (Opionnal)
+If you work on mac, chances are high that your Inkscape is not in your path.
+
+on **mac**
+```export PATH=$PATH:/Applications/Inkscape.app/Contents/MacOS/```
+
 ## Plot Spin
 
 run `python3 main.py -p input/SPIN.json -l`
