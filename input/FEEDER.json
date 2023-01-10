@@ -1,0 +1,55 @@
+{
+	"legend": {
+		"title": "FEEDER V0.1"
+	},
+	"groups": [
+		{
+			"name": "Power IN",
+			"origin": {
+				"x": 60,
+				"y": 20,
+				"units": "mm"
+			},
+			"side": "L",
+			"spacing": 2.54,
+			"pins": [
+				{
+					"functions": [
+						{ "name": "XX", "style": "dummy" },
+						{ "name": "VIN", "style": "power" }
+					]
+				},
+				{
+					"functions": [
+						{ "name": "XX", "style": "dummy" },
+						{ "name": "GND", "style": "GND" }
+					]
+				}
+			]
+		},
+		{
+			"name": "Power OUT",
+			"origin": {
+				"x": 100,
+				"y": 20,
+				"units": "mm"
+			},
+			"side": "R",
+			"spacing": 2.54,
+			"pins": [
+				{
+					"functions": [
+						{ "name": "XX", "style": "dummy" },
+						{ "name": "VOUT", "style": "power" }
+					]
+				},
+				{
+					"functions": [
+						{ "name": "XX", "style": "dummy" },
+						{ "name": "DGND", "style": "GND" }
+					]
+				}
+			]
+		}
+	]
+}
