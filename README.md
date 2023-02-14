@@ -23,7 +23,7 @@ on **mac**
 run `python3 main.py -p input/SPIN.json -l`
 
 The raw svg out of PinMaker: \
-![Spin raw](Images/spin-raw.png "banner")
+![Spin raw](Images/SPIN_raw.png "banner")
 
 Image cleaned up with filters (-oc -os): \
 ![Spin cleaned pinout](Images/SPIN_pinout.png "banner")
