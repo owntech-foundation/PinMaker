@@ -53,8 +53,9 @@ def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=
 	elif (("fixed_width_chars" in style) and (style["fixed_width_chars"] > len(text))):
 		missing_number_offset = em_size * abs(style["fixed_width_chars"] - len(text)) # width of digit * number of missing digits
 
-
-	t = Text(str(text), pos_x + text_margin + margins + (missing_number_offset / 2), pos_y + 7.680 , **kw)
+	if (len(text) > 0):
+		t = Text(str(text), pos_x + text_margin + margins + (missing_number_offset / 2), pos_y + 7.680 , **kw)
+	
 	rwidth = (margins * 2) + missing_number_offset + (len(text) * em_size)
 	r = Rect(pos_x + 10 + skew_error, pos_y + 2, rwidth ,  height, 2, 2, **rect_args)
 
@@ -68,7 +69,8 @@ def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=
 			return rwidth
 
 	s.addElement(r)
-	s.addElement(t)
+	if (len(text) > 0):
+		s.addElement(t)
 	return rwidth
 
 def pwm_indicator(x, y):
