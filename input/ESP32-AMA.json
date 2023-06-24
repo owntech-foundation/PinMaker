@@ -1,0 +1,373 @@
+{
+	"legend": {
+		"title": "ESP32 AMA"
+	},
+	"groups": [
+		{
+			"name": "Left side",
+			"origin": {
+				"x": 110,
+				"y": 35,
+				"units": "mm"
+			},
+			"side": "L",
+			"spacing": 2.54,
+			"pins": [
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "3V3", "style": "power"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "9", "style": "physicalPin"},
+						{"name": "CHIP_PU", "style": "control"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "5", "style": "physicalPin"},
+						{"name": "GPI36", "style": "portPin"},
+						{"name": "Analog_Pot", "style": "analog"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "8", "style": "physicalPin"},
+						{"name": "GPI39", "style": "portPin"},
+						{"name": "Analog_SW", "style": "analog"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "10", "style": "physicalPin"},
+						{"name": "GPI34", "style": "portPin"},
+						{"name": "Analog_LDR", "style": "analog"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "12", "style": "physicalPin"},
+						{"name": "GPIO32", "style": "portPin"},
+						{"name": "32K_XP", "style": "control"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "13", "style": "physicalPin"},
+						{"name": "GPIO33", "style": "portPin"},
+						{"name": "32K_XN", "style": "control"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "14", "style": "physicalPin"},
+						{"name": "GPIO25", "style": "portPin"},
+						{"name": "DHT_DATA", "style": "analog"}
+
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "15", "style": "physicalPin"},
+						{"name": "GPIO26", "style": "portPin"},
+						{"name": "SR_DS", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "16", "style": "physicalPin"},
+						{"name": "GPIO27", "style": "portPin"},
+						{"name": "SR_SH_CP", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "17", "style": "physicalPin"},
+						{"name": "GPIO14", "style": "portPin"},
+						{"name": "SR_ST_CP", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "18", "style": "physicalPin"},
+						{"name": "GPIO12", "style": "portPin"},
+						{"name": "SR_MR", "style": "serial"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "GND", "style": "GND"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "20", "style": "physicalPin"},
+						{"name": "GPIO13", "style": "portPin"},
+						{"name": "SPI_CS_uSD", "style": "spi"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+								{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "5V", "style": "power"}
+					]
+				}
+			]
+		},
+		{
+			"name": "Right side",
+			"origin": {
+				"x": 115,
+				"y": 35,
+				"units": "mm"
+			},
+			"side": "R",
+			"spacing": 2.54,
+			"pins": [
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "GND", "style": "GND"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "36", "style": "physicalPin"},
+						{"name": "GPIO23", "style": "portPin"},
+						{"name": "MOSI", "style": "spi"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "39", "style": "physicalPin"},
+						{"name": "GPIO22", "style": "portPin"},
+						{"name": "SCL", "style": "i2c"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "41", "style": "physicalPin"},
+						{"name": "GPIO1", "style": "portPin"},
+						{"name": "TX0", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "40", "style": "physicalPin"},
+						{"name": "GPIO3", "style": "portPin"},
+						{"name": "RX0", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "42", "style": "physicalPin"},
+						{"name": "GPIO21", "style": "portPin"},
+						{"name": "SDA", "style": "i2c"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "GND", "style": "GND"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "38", "style": "physicalPin"},
+						{"name": "GPIO19", "style": "portPin"},
+						{"name": "MISO", "style": "spi"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "35", "style": "physicalPin"},
+						{"name": "GPIO18", "style": "portPin"},
+						{"name": "CLK", "style": "spi"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "34", "style": "physicalPin"},
+						{"name": "GPIO5", "style": "portPin"},
+						{"name": "SERVO", "style": "control"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "27", "style": "physicalPin"},
+						{"name": "GPIO17", "style": "portPin"},
+						{"name": "TX2", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "25", "style": "physicalPin"},
+						{"name": "GPIO16", "style": "portPin"},
+						{"name": "RX2", "style": "serial"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "24", "style": "physicalPin"},
+						{"name": "GPIO4", "style": "portPin"},
+						{"name": "DIGITAL_SW", "style": "control"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "23", "style": "physicalPin"},
+						{"name": "GPIO0", "style": "portPin"},
+						{"name": "USER_LED_2", "style": "led"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "22", "style": "physicalPin"},
+						{"name": "GPIO2", "style": "portPin"},
+						{"name": "USER_LED_1", "style": "led"}
+					]
+				},
+				{
+					"isPWM": true,
+					"functions": [
+						{"name": "21", "style": "physicalPin"},
+						{"name": "GPIO15", "style": "portPin"},
+						{"name": "USER_LED_3", "style": "led"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "XX", "style": "dummy"},
+						{"name": "NC", "style": "greyout"}
+					]
+				}
+			]
+		},
+		{
+			"name": "DHT",
+			"origin": {
+				"x":50,
+				"y": 50,
+				"units": "mm"
+			},
+			"side": "L",
+			"spacing": 2.54,
+			"pins": [
+				{
+					"functions": [
+						{"name": "3V3", "style": "power"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "GPIO25", "style": "portPin"},
+						{"name": "DHT_DATA", "style": "analog"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "NC", "style": "greyout"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "GND", "style": "GND"}
+					]
+				}
+			]
+		},
+		{
+			"name": "Servo",
+			"origin": {
+				"x":50,
+				"y": 70,
+				"units": "mm"
+			},
+			"side": "L",
+			"spacing": 2.54,
+			"pins": [
+
+				{
+					"functions": [
+						{"name": "GPIO5", "style": "portPin"},
+						{"name": "SERVO", "style": "control"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "5V", "style": "power"}
+					]
+				},
+				{
+					"functions": [
+						{"name": "GND", "style": "GND"}
+					]
+				}
+			]
+		}
+	]
+}
