@@ -28,7 +28,7 @@ def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=
 	em_size = 3
 	skew_angle = 10
 	margins = 3
-	font_size = "0.5em" #0.42 for linux ?
+	font_size = "6px" #was 0.5em before. 0.42 for linux ?
 
 	kw={}
 	kw['style'] = 'font-size:' + font_size + '; font-family:Monospace; fill:' + style["textColor"]  + '; '
