@@ -3,5 +3,6 @@
 pinout.svg
 pinout.svg.png
 pinout.png
+*.ttf
 __pycache__
 __pycache__/*

@@ -8,10 +8,10 @@ from pysvg.style import *
 from pysvg.text import *
 from pysvg.builders import *
 from pysvg.parser import parse
-
 import math
 
 import helpers
+font_family = "Inconsolata"
 
 def function_label_lenght_helper(text, style, added_width, is_italic=True):
 	em_size = 3
@@ -31,7 +31,7 @@ def function_label(s, pos_x, pos_y, text, style, added_width, sign=1, is_italic=
 	font_size = "6px" #was 0.5em before. 0.42 for linux ?
 
 	kw={}
-	kw['style'] = 'font-size:' + font_size + '; font-family:Monospace; fill:' + style["textColor"]  + '; '
+	kw['style'] = 'font-size:' + font_size + '; font-family:' + font_family + '; fill:' + style["textColor"]  + '; '
 	if (is_italic):
 		kw['style'] += 'font-style:italic; '
 
@@ -91,9 +91,9 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side, styles, omit_
 	height = 7.680
 	sign = 1
 
+	line_label_group = G(**helpers.kwargs_helper([("id", helpers.lineLabelNamer(pin_data))]))
 	label_group= G()
 	line_group= G()
-	line_label_group = G()
 
 	if (side == "L"):
 		sign = -1
@@ -120,6 +120,8 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side, styles, omit_
 		elif (("style" in f) and f["style"] in omit_styles):
 			pass
 		else:
+			label_function_group = G(**helpers.kwargs_helper([("class", helpers.labelFunctionNamer(styles['label'][f['style']]))]))
+
 			lenght_label = 0
 			error_offset = 0
 
@@ -127,8 +129,8 @@ def pin_maker(pin_data, s, x_origin_offset, y_origin_offset, side, styles, omit_
 				lenght_label = function_label_lenght_helper(f['name'], styles['label'][f['style']], 0)
 				error_offset = 17.941 #surely due to the skew thinggy
 
-			pr = function_label(label_group, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles['label'][f['style']], 0, sign)
-
+			pr = function_label(label_function_group, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles['label'][f['style']], 0, sign)
+			label_group.addElement(label_function_group)
 			if (pr != 0): #for the hidden tag
 				prev_width = prev_width + pr + 3
 

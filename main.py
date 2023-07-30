@@ -114,7 +114,6 @@ if __name__ == '__main__':
 
 	styles_in_sheets = []
 
-	s = Svg(0, 0, helpers.mm_to_pixels(297), helpers.mm_to_pixels(210)) #TODO: auto choose the size of the canvas
 	# A4 paper = 210 x 297 mm
 
 	all_args = argparse.ArgumentParser()
@@ -127,6 +126,9 @@ if __name__ == '__main__':
 	all_args.add_argument("-w", "--show", action='store_true', required=False, help="show a preview png file (not 100% accurate).")
 	all_args.add_argument('-i', "--inkscape", action='store_true', required=False, help="open inkscape")
 	all_args.add_argument("-o", "--output", required=False, help="name of the output file (pinout.svg is the default value)")
+	all_args.add_argument("-f", "--font", required=False, help="include a font file into the output svg")
+	all_args.add_argument("-ps", "--paper_size", required=False, help="specify the page size ('A3', 'A4', 'A5')")
+	all_args.add_argument("-po", "--paper_orientation", required=False, help="specify the page orientation ('Portraitt', 'Landscape')")
 
 	args = vars(all_args.parse_args())
 	#print(args)
@@ -142,6 +144,18 @@ if __name__ == '__main__':
 	omit_styles = []
 
 	# omit_styles = ["portPin", "default", "led", "timer", "adc", "dac", "i2c", "spi", "audio", "control", "jtag", "usb", "rtc"] #["timer"]
+
+	if (args['paper_size']):
+		paper_size = str(args['paper_size'])
+	else:
+		paper_size = "A4"
+	if (args['paper_orientation']):
+		paper_orientation = str(args['paper_orientation'])
+	else:
+		paper_orientation = "Portrait"
+	cprint("Page size is " + paper_size + " | orientation " + paper_orientation, "blue")
+	svg_size_mm = helpers.paper_size(paper_size, paper_orientation)
+	s = Svg(0, 0, svg_size_mm[0], svg_size_mm[1])
 
 	if (args['omit_styles']):
 		for omit_styles_arg in args['omit_styles']:
@@ -162,7 +176,6 @@ if __name__ == '__main__':
 	if (args['legend']):
 		legend.legend_maker(s, styles, omit_styles, omit_categories, legend_data, styles_in_sheets)
 
-
 	output_file = "pinout.svg"
 	if (args['output']):
 		output_file = str(args['output'])
@@ -172,7 +185,7 @@ if __name__ == '__main__':
 	cprint("Done in %.3f"%(end - start) + "s ! Happy pin making :)", "green")
 
 	if (args['show']):
-		cprint("Opening the rendered png file ,..", "blue")
+		cprint("Opening the rendered png file ...", "blue")
 		png_renderer.show_svg(output_file, s.get_width(), s.get_height())
 
 	if (args['inkscape']):
@@ -181,3 +194,8 @@ if __name__ == '__main__':
 			os.system("inkscape " + output_file + " 2> /dev/null &") #quiet please
 		else:
 			helpers.inkscape_not_here_helper()
+
+	if (args['font']):
+		font_file = str(args['font'])
+		cprint("including the font " + font_file, "blue")
+		helpers.include_font_file(font_file, output_file)

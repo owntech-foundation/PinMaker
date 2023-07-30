@@ -35,7 +35,7 @@ def legend_maker(svg, styl, omit_styles, omit_categories, legend_data, styles_in
 
 	styles = styl
 
-	legend_origin = 10, 10 #pixels
+	legend_origin = helpers.units_to_pixels(legend_data["origin"]["x"], units=legend_data["origin"]["units"]), helpers.units_to_pixels(legend_data["origin"]["y"], units=legend_data["origin"]["units"]) 
 
 	legend_group = G(**helpers.kwargs_helper([("id", "legend"), ("transform", "translate(" + str(legend_origin[0]) + ", " + str(legend_origin[1]) + ")")]))
 

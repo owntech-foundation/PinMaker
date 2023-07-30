@@ -1,12 +1,17 @@
 {
 	"legend": {
-		"title": "SPIN V0.9"
+		"title": "SPIN V0.9",
+		"origin": {
+			"x": 10,
+			"y": 650,
+			"units": "px"
+		}
 	},
 	"groups": [
 		{
 			"name": "Left",
 			"origin": {
-				"x": 750,
+				"x": 575,
 				"y": 50,
 				"units": "px"
 			},
@@ -343,7 +348,7 @@
 		{
 			"name": "Right",
 			"origin": {
-				"x": 800,
+				"x": 585,
 				"y": 50,
 				"units": "px"
 			},
@@ -969,6 +974,25 @@
 						{"name": "COMP2+", "style": "analog", "categories": ["additional"]},
 						{"name": "OPAMP1_V-/OPAMP1+", "style": "analog", "categories": ["additional"]},
 						{"name": "OPAMP5_V-", "style": "analog", "categories": ["additional"]}
+					]
+				}
+			]
+		},
+		{
+			"name": "Right 2",
+			"origin": {
+				"x": 650,
+				"y": 650,
+				"units": "px"
+			},
+			"side": "R",
+			"spacing": 2.54,
+			"pins": [
+				{
+					"functions": [
+						{"name": "7", "style": "physicalPin"},
+				
+						{"name": "NRST", "style": "control", "categories": ["additional"]}
 					]
 				}
 			]
