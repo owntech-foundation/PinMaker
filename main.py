@@ -156,7 +156,9 @@ if __name__ == '__main__':
 	cprint("Page size is " + paper_size + " | orientation " + paper_orientation, "blue")
 	svg_size_mm = helpers.paper_size(paper_size, paper_orientation)
 	s = Svg(0, 0, svg_size_mm[0], svg_size_mm[1])
-
+	#test = parse("licenses/by-nc.svg")
+	test = parse("spin_imported_simple-min.svg")
+	s.addElement(test)
 	if (args['omit_styles']):
 		for omit_styles_arg in args['omit_styles']:
 			if (omit_styles_arg not in styles['label']):

@@ -6,3 +6,5 @@ pinout.png
 *.ttf
 __pycache__
 __pycache__/*
+test_files
+test_files/*
