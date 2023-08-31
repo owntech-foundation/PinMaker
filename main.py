@@ -49,6 +49,12 @@ def load_pins_file(filepath, svg):
 	global legend_data
 	legend_data = board_data["legend"]
 	
+	global license_data
+	license_data = board_data["license"]
+	
+	global additional_data
+	additional_data = board_data["additional"]
+
 	filename = os.path.splitext(os.path.basename(filepath))[0]
 	board = G(**helpers.kwargs_helper([("id", filename)]))
 
@@ -154,11 +160,11 @@ if __name__ == '__main__':
 	else:
 		paper_orientation = "Portrait"
 	cprint("Page size is " + paper_size + " | orientation " + paper_orientation, "blue")
-	svg_size_mm = helpers.paper_size(paper_size, paper_orientation)
-	s = Svg(0, 0, svg_size_mm[0], svg_size_mm[1])
+	page_size = helpers.paper_size(paper_size, paper_orientation)
+	s = Svg(0, 0, page_size["px"][0], page_size["px"][1])
 	#test = parse("licenses/by-nc.svg")
-	test = parse("spin_imported_simple-min.svg")
-	s.addElement(test)
+
+
 	if (args['omit_styles']):
 		for omit_styles_arg in args['omit_styles']:
 			if (omit_styles_arg not in styles['label']):
@@ -181,6 +187,9 @@ if __name__ == '__main__':
 	output_file = "pinout.svg"
 	if (args['output']):
 		output_file = str(args['output'])
+
+	helpers.include_additional(s, additional_data, page_size)
+	helpers.include_license(s, license_data, page_size)
 
 	s.save(output_file)
 	end = time.time()

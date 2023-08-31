@@ -58,15 +58,17 @@ def legend_maker(svg, styl, omit_styles, omit_categories, legend_data, styles_in
 		elif (styl not in styles_in_sheets): #only add the styles in the sheets
 			pass
 		else:
-			w = labels.function_label(legend_inner_group, left_offset, off, "", styles['label'][styl], 0, fwco=4)
+			label_function_group = G(**helpers.kwargs_helper([("class", helpers.labelFunctionNamer(styles['label'][styl]))]))
+
+			w = labels.function_label(label_function_group, left_offset, off, "", styles['label'][styl], 0, fwco=4)
 
 			name = styl
 			if ("name" in styles['label'][styl]):
 				name = styles['label'][styl]['name']
 			
-			labels.function_label(legend_inner_group, left_offset + 5 + w, off, name, styles['label']["onlyText"], 0)
+			labels.function_label(label_function_group, left_offset + 5 + w, off, name, styles['label']["onlyText"], 0)
 			off = off + legend_inner_spacing
-	
+			legend_inner_group.addElement(label_function_group)
 	if (styles['pwm']['show'] == True):
 		legend_inner_group.addElement(labels.pwm_indicator(left_offset + 3 + 5.92 - 0.08, off + 10))
 		labels.function_label(legend_inner_group, 5 + w, off + helpers.inch_to_pixels(0.04), styles['pwm']['name'], styles['label']["onlyText"], 0)

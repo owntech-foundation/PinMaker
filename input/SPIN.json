@@ -1,4 +1,24 @@
 {
+	"license": {
+		"name": "cc-by-sa",
+		"origin": {
+			"brx": 140,
+			"bry": 60,
+			"units": "px"
+		}
+	},
+	"additional": [
+	{ 
+		"type": "svg",
+		"path": "tests_files/spin_imported_ink.svg",
+		"name": "SPIN_SVG",
+		"origin": {
+			"x": 654,
+			"y": 46 ,
+			"units": "px"
+		}
+	}
+	],
 	"legend": {
 		"title": "SPIN V0.9",
 		"origin": {
@@ -11,7 +31,7 @@
 		{
 			"name": "Left",
 			"origin": {
-				"x": 575,
+				"x": 650,
 				"y": 50,
 				"units": "px"
 			},
@@ -348,7 +368,7 @@
 		{
 			"name": "Right",
 			"origin": {
-				"x": 585,
+				"x": 738,
 				"y": 50,
 				"units": "px"
 			},
@@ -627,7 +647,7 @@
 			"name": "Bottom",
 			"origin": {
 				"x": 650,
-				"y": 300,
+				"y": 250,
 				"units": "px"
 			},
 			"side": "L",
