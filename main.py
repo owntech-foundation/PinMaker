@@ -90,8 +90,9 @@ def load_pins_file(filepath, svg):
 
 		#make the pin
 		y_pin_origin = 0
-		for b in order_chooser(pin_group["pins"], order):
-			labels.pin_maker(b, group, 0, y_pin_origin, pin_group["side"], styles, omit_styles, omit_categories)
+		for pin_number_in_group, b in enumerate(order_chooser(pin_group["pins"], order)):
+			#print(order_chooser(pin_group["pins"], order))
+			labels.pin_maker(b, pin_number_in_group, group, 0, y_pin_origin, pin_group["side"], styles, omit_styles, omit_categories)
 
 			spacing = helpers.inch_to_pixels(0.1)
 			if ("spacing" in pin_group):

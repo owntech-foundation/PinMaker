@@ -650,7 +650,7 @@
 				"y": 250,
 				"units": "px"
 			},
-			"side": "L",
+			"side": "LB",
 			"spacing": 2.54,
 			"pins": [
 				{
