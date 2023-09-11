@@ -13,8 +13,8 @@
 		"path": "tests_files/spin_imported_ink.svg",
 		"name": "SPIN_SVG",
 		"origin": {
-			"x": 654,
-			"y": 46 ,
+			"x": 655.6,
+			"y": 45.6 ,
 			"units": "px"
 		}
 	}
@@ -368,7 +368,7 @@
 		{
 			"name": "Right",
 			"origin": {
-				"x": 738,
+				"x": 740.55,
 				"y": 50,
 				"units": "px"
 			},
@@ -646,13 +646,13 @@
 		{
 			"name": "Bottom",
 			"origin": {
-				"x": 650,
-				"y": 250,
+				"x": 650.6,
+				"y": 252.28,
 				"units": "px"
 			},
 			"side": "LB",
 			"length": {
-				"length": 19.5,
+				"length": 20.7,
 				"units": "px"
 			},
 			"spacing": 2.54,
@@ -1022,13 +1022,13 @@
 			]
 		},
 		{
-			"name": "JTAG Left",
+			"name": "JTAG Top Left",
 			"origin": {
 				"x": 800,
 				"y": 300,
 				"units": "px"
 			},
-			"side": "L",
+			"side": "TL",
 			"spacing": 2.54,
 			"pins": [
 				{
@@ -1069,13 +1069,13 @@
 			]
 		},
 		{
-			"name": "JTAG Right",
+			"name": "JTAG Bottom Left",
 			"origin": {
-				"x": 850,
-				"y": 300,
+				"x": 800,
+				"y": 500,
 				"units": "px"
 			},
-			"side": "R",
+			"side": "BL",
 			"spacing": 2.54,
 			"pins": [
 				{

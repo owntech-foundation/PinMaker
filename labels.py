@@ -93,9 +93,11 @@ def pwm_indicator(x, y):
 	pwm.addElement(pwm_path)
 	return (pwm)
 
-def pin_maker(pin_data, pin_number_in_group, s, x_origin_offset, y_origin_offset, side, pin_group_data, styles, omit_styles, omit_categories):
+def pin_maker(pin_data, pin_number_in_group, number_pins_in_group, s, x_origin_offset, y_origin_offset, side, pin_group_data, styles, omit_styles, omit_categories):
 	height = 7.680
-	sign = 1
+	sign = 1 #positive = R
+	direction = 1 #positive = T ?
+
 	line_thickness = 1.92/2 #0.02in
 	line_label_group = G(**helpers.kwargs_helper([("id", helpers.lineLabelNamer(pin_data))]))
 	label_group = G()
@@ -145,10 +147,14 @@ def pin_maker(pin_data, pin_number_in_group, s, x_origin_offset, y_origin_offset
 		added_length = helpers.units_to_pixels(pin_group_data["length"]["length"], pin_group_data["length"]["units"])
 	added_length_dot = added_length
 
+	if ("T" in side):
+		bigline_bottom_extention = (number_pins_in_group - 1 -  pin_number_in_group) * helpers.mm_to_pixels(2.54) #TODO: from config file
+		group_height = helpers.mm_to_pixels(2.54) + (number_pins_in_group - 1 - pin_number_in_group) * helpers.mm_to_pixels(2.54)
+
 	if ("B" in side):
 		bigline_bottom_extention = pin_number_in_group * helpers.mm_to_pixels(2.54) #TODO: from config file
 		group_height = helpers.mm_to_pixels(2.54) + pin_number_in_group * helpers.mm_to_pixels(2.54)
-
+		direction = -1
 
 	if (("isPWM" in pin_data) and (pin_data["isPWM"] == True)):
 		
@@ -177,16 +183,23 @@ def pin_maker(pin_data, pin_number_in_group, s, x_origin_offset, y_origin_offset
 	big_line.set_style(dot_style.getStyle())
 	line_group.addElement(big_line)
 
-	if ("B" in side):
-		vertical_line = Line(x_origin_offset + (sign * (pwm_offeset - pwm_overlap - bigline_bottom_extention - added_length)), 
-							y_origin_offset + (height/2 + 2) + (line_thickness/2), 
-							x_origin_offset + added_length + (sign * (pwm_offeset - pwm_overlap - bigline_bottom_extention)),
-							y_origin_offset + (height/2 + 2) - group_height)
+	if ("T" in side or "B" in side):
+		if ("T" in side):
+			print("Top")
+			vertical_line = Line(x_origin_offset + (sign * (pwm_offeset - pwm_overlap - bigline_bottom_extention - added_length)), 
+								y_origin_offset + (height/2 + 2) - (line_thickness/2),  #slight overlap for nice sharp corners
+								x_origin_offset + added_length + (sign * (pwm_offeset - pwm_overlap - bigline_bottom_extention)),
+								y_origin_offset + (height/2 + 2) + group_height)
+		elif ("B" in side):
+			vertical_line = Line(x_origin_offset + (sign * (pwm_offeset - pwm_overlap - bigline_bottom_extention - added_length)), 
+								y_origin_offset + (height/2 + 2) + (line_thickness/2), #slight overlap for nice sharp corners
+								x_origin_offset + added_length + (sign * (pwm_offeset - pwm_overlap - bigline_bottom_extention)),
+								y_origin_offset + (height/2 + 2) - group_height)
 		vertical_line.set_style(dot_style.getStyle())
 		line_group.addElement(vertical_line)
 
 	c = Circle(x_origin_offset - sign * (bigline_bottom_extention + added_length_dot),
-				y_origin_offset + (height/2 + 2) - group_height, 
+				y_origin_offset + (height/2 + 2) + direction * (group_height), 
 				1.92)
 
 	c.set_style(dot_style.getStyle())
