@@ -13,6 +13,12 @@ import math
 import helpers
 font_family = "Inconsolata"
 
+#for debug purposes only
+debug_style = StyleBuilder()
+debug_style.setStrokeWidth(1.92/2) 
+debug_style.setStroke('#ff0000')
+debug_style.setFilling('#00ff00')
+
 def function_label_lenght_helper(text, style, added_width, is_italic=True):
 	em_size = 3
 	margins = 3
@@ -87,19 +93,19 @@ def pwm_indicator(x, y):
 	pwm.addElement(pwm_path)
 	return (pwm)
 
-def pin_maker(pin_data, pin_number_in_group, s, x_origin_offset, y_origin_offset, side, styles, omit_styles, omit_categories):
+def pin_maker(pin_data, pin_number_in_group, s, x_origin_offset, y_origin_offset, side, pin_group_data, styles, omit_styles, omit_categories):
 	height = 7.680
 	sign = 1
-
+	line_thickness = 1.92/2 #0.02in
 	line_label_group = G(**helpers.kwargs_helper([("id", helpers.lineLabelNamer(pin_data))]))
-	label_group= G()
-	line_group= G()
+	label_group = G()
+	line_group = G()
 
 	if ("L" in side):
 		sign = -1
 	
 	dot_style = StyleBuilder()
-	dot_style.setStrokeWidth(1.92/2) #0.02in
+	dot_style.setStrokeWidth(line_thickness) 
 	if (("lineStyle" in pin_data) and ("stroke" in pin_data["lineStyle"])):
 		dot_style.setStrokeWidth(pin_data["lineStyle"]["stroke"])
 
@@ -118,14 +124,14 @@ def pin_maker(pin_data, pin_number_in_group, s, x_origin_offset, y_origin_offset
 		else:
 			label_function_group = G(**helpers.kwargs_helper([("class", helpers.labelFunctionNamer(styles['label'][f['style']]))]))
 
-			lenght_label = 0
+			length_label = 0
 			error_offset = 0
 
 			if ("L" in side):
-				lenght_label = function_label_lenght_helper(f['name'], styles['label'][f['style']], 0)
+				length_label = function_label_lenght_helper(f['name'], styles['label'][f['style']], 0)
 				error_offset = 17.941 #surely due to the skew thinggy
 	
-			pr = function_label(label_function_group, sign * (x_offset + prev_width + lenght_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles['label'][f['style']], 0, sign)
+			pr = function_label(label_function_group, sign * (x_offset + prev_width + length_label + error_offset) + x_origin_offset, y_origin_offset, f['name'], styles['label'][f['style']], 0, sign)
 			label_group.addElement(label_function_group)
 			if (pr != 0): #for the hidden tag
 				prev_width = prev_width + pr + 3
@@ -133,9 +139,14 @@ def pin_maker(pin_data, pin_number_in_group, s, x_origin_offset, y_origin_offset
 	pwm_offeset = 0
 	pwm_overlap = 0 #to ensure there is no gap between the line and pwm sign (only when pwmsign is needed)
 	group_height = 0
-	bottom_display_extention = 0 #extra lenght of bigline used in the bottom case (for spacing the lines vertically)
+	bigline_bottom_extention = 0 #extra length of bigline used in the bottom case (for spacing the lines vertically)
+	added_length = 0 #extra length of pin bigline specified in the json file
+	if ("length" in pin_group_data):
+		added_length = helpers.units_to_pixels(pin_group_data["length"]["length"], pin_group_data["length"]["units"])
+	added_length_dot = added_length
+
 	if ("B" in side):
-		bottom_display_extention = pin_number_in_group * helpers.mm_to_pixels(2.54) #TODO: from config file
+		bigline_bottom_extention = pin_number_in_group * helpers.mm_to_pixels(2.54) #TODO: from config file
 		group_height = helpers.mm_to_pixels(2.54) + pin_number_in_group * helpers.mm_to_pixels(2.54)
 
 
@@ -143,18 +154,23 @@ def pin_maker(pin_data, pin_number_in_group, s, x_origin_offset, y_origin_offset
 		
 		pwmLength = 0
 		if ("L" in side):
-			pwmLength = 18 #lenght of the path
+			pwmLength = 18 #length of the path
 
 		line_group.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
 
 		pwm_offeset = 18 + 5
 		pwm_overlap = 0.1
 
-		small_line = Line(x_origin_offset, (height/2 + 2) + y_origin_offset, x_origin_offset + (sign * (5 + pwm_overlap)), (height/2 + 2) + y_origin_offset)
+		small_line = Line(x_origin_offset - sign * (added_length),
+						(height/2 + 2) + y_origin_offset,
+						x_origin_offset + (sign * (5 + pwm_overlap)),
+						(height/2 + 2) + y_origin_offset)
+
 		small_line.set_style(dot_style.getStyle())
 		line_group.addElement(small_line)
+		added_length = 0
 
-	big_line = Line(x_origin_offset + (sign * (pwm_offeset - pwm_overlap - bottom_display_extention)), 
+	big_line = Line(x_origin_offset + (sign * (pwm_offeset - pwm_overlap - bigline_bottom_extention - added_length)), 
 						y_origin_offset + (height/2 + 2), 
 						x_origin_offset + (sign * (prev_width + x_offset)), 
 						y_origin_offset + (height/2 + 2))
@@ -162,14 +178,14 @@ def pin_maker(pin_data, pin_number_in_group, s, x_origin_offset, y_origin_offset
 	line_group.addElement(big_line)
 
 	if ("B" in side):
-		vertical_line = Line(x_origin_offset + (sign * (pwm_offeset - pwm_overlap - bottom_display_extention)), 
-							y_origin_offset + (height/2 + 2), 
-							x_origin_offset + (sign * (pwm_offeset - pwm_overlap - bottom_display_extention)),
+		vertical_line = Line(x_origin_offset + (sign * (pwm_offeset - pwm_overlap - bigline_bottom_extention - added_length)), 
+							y_origin_offset + (height/2 + 2) + (line_thickness/2), 
+							x_origin_offset + added_length + (sign * (pwm_offeset - pwm_overlap - bigline_bottom_extention)),
 							y_origin_offset + (height/2 + 2) - group_height)
 		vertical_line.set_style(dot_style.getStyle())
 		line_group.addElement(vertical_line)
 
-	c = Circle(x_origin_offset - sign * (bottom_display_extention),
+	c = Circle(x_origin_offset - sign * (bigline_bottom_extention + added_length_dot),
 				y_origin_offset + (height/2 + 2) - group_height, 
 				1.92)
 

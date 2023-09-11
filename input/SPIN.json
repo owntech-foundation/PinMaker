@@ -651,6 +651,10 @@
 				"units": "px"
 			},
 			"side": "LB",
+			"length": {
+				"length": 19.5,
+				"units": "px"
+			},
 			"spacing": 2.54,
 			"pins": [
 				{
