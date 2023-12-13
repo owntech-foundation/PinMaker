@@ -14,7 +14,9 @@ from pysvg.structure import *
 from pysvg.style import *
 from pysvg.text import *
 from pysvg.builders import *
-from pysvg.parser import parse
+# from pysvg.parser import parse
+# from pysvg.parser import setAttributes
+from pysvg_parser_patch import *
 
 def categories_helper(f):
 	#TODO: add all categories to a list
@@ -155,12 +157,52 @@ def include_license(svg, license_data, page_size):
 	print(licenses_availables)
 	return 
 
+from xml.dom import minidom
+from xml.dom import Node
+
+def buildx(node_, object):
+	attrs = node_.attributes
+	if attrs != None:
+		setAttributes(attrs, object)
+	for child_ in node_.childNodes:
+		nodeName_ = child_.nodeName.split(':')[-1]
+		if child_.nodeType == Node.ELEMENT_NODE:
+			try:
+				capitalLetter = nodeName_[0].upper()
+				print(capitalLetter+nodeName_[1:])
+				objectinstance=eval(capitalLetter+nodeName_[1:]) ()                
+			except:
+				print('no class for: ' + nodeName_)
+				continue
+			object.addElement(buildx(child_,objectinstance))
+		elif child_.nodeType == Node.TEXT_NODE:
+			#print "TextNode:"+child_.nodeValue
+			#if child_.nodeValue.startswith('\n'):
+			#    print "TextNode starts with return:"+child_.nodeValue
+			#else:
+			#print "TextNode is:"+child_.nodeValue
+			#object.setTextContent(child_.nodeValue)
+			if child_.nodeValue != None and child_.nodeValue.strip() != '':
+				# print(len(child_.nodeValue))
+				object.appendTextContent(child_.nodeValue)
+		elif child_.nodeType == Node.CDATA_SECTION_NODE:  
+			object.appendTextContent('<![CDATA['+child_.nodeValue+']]>')          
+		elif child_.nodeType == Node.COMMENT_NODE:  
+			object.appendTextContent('<!-- '+child_.nodeValue+' -->')          
+		else:
+			print(child_.nodeType)
+			print("Some node:"+nodeName_+" value: "+child_.nodeValue)
+	return object
+
 def include_additional(svg, additional_data, page_size):
 	for ad in additional_data:
 		if (ad["type"] == "svg"):
 			external_svg = parse(ad["path"])
 			ad_origin = origin_helper(ad["origin"], page_size)
-			ad_group = G(**kwargs_helper([("id", ad["name"]), ("transform", "translate(" + str(ad_origin[0]) + ", " + str(ad_origin[1]) + ")")]))
+			scale = 1
+			if ("scale" in ad):
+				scale = ad["scale"]
+			ad_group = G(**kwargs_helper([("id", ad["name"]), ("transform", "translate(" + str(ad_origin[0]) + ", " + str(ad_origin[1]) + ") scale(" + str(scale) + ")")]))
 			ad_group.addElement(external_svg)
 			svg.addElement(ad_group)
 

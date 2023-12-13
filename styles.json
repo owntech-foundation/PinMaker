@@ -20,6 +20,24 @@
 			"strokeColor" : "#000000",
 			"fillColor" : "#000000"
 		},
+		"nexus" : {
+			"name": "Nexus",
+			"desc": "nexus pin number",
+			"isSkewed": true,
+			"fixed_width_chars": 2,
+			"textColor" : "#ffffff",
+			"strokeColor" : "#424242",
+			"fillColor" : "#00694C"
+		},
+		"arduino" : {
+			"name": "Arduino",
+			"desc": "arduino pin number",
+			"isSkewed": true,
+			"fixed_width_chars": 2,
+			"textColor" : "#ffffff",
+			"strokeColor" : "#424242",
+			"fillColor" : "#008184"
+		},
 		"dummy" : {
 			"special": "dummy",
 			"desc": "hide the pin but take space.",

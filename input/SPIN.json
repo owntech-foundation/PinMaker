@@ -10,11 +10,37 @@
 	"additional": [
 	{ 
 		"type": "svg",
-		"path": "tests_files/spin_imported_ink.svg",
+		"path": "input/SPIN_1.0.0_NoViaOut_REV2.svg",
 		"name": "SPIN_SVG",
 		"origin": {
-			"x": 655.6,
-			"y": 45.6 ,
+			"x": 653.725,
+			"y": 46.353,
+			"units": "px"
+		}
+	},{ 
+		"type": "svg",
+		"path": "input/SPIN_1.0.0_NoViaOut_Cut1_REV2.svg",
+		"name": "SPIN_SVG",
+		"origin": {
+			"x": 653.725,
+			"y": 346.353,
+			"units": "px"
+		}
+	},{ 
+		"type": "svg",
+		"path": "input/SPIN_1.0.0_NoViaOut_Cut2_REV2.svg",
+		"name": "SPIN_SVG",
+		"origin": {
+			"x": 753.725,
+			"y": 100.353,
+			"units": "px"
+		},
+		"scale": 2
+	},{
+		"type": "text",
+		"origin": {
+			"x": 753,
+			"y": 100,
 			"units": "px"
 		}
 	}
@@ -40,6 +66,7 @@
 			"pins": [
 				{
 					"functions": [
+						{"name": "1", "style": "nexus"},
 						{"name": "33", "style": "physicalPin"},
 						{"name": "PB11", "style": "portPin"},
 				
@@ -58,6 +85,7 @@
 				},{
 					"isPWM": true,
 					"functions": [
+						{"name": "2", "style": "nexus"},
 						{"name": "34", "style": "physicalPin"},
 						{"name": "PB12", "style": "portPin"},
 				
@@ -80,12 +108,14 @@
 				},
 				{
 					"functions": [
+						{"name": "3", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}]
 				},
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "4", "style": "nexus"},
 						{"name": "35", "style": "physicalPin"},
 						{"name": "PB13", "style": "portPin"},
 				
@@ -108,6 +138,7 @@
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "5", "style": "nexus"},
 						{"name": "36", "style": "physicalPin"},
 						{"name": "PB14", "style": "portPin"},
 				
@@ -128,6 +159,7 @@
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "6", "style": "nexus"},
 						{"name": "37", "style": "physicalPin"},
 						{"name": "PB15", "style": "portPin"},
 				
@@ -149,6 +181,7 @@
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "7", "style": "nexus"},
 						{"name": "38", "style": "physicalPin"},
 						{"name": "PC6", "style": "portPin"},
 				
@@ -165,6 +198,7 @@
 				{
 					"side": "L",
 					"functions": [
+						{"name": "8", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}
 					]
@@ -172,6 +206,7 @@
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "9", "style": "nexus"},
 						{"name": "39", "style": "physicalPin"},
 						{"name": "PC7", "style": "portPin"},
 				
@@ -188,6 +223,7 @@
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "10", "style": "nexus"},
 						{"name": "40", "style": "physicalPin"},
 						{"name": "PC8", "style": "portPin"},
 				
@@ -203,6 +239,7 @@
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "11", "style": "nexus"},
 						{"name": "41", "style": "physicalPin"},
 						{"name": "PC9", "style": "portPin"},
 				
@@ -218,6 +255,7 @@
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "12", "style": "nexus"},
 						{"name": "42", "style": "physicalPin"},
 						{"name": "PA8", "style": "portPin"},
 				
@@ -241,6 +279,7 @@
 				},
 				{
 					"functions": [
+						{"name": "13", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}
 					]
@@ -248,6 +287,7 @@
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "14", "style": "nexus"},
 						{"name": "43", "style": "physicalPin"},
 						{"name": "PA9", "style": "portPin"},
 				
@@ -270,6 +310,7 @@
 				{
 					"isPWM": true,
 					"functions": [
+						{"name": "15", "style": "nexus"},
 						{"name": "44", "style": "physicalPin"},
 						{"name": "PA10", "style": "portPin"},
 				
@@ -293,6 +334,7 @@
 				},
 				{
 					"functions": [
+						{"name": "16", "style": "nexus"},
 						{"name": "52", "style": "physicalPin"},
 						{"name": "PC10", "style": "portPin"},
 				
@@ -307,6 +349,7 @@
 				},
 				{
 					"functions": [
+						{"name": "17", "style": "nexus"},
 						{"name": "53", "style": "physicalPin"},
 						{"name": "PC11", "style": "portPin"},
 				
@@ -321,12 +364,14 @@
 				},
 				{
 					"functions": [
+						{"name": "18", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}
 					]
 				},
 				{
 					"functions": [
+						{"name": "19", "style": "nexus"},
 						{"name": "54", "style": "physicalPin"},
 						{"name": "PC12", "style": "portPin"},
 				
@@ -343,6 +388,7 @@
 				},
 				{
 					"functions": [
+						{"name": "20", "style": "nexus"},
 						{"name": "57", "style": "physicalPin"},
 						{"name": "PB4", "style": "portPin"},
 				
@@ -377,21 +423,25 @@
 			"pins": [
 				{
 					"functions": [
+						{"name": "40", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "VIN", "style": "power"}]
 				},
 				{
 					"functions": [
+						{"name": "39", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "VBAT", "style": "power"}]
 				},
 				{
 					"functions": [
+						{"name": "38", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}]
 				},
 				{
 					"functions": [
+						{"name": "37", "style": "nexus"},
 						{"name": "25", "style": "physicalPin"},
 						{"name": "PB1", "style": "portPin"},
 				
@@ -412,12 +462,14 @@
 				},
 				{
 					"functions": [
+						{"name": "36", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "+3V3", "style": "power"}
 					]
 				},
 				{
 					"functions": [
+						{"name": "35", "style": "nexus"},
 						{"name": "22", "style": "physicalPin"},
 						{"name": "PC4", "style": "portPin"},
 				
@@ -431,6 +483,7 @@
 					]
 				},{
 					"functions": [
+						{"name": "34", "style": "nexus"},
 						{"name": "20", "style": "physicalPin"},
 						{"name": "PA6", "style": "portPin"},
 				
@@ -451,12 +504,14 @@
 				},
 				{
 					"functions": [
+						{"name": "33", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}
 					]
 				},
 				{
 					"functions": [
+						{"name": "32", "style": "nexus"},
 						{"name": "19", "style": "physicalPin"},
 						{"name": "PA5", "style": "portPin"},
 						{"name": "LED BUILTIN", "style": "led"},
@@ -475,6 +530,7 @@
 				},
 				{
 					"functions": [
+						{"name": "31", "style": "nexus"},
 						{"name": "24", "style": "physicalPin"},
 						{"name": "PB0", "style": "portPin"},
 				
@@ -494,6 +550,7 @@
 				},
 				{
 					"functions": [
+						{"name": "30", "style": "nexus"},
 						{"name": "13", "style": "physicalPin"},
 						{"name": "PA1", "style": "portPin"},
 				
@@ -513,6 +570,7 @@
 				},
 				{
 					"functions": [
+						{"name": "29", "style": "nexus"},
 						{"name": "12", "style": "physicalPin"},
 						{"name": "PA0", "style": "portPin"},
 				
@@ -534,12 +592,14 @@
 				},
 				{
 					"functions": [
+						{"name": "28", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}
 					]
 				},
 				{
 					"functions": [
+						{"name": "27", "style": "nexus"},
 						{"name": "11", "style": "physicalPin"},
 						{"name": "PC3", "style": "portPin"},
 				
@@ -557,6 +617,7 @@
 				},
 				{
 					"functions": [
+						{"name": "26", "style": "nexus"},
 						{"name": "10", "style": "physicalPin"},
 						{"name": "PC2", "style": "portPin"},
 				
@@ -572,6 +633,7 @@
 				},
 				{
 					"functions": [
+						{"name": "25", "style": "nexus"},
 						{"name": "9", "style": "physicalPin"},
 						{"name": "PC1", "style": "portPin"},
 				
@@ -588,6 +650,7 @@
 				},
 				{
 					"functions": [
+						{"name": "24", "style": "nexus"},
 						{"name": "8", "style": "physicalPin"},
 						{"name": "PC0", "style": "portPin"},
 				
@@ -602,11 +665,13 @@
 				},
 				{
 					"functions": [
+						{"name": "23", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}]
 				},
 				{
 					"functions": [
+						{"name": "22", "style": "nexus"},
 						{"name": "2", "style": "physicalPin"},
 						{"name": "PC13", "style": "portPin"},
 						
@@ -623,6 +688,7 @@
 				},
 				{
 					"functions": [
+						{"name": "21", "style": "nexus"},
 						{"name": "62", "style": "physicalPin"},
 						{"name": "PB9", "style": "portPin"},
 				
@@ -659,6 +725,7 @@
 			"pins": [
 				{
 					"functions": [
+						{"name": "53", "style": "nexus"},
 						{"name": "58", "style": "physicalPin"},
 						{"name": "PB5", "style": "portPin"},
 				
@@ -683,11 +750,13 @@
 				},
 				{
 					"functions": [
+						{"name": "54", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}]
 				},
 				{
 					"functions": [
+						{"name": "55", "style": "nexus"},
 						{"name": "59", "style": "physicalPin"},
 						{"name": "PB6", "style": "portPin"},
 				
@@ -710,6 +779,7 @@
 				},
 				{
 					"functions": [
+						{"name": "56", "style": "nexus"},
 						{"name": "60", "style": "physicalPin"},
 						{"name": "PB7", "style": "portPin"},
 				
@@ -730,11 +800,13 @@
 				},
 				{
 					"functions": [
+						{"name": "57", "style": "nexus"},
 						{"name": "XX", "style": "dummy"},
 						{"name": "GND", "style": "GND"}]
 				},
 				{
 					"functions": [
+						{"name": "58", "style": "nexus"},
 						{"name": "61", "style": "physicalPin"},
 						{"name": "PB8", "style": "portPin"},
 				
@@ -766,6 +838,7 @@
 			"pins": [
 				{
 					"functions": [
+						{"name": "41", "style": "nexus"},
 						{"name": "30", "style": "physicalPin"},
 						{"name": "PB10", "style": "portPin"},
 				
@@ -785,6 +858,7 @@
 				},
 				{
 					"functions": [
+						{"name": "42", "style": "nexus"},
 						{"name": "26", "style": "physicalPin"},
 						{"name": "PB2", "style": "portPin"},
 						
@@ -804,6 +878,7 @@
 				},
 				{
 					"functions": [
+						{"name": "43", "style": "nexus"},
 						{"name": "23", "style": "physicalPin"},
 						{"name": "PC5", "style": "portPin"},
 				
@@ -822,6 +897,7 @@
 				},
 				{
 					"functions": [
+						{"name": "44", "style": "nexus"},
 						{"name": "21", "style": "physicalPin"},
 						{"name": "PA7", "style": "portPin"},
 					
@@ -843,6 +919,7 @@
 				},
 				{
 					"functions": [
+						{"name": "45", "style": "nexus"},
 						{"name": "18", "style": "physicalPin"},
 						{"name": "PA4", "style": "portPin"},
 				
@@ -873,6 +950,7 @@
 			"pins": [
 				{
 					"functions": [
+						{"name": "46", "style": "nexus"},
 						{"name": "49", "style": "physicalPin"},
 						{"name": "PA13", "style": "portPin"},
 				
@@ -889,6 +967,7 @@
 				},
 				{
 					"functions": [
+						{"name": "47", "style": "nexus"},
 						{"name": "50", "style": "physicalPin"},
 						{"name": "PA14", "style": "portPin"},
 					
@@ -905,6 +984,7 @@
 				},
 				{
 					"functions": [
+						{"name": "48", "style": "nexus"},
 						{"name": "51", "style": "physicalPin"},
 						{"name": "PA15", "style": "portPin"},
 				
@@ -926,6 +1006,7 @@
 				},
 				{
 					"functions": [
+						{"name": "49", "style": "nexus"},
 						{"name": "55", "style": "physicalPin"},
 						{"name": "PD2", "style": "portPin"},
 				
@@ -937,6 +1018,7 @@
 				},
 				{
 					"functions": [
+						{"name": "50", "style": "nexus"},
 						{"name": "56", "style": "physicalPin"},
 						{"name": "PB3", "style": "portPin"},
 					
@@ -960,6 +1042,7 @@
 				},
 				{
 					"functions": [
+						{"name": "51", "style": "nexus"},
 						{"name": "14", "style": "physicalPin"},
 						{"name": "PA2", "style": "portPin"},
 				
@@ -981,6 +1064,7 @@
 				},
 				{
 					"functions": [
+						{"name": "52", "style": "nexus"},
 						{"name": "17", "style": "physicalPin"},
 						{"name": "PA3", "style": "portPin"},
 				
@@ -1014,8 +1098,9 @@
 			"pins": [
 				{
 					"functions": [
+						{"name": "59", "style": "nexus"},
 						{"name": "7", "style": "physicalPin"},
-				
+						{"name": "PG10-NRST", "style": "portPin"},
 						{"name": "NRST", "style": "control", "categories": ["additional"]}
 					]
 				}
@@ -1024,7 +1109,7 @@
 		{
 			"name": "JTAG Top Left",
 			"origin": {
-				"x": 800,
+				"x": 900,
 				"y": 300,
 				"units": "px"
 			},
@@ -1071,7 +1156,7 @@
 		{
 			"name": "JTAG Bottom Left",
 			"origin": {
-				"x": 800,
+				"x": 900,
 				"y": 500,
 				"units": "px"
 			},
