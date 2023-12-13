@@ -136,24 +136,25 @@ def origin_helper(origin, page_size):
 		object_origin[0] = page_size["px"][0] - origin["brx"]
 		object_origin[1] = page_size["px"][1] - origin["bry"]
 	return object_origin
-
+	
 def include_license(svg, license_data, page_size):
-	print(license_data)
-	print(page_size)
-
 	license_origin = [0, 0]
-	licenses_availables = "Availables formats: "
+	licenses_availables = "Availables licenses: "
+	print("license_data")
+	print(license_data)
+
 	for l in licenses:
 		licenses_availables+=(str(l["name"]) + " ")
-		if l["name"] == license_data["name"]:
-			license = parse(l["file"])
-			license_origin = origin_helper(license_data["origin"], page_size)
-			license_group = G(**kwargs_helper([("id", "license"), ("transform", "translate(" + str(license_origin[0]) + ", " + str(license_origin[1]) + ")")]))
-			license_group.addElement(license)
-			svg.addElement(license_group)
-			return
-
-	print("license " + str(license_data["name"]) + " is not supported")
+		if ("name" in license_data):
+			if l["name"] == license_data["name"]:
+				license = parse(l["file"])
+				license_origin = origin_helper(license_data["origin"], page_size)
+				license_group = G(**kwargs_helper([("id", "license"), ("transform", "translate(" + str(license_origin[0]) + ", " + str(license_origin[1]) + ")")]))
+				license_group.addElement(license)
+				svg.addElement(license_group)
+				return
+			print("license " + str(license_data["name"]) + " is not supported.")
+	print("No license. Consider using one.")
 	print(licenses_availables)
 	return 
 

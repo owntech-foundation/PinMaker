@@ -50,10 +50,14 @@ def load_pins_file(filepath, svg):
 	legend_data = board_data["legend"]
 	
 	global license_data
-	license_data = board_data["license"]
+	license_data = []
+	if "license" in board_data:
+		license_data = board_data["license"]
 	
 	global additional_data
-	additional_data = board_data["additional"]
+	additional_data = []
+	if "additional" in board_data:
+		additional_data = board_data["additional"]
 
 	filename = os.path.splitext(os.path.basename(filepath))[0]
 	board = G(**helpers.kwargs_helper([("id", filename)]))

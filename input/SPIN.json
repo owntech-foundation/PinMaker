@@ -954,7 +954,8 @@
 						{"name": "49", "style": "physicalPin"},
 						{"name": "PA13", "style": "portPin"},
 				
-						{"name": "SWDIO-JTMS", "style": "jtag", "categories": ["alternate"]},
+						{"name": "SWDIO", "style": "jtag", "categories": ["alternate"]},
+						{"name": "JTMS", "style": "jtag", "categories": ["alternate"]},
 						{"name": "TIM16_CH1N", "style": "timer", "categories": ["alternate"]},
 						{"name": "I2C4_SCL", "style": "i2c", "categories": ["alternate"]}, 
 						{"name": "I2C1_SCL", "style": "i2c", "categories": ["alternate"]},
@@ -972,6 +973,7 @@
 						{"name": "PA14", "style": "portPin"},
 					
 						{"name": "SWCLK-JTCK", "style": "jtag", "categories": ["alternate"]},
+						{"name": "SWCLK", "style": "jtag", "categories": ["alternate"]},
 						{"name": "LPTIM1_OUT", "style": "timer", "categories": ["alternate"]},
 						{"name": "I2C4_SMBA", "style": "i2c", "categories": ["alternate", "extended"]},
 						{"name": "I2C1_SDA", "style": "i2c", "categories": ["alternate"]},
@@ -1022,7 +1024,9 @@
 						{"name": "56", "style": "physicalPin"},
 						{"name": "PB3", "style": "portPin"},
 					
-						{"name": "JTDO-TRACESWO", "style": "jtag", "categories": ["alternate"]},
+						{"name": "JTDO", "style": "jtag", "categories": ["alternate"]},
+						{"name": "TRACESWO", "style": "jtag", "categories": ["alternate"]},
+
 						{"name": "TIM2_CH2", "style": "timer", "categories": ["alternate"]},
 						{"name": "TIM4_ETR", "style": "timer", "categories": ["alternate", "extended"]},
 						{"name": "UCPD1_CRS_SYNC", "style": "usb", "categories": ["alternate"]},
