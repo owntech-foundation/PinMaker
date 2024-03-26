@@ -15,12 +15,8 @@
 			"pins": [
 				{
 					"functions": [
-						{ "name": "PinMaker", "style": "adc" }
-					]
-				},
-				{
-					"functions": [
-						{ "name": "V0.1", "style": "physicalPin" }
+						{ "name": "PinMaker", "style": "nexus" },
+						{ "name": "V0.3", "style": "physicalPin" }
 					]
 				}
 			]

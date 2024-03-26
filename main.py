@@ -16,7 +16,7 @@ from termcolor import cprint
 import time
 
 import helpers
-import png_renderer
+# import png_renderer
 import legend
 import labels
 
@@ -189,7 +189,7 @@ if __name__ == '__main__':
 		load_pins_file(pin_file, s)
 
 	if (args['legend']):
-		legend.legend_maker(s, styles, omit_styles, omit_categories, legend_data, styles_in_sheets)
+		legend.legend_maker(s, styles, omit_styles, omit_categories, legend_data, styles_in_sheets, page_size)
 
 	output_file = "pinout.svg"
 	if (args['output']):

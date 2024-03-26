@@ -8,3 +8,5 @@ __pycache__
 __pycache__/*
 test_files
 test_files/*
+temp
+temp/*

@@ -4,6 +4,8 @@ from termcolor import colored, cprint
 import base64
 import sys
 import os, fileinput
+import qrcode
+import qrcode.image.svg
 
 from pysvg.filter import *
 from pysvg.gradient import *
@@ -127,22 +129,59 @@ licenses = [{"name": "cc-by-nc-nd.eu", "file": "licenses/by-nc-nd.eu.svg", "webs
 			{"name": "cc-by", "file": "licenses/by.svg", "website": "https://www.creativecommons.org/licenses/by/4.0/"},
 			{"name": "cc-zero", "file": "licenses/cc-zero.svg", "website": "https://creativecommons.org/publicdomain/zero/1.0/"}]
 
-def origin_helper(origin, page_size):
+def origin_helper(origin, page_size, elem=None, prev_elem=None, prev_elem_origin=None):
 	object_origin = [0, 0]
-	if ("x" in origin and "y" in origin):
+	prev = [0, 0]
+	elem_dim = [0, 0]
+	#x = lx --> left x
+	#pagex - x = rx --> right x
+	#y = ty --> top y
+	#pagey - y = by --> bottom y
+
+	if ("get_height" in dir(elem)):
+		elem_dim[0] = elem.get_height()
+		elem_dim[1] = elem.get_width()
+
+	if prev_elem:
+		#prev[0], prev[1] = origin_helper(prev_elem_origin, page_size)
+		prev[0] = units_to_pixels(prev_elem_origin["rx"], units=origin["units"])
+		prev[1] = units_to_pixels(prev_elem_origin["by"], units=origin["units"])
+
+	if ("x" in origin):
 		object_origin[0] = units_to_pixels(origin["x"], units=origin["units"])
+	elif ("lx" in origin):
+		object_origin[0] = units_to_pixels(origin["lx"], units=origin["units"])
+	elif ("rx" in origin):
+		object_origin[0] = page_size["px"][0] - origin["rx"] - elem_dim[0] - prev[0]
+	else:
+		object_origin[0] = 0
+		print("no x value")
+
+	if ("y" in origin):
 		object_origin[1] = units_to_pixels(origin["y"], units=origin["units"])
-	elif ("brx" in origin and "bry" in origin):
-		object_origin[0] = page_size["px"][0] - origin["brx"]
-		object_origin[1] = page_size["px"][1] - origin["bry"]
+	elif ("ty" in origin):
+		object_origin[1] = units_to_pixels(origin["by"], units=origin["units"])
+	elif ("by" in origin):
+		object_origin[1] = page_size["px"][1] - origin["by"] - elem_dim[0] - prev[1]
+	else:
+		print("no y value")
 	return object_origin
 	
+def include_watermark(svg, page_size, prev_elem=None, prev_elem_origin=None):
+	watermark_origin =  { "rx": -50, "by": 30, "units": "px" }
+	watermark = parse("input/watermark.svg")
+	watermark_origin = origin_helper(watermark_origin, page_size, prev_elem=prev_elem, prev_elem_origin=prev_elem_origin)
+	watermark_group = G(**kwargs_helper([("id", "watermark"), ("transform", "translate(" + str(watermark_origin[0]) + ", " + str(watermark_origin[1]) + ")")]))
+	watermark_group.addElement(watermark)
+	print(watermark.get_height())
+
+	svg.addElement(watermark_group)
+
 def include_license(svg, license_data, page_size):
 	license_origin = [0, 0]
 	licenses_availables = "Availables licenses: "
-	print("license_data")
-	print(license_data)
-
+	license = None
+	
 	for l in licenses:
 		licenses_availables+=(str(l["name"]) + " ")
 		if ("name" in license_data):
@@ -152,10 +191,13 @@ def include_license(svg, license_data, page_size):
 				license_group = G(**kwargs_helper([("id", "license"), ("transform", "translate(" + str(license_origin[0]) + ", " + str(license_origin[1]) + ")")]))
 				license_group.addElement(license)
 				svg.addElement(license_group)
+				include_watermark(svg, page_size, prev_elem=license, prev_elem_origin=license_data["origin"])
 				return
 			print("license " + str(license_data["name"]) + " is not supported.")
 	print("No license. Consider using one.")
 	print(licenses_availables)
+	include_watermark(svg, page_size, prev_elem=license)
+
 	return 
 
 from xml.dom import minidom
@@ -173,7 +215,7 @@ def buildx(node_, object):
 				print(capitalLetter+nodeName_[1:])
 				objectinstance=eval(capitalLetter+nodeName_[1:]) ()                
 			except:
-				print('no class for: ' + nodeName_)
+				#print('no class for: ' + nodeName_)
 				continue
 			object.addElement(buildx(child_,objectinstance))
 		elif child_.nodeType == Node.TEXT_NODE:
@@ -206,6 +248,62 @@ def include_additional(svg, additional_data, page_size):
 			ad_group = G(**kwargs_helper([("id", ad["name"]), ("transform", "translate(" + str(ad_origin[0]) + ", " + str(ad_origin[1]) + ") scale(" + str(scale) + ")")]))
 			ad_group.addElement(external_svg)
 			svg.addElement(ad_group)
+		if (ad["type"] == "text"):
+			tc = [0, 0]
+			size = 1 #em
+			color = "#000000"
+			if "size" in ad:
+				print("SIZE")
+				size = ad["size"]
+				print(size)
+			if "center" in ad["origin"]:
+				if ad["origin"]["center"] == True:
+					em_width = 1 * 6
+					tc = text_centerer_helper(size, page_size["px"], ad["text"])
+			if "color" in ad:
+				color = ad["color"]
+			text_origin = origin_helper(ad["origin"], page_size)
+			text_group = Text(ad["text"], x=text_origin[0]+tc[0], y=text_origin[1], **kwargs_helper([("style", "font-size:" + str(size) + "em; fill:" + str(color) + ";font-family:Inconsolata;")]))
+			svg.addElement(text_group)
+		if (ad["type"] == "QRcode"):
+			scale = 1
+			if ("scale" in ad):
+				scale = ad["scale"]
+			factory = qrcode.image.svg.SvgImage
+			img = qrcode.make(ad["data"], image_factory=factory)
+			img.save("temp/qr.svg")
+			qrcode_svg = parse("temp/qr.svg")
+			qr_origin = origin_helper(ad["origin"], page_size)
+			gr_group = G(**kwargs_helper([("transform", "translate(" + str(qr_origin[0]) + ", " + str(qr_origin[1]) + ") scale(" + str(scale) + ")")]))
+
+			qrcode_background = Rect(0, 0, qrcode_svg.get_width(), qrcode_svg.get_height(),  **kwargs_helper([("style", "fill:" + "#ffffff" + ";")]))
+			gr_group.addElement(qrcode_background)
+			gr_group.addElement(qrcode_svg)
+			svg.addElement(gr_group)
+		if (ad["type"] == "banner"):
+			tc = [0, 0]
+			size = 2 #em
+			color = "#000000"
+			if "size" in ad:
+				print("SIZE")
+				size = ad["size"]
+				print(size)
+				# if ad["origin"]["center"] == True:
+				# 	em_width = 1 * 6
+				# 	tc = text_centerer_helper(size, page_size["px"], ad["text"])
+			tc = text_centerer_helper(size, page_size["px"], ad["text"])
+			if "color" in ad:
+				color = ad["color"]
+			text_origin = origin_helper([0,0], page_size)
+			banner_height = 30
+			banner_background = Rect(0, 0, page_size["px"][0], banner_height, **kwargs_helper([("style", "fill:" + "#00694C" + ";")]))
+			banner_text = Text(ad["text"], x=tc[0], y=23, **kwargs_helper([("style", "font-size:" + str(size) + "em; fill:" + str(color) + ";font-family:Inconsolata;")]))
+			banner_group = G()
+			banner_group.addElement(banner_background)
+			banner_group.addElement(banner_text)
+			svg.addElement(banner_group)
+			pass
+			
 
 def include_font_file(font_file, output_file):
 	with open(font_file, 'rb') as file:

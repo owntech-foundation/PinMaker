@@ -24,20 +24,19 @@ def legend_title_maker(s, legend_width, legend_title_height, title):
 	text_pos = helpers.text_centerer_helper(1, [legend_width, legend_title_height], title)
 
 	legend_title = Text(str(title), text_pos[0], text_pos[1], 
-	**helpers.kwargs_helper([("id", "legend_title_text"),("style", "font-size:1em; font-family:Monospace; fill:" + styles['legend']['titleTextColor']  + ";")]))
+	**helpers.kwargs_helper([("id", "legend_title_text"),("style", "font-size:1em; font-family:Inconsolata; fill:" + styles['legend']['titleTextColor']  + ";")]))
 
 	s.addElement(legend_title_clip)
 	s.addElement(legend_title_rect)
 	s.addElement(legend_title)
 
-def legend_maker(svg, styl, omit_styles, omit_categories, legend_data, styles_in_sheets):
+def legend_maker(svg, styl, omit_styles, omit_categories, legend_data, styles_in_sheets, page_size):
 	global styles
 
 	styles = styl
 
-	legend_origin = helpers.units_to_pixels(legend_data["origin"]["x"], units=legend_data["origin"]["units"]), helpers.units_to_pixels(legend_data["origin"]["y"], units=legend_data["origin"]["units"]) 
-
-	legend_group = G(**helpers.kwargs_helper([("id", "legend"), ("transform", "translate(" + str(legend_origin[0]) + ", " + str(legend_origin[1]) + ")")]))
+	# legend_origin = helpers.units_to_pixels(legend_data["origin"]["x"], units=legend_data["origin"]["units"]), helpers.units_to_pixels(legend_data["origin"]["y"], units=legend_data["origin"]["units"]) 
+	legend_group = G(**helpers.kwargs_helper([("id", "legend")])) #, ("transform", "translate(" + str(legend_origin[0]) + ", " + str(legend_origin[1]) + ")")]))
 
 	legend_inner_spacing = 10 #space between lines
 	legend_title_height = 30 #height of the title block
@@ -81,4 +80,6 @@ def legend_maker(svg, styl, omit_styles, omit_categories, legend_data, styles_in
 	legend_group.addElement(legend_title_group)
 	legend_group.addElement(legend_inner_group)
 	
+	legend_origin = helpers.origin_helper(legend_data["origin"], page_size, elem=legend_rect)
+	legend_group.set_transform("translate(" + str(legend_origin[0]) + ", " + str(legend_origin[1]) + ")")
 	svg.addElement(legend_group)

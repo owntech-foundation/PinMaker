@@ -103,7 +103,9 @@ def pin_maker(pin_data, pin_number_in_group, number_pins_in_group, s, x_origin_o
 	label_group = G()
 	line_group = G()
 
-	if ("L" in side):
+	if("LR" in side):
+		pass
+	elif ("L" in side):
 		sign = -1
 	
 	dot_style = StyleBuilder()
@@ -129,7 +131,9 @@ def pin_maker(pin_data, pin_number_in_group, number_pins_in_group, s, x_origin_o
 			length_label = 0
 			error_offset = 0
 
-			if ("L" in side):
+			if ("LR" in side):
+				pass
+			elif ("L" in side):
 				length_label = function_label_lenght_helper(f['name'], styles['label'][f['style']], 0)
 				error_offset = 17.941 #surely due to the skew thinggy
 	
@@ -159,7 +163,9 @@ def pin_maker(pin_data, pin_number_in_group, number_pins_in_group, s, x_origin_o
 	if (("isPWM" in pin_data) and (pin_data["isPWM"] == True)):
 		
 		pwmLength = 0
-		if ("L" in side):
+		if ("LR" in side):
+			pass
+		elif ("L" in side):
 			pwmLength = 18 #length of the path
 
 		line_group.addElement(pwm_indicator(x_origin_offset + sign * (pwmLength + 5), y_origin_offset + 5.92 - 0.08))
