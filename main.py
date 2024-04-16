@@ -14,6 +14,7 @@ import argparse
 import os
 from termcolor import cprint
 import time
+from deepmerge import always_merger
 
 import helpers
 # import png_renderer
@@ -41,10 +42,40 @@ def style_sort(k):
 def styles_in_sheet_helper():
 	pass
 
+def replace_variables(obj, variables):
+	if isinstance(obj, dict):
+		for key, value in obj.items():
+			obj[key] = replace_variables(value, variables)
+		return obj
+	elif isinstance(obj, list):
+		return [replace_variables(item, variables) for item in obj]
+	elif isinstance(obj, str) and obj.startswith("$"):
+		var_name = obj[1:]
+		if var_name in variables:
+			return variables[var_name]
+	return obj
+
+
+def include_files_recursively(file, data, variables):
+	file_descriptor = open(file)
+	file_json = json.load(file_descriptor)
+	file_descriptor.close()
+
+	for item in file_json.get("variables", []):
+		always_merger.merge(variables, item)
+
+	file_json = replace_variables(file_json, variables)
+	always_merger.merge(data, file_json) #maybe after recursive ?
+
+	if ("includes" in file_json):
+		for include_file in file_json["includes"]:
+			include_files_recursively(include_file, data, variables)
+
 def load_pins_file(filepath, svg):
-	f = open(filepath)
-	board_data = json.load(f)
-	f.close()
+	board_data = {}	
+	variables = {}
+
+	include_files_recursively(filepath, board_data, variables)
 
 	global legend_data
 	legend_data = board_data["legend"]

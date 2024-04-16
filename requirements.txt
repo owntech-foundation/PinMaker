@@ -2,3 +2,4 @@ pysvg-py3
 termcolor
 svglib
 qrcode
+deepmerge

@@ -1,0 +1,53 @@
+{
+	"includes": ["input/SPIN.json", "input/A5_base.json"],
+	"variables": [{
+		"bannerText": "SPIN V1.0.0 PINOUT",
+		"legendTitle": "SPIN V1.0.0",
+		"text1": "\"SPIN V1.0.0 Pinout\" by OwnTech Foundation", 
+		"text2": "OwnThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.",
+		"text_color": "#121212",
+		"text_banner_color": "#ffffff",
+		"qrdata": "https://github.com/owntech-foundation/SPIN/tree/SPIN-V1.0" 
+	}],
+	"additional": [
+		{ 
+			"type": "svg",
+			"path": "input/svg/pcb/SPIN/SPIN_1.0.0_NoViaOut_REV2.svg",
+			"name": "SPIN_SVG",
+			"origin": {
+				"x": 238.110,
+				"y": 46.353,
+				"units": "px"
+			}
+		},{ 
+			"type": "svg",
+			"path": "input/svg/pcb/SPIN/SPIN_1.0.0_NoViaOut_Cut1_REV2.svg",
+			"name": "SPIN_SVG",
+			"origin": {
+				"x": 290,
+				"y": 316,
+				"units": "px"
+			}
+		},{ 
+			"type": "svg",
+			"path": "input/svg/pcb/SPIN/SPIN_1.0.0_NoViaOut_Cut2_REV2.svg",
+			"name": "SPIN_SVG",
+			"origin": {
+				"x": 196.535,
+				"y": 290,
+				"units": "px"
+			},
+			"scale": 2
+		},{ 
+			"type": "svg-disabled",
+			"path": "input/svg/logos/watermark.svg",
+			"name": "background",
+			"mozaic": true,
+			"origin": {
+				"x": 0,
+				"y": 0,
+				"units": "px"
+			},
+			"scale": 1
+		}]
+}

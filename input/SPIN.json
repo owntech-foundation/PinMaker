@@ -1,44 +1,8 @@
 {
-	"license": {
-		"name": "cc-by-sa",
-		"origin": {
-			"rx": 140,
-			"by": 60,
-			"units": "px"
-		}
-	},
 	"additional": [
 	{ 
 		"type": "svg",
-		"path": "input/SPIN_1.0.0_NoViaOut_REV2.svg",
-		"name": "SPIN_SVG",
-		"origin": {
-			"x": 238.110,
-			"y": 46.353,
-			"units": "px"
-		}
-	},{ 
-		"type": "svg",
-		"path": "input/SPIN_1.0.0_NoViaOut_Cut1_REV2.svg",
-		"name": "SPIN_SVG",
-		"origin": {
-			"x": 290,
-			"y": 316,
-			"units": "px"
-		}
-	},{ 
-		"type": "svg",
-		"path": "input/SPIN_1.0.0_NoViaOut_Cut2_REV2.svg",
-		"name": "SPIN_SVG",
-		"origin": {
-			"x": 196.535,
-			"y": 290,
-			"units": "px"
-		},
-		"scale": 2
-	},{ 
-		"type": "svg",
-		"path": "input/owntech_logo.svg",
+		"path": "input/svg/logos/owntech_logo.svg",
 		"name": "OWNTECH_LOGO",
 		"origin": {
 			"rx": 140,
@@ -48,31 +12,31 @@
 		"scale": 0.15
 	},{
 		"type": "text",
-		"text": "\"SPIN V1.0.0 Pinout\" by OwnTech Foundation",
+		"text": "$text1",
 		"size": 1,
-		"color": "#dedede",
+		"color": "$text_color",
 		"origin": {
-			"x": 0,
+			"x": -5,
 			"by": 20,
 			"center": true,
 			"units": "px"
 		}
 	},{
 		"type": "text",
-		"text": "OwnThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.",
+		"text": "$text2",
 		"size": 0.45,
-		"color": "#dedede",
+		"color": "$text_color",
 		"origin": {
-			"x": 0,
+			"x": -5,
 			"by": 10,
 			"center": true,
 			"units": "px"
 		}
 	},{
 		"type": "QRcode",
-		"data": "https://github.com/owntech-foundation/SPIN/tree/SPIN-V1.0",
+		"data": "$qrdata",
 		"scale": 0.7,
-		"color": "#dedede",
+		"color": "$text_color",
 		"name": "GITHUB_QRCODE",
 		"origin": {
 			"rx": 130,
@@ -81,12 +45,12 @@
 		}
 	},{
 		"type": "banner",
-		"text": "SPIN V1.0.0 Pinout",
-		"color": "#dedede"
+		"text": "$bannerText",
+		"color": "$text_banner_color"
 	}
 	],
 	"legend": {
-		"title": "SPIN V1.0.0",
+		"title": "$legendTitle",
 		"origin": {
 			"x": 10,
 			"by": 10,

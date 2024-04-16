@@ -6,6 +6,7 @@ import sys
 import os, fileinput
 import qrcode
 import qrcode.image.svg
+from copy import deepcopy
 
 from pysvg.filter import *
 from pysvg.gradient import *
@@ -169,7 +170,7 @@ def origin_helper(origin, page_size, elem=None, prev_elem=None, prev_elem_origin
 	
 def include_watermark(svg, page_size, prev_elem=None, prev_elem_origin=None):
 	watermark_origin =  { "rx": -50, "by": 30, "units": "px" }
-	watermark = parse("input/watermark.svg")
+	watermark = parse("input/svg/logos/watermark.svg")
 	watermark_origin = origin_helper(watermark_origin, page_size, prev_elem=prev_elem, prev_elem_origin=prev_elem_origin)
 	watermark_group = G(**kwargs_helper([("id", "watermark"), ("transform", "translate(" + str(watermark_origin[0]) + ", " + str(watermark_origin[1]) + ")")]))
 	watermark_group.addElement(watermark)
@@ -245,8 +246,26 @@ def include_additional(svg, additional_data, page_size):
 			scale = 1
 			if ("scale" in ad):
 				scale = ad["scale"]
+			
 			ad_group = G(**kwargs_helper([("id", ad["name"]), ("transform", "translate(" + str(ad_origin[0]) + ", " + str(ad_origin[1]) + ") scale(" + str(scale) + ")")]))
-			ad_group.addElement(external_svg)
+			if ("mozaic" in ad):
+				if (ad["mozaic"] == True):
+					print("HEREEEE ",  external_svg.get_width(), " ", external_svg.get_height())
+					print(page_size["px"])
+					width = int(external_svg.get_width()) * scale
+					height = int(external_svg.get_height()) * scale
+					ix = 0
+					while((ix * width + int(ad_origin[0])) < int(page_size["px"][0])):
+						iy = 0
+						while((iy * height + int(ad_origin[1])) < int(page_size["px"][1])):
+							external_svg_moz = deepcopy(external_svg)
+							external_svg_moz.set_x(width * ix + ad_origin[0])
+							external_svg_moz.set_y(height * iy + ad_origin[1])
+							ad_group.addElement(external_svg_moz)
+							iy += 1
+						ix += 1
+			else:
+				ad_group.addElement(external_svg)
 			svg.addElement(ad_group)
 		if (ad["type"] == "text"):
 			tc = [0, 0]
