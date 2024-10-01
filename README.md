@@ -5,7 +5,7 @@
 ## Setup
 
 ### Get the soft
-clone the project `git clone https:/github.com/owntech-foundation/PinMaker.git`
+clone the project `git clone https://github.com/owntech-foundation/PinMaker.git`
 
 install the dependencies with `python3 -m pip install -r requirements.txt`
 
@@ -39,7 +39,7 @@ You may add multiple pin files in a single command.
 
 ### Optionals
 
-`-s` or `--style` followed by the **style.json** file. 
+`-s` or `--style` followed by the **style.json** file.
 By default, the style.json file is read.
 
 `-w` or `--show` enable the png render.
