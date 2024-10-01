@@ -61,7 +61,7 @@ def labelFunctionNamer(s):
 			return("speLabel_" + s['special'].replace(" ", "_"))
 		except KeyError:
 			return("unknown")
-	
+
 def intersection(lst1, lst2):
 	lst3 = [value for value in lst1 if value in lst2]
 	return lst3
@@ -167,7 +167,7 @@ def origin_helper(origin, page_size, elem=None, prev_elem=None, prev_elem_origin
 	else:
 		print("no y value")
 	return object_origin
-	
+
 def include_watermark(svg, page_size, prev_elem=None, prev_elem_origin=None):
 	watermark_origin =  { "rx": -50, "by": 30, "units": "px" }
 	watermark = parse("input/svg/logos/watermark.svg")
@@ -182,7 +182,7 @@ def include_license(svg, license_data, page_size):
 	license_origin = [0, 0]
 	licenses_availables = "Availables licenses: "
 	license = None
-	
+
 	for l in licenses:
 		licenses_availables+=(str(l["name"]) + " ")
 		if ("name" in license_data):
@@ -199,7 +199,7 @@ def include_license(svg, license_data, page_size):
 	print(licenses_availables)
 	include_watermark(svg, page_size, prev_elem=license)
 
-	return 
+	return
 
 from xml.dom import minidom
 from xml.dom import Node
@@ -214,7 +214,7 @@ def buildx(node_, object):
 			try:
 				capitalLetter = nodeName_[0].upper()
 				print(capitalLetter+nodeName_[1:])
-				objectinstance=eval(capitalLetter+nodeName_[1:]) ()                
+				objectinstance=eval(capitalLetter+nodeName_[1:]) ()
 			except:
 				#print('no class for: ' + nodeName_)
 				continue
@@ -229,10 +229,10 @@ def buildx(node_, object):
 			if child_.nodeValue != None and child_.nodeValue.strip() != '':
 				# print(len(child_.nodeValue))
 				object.appendTextContent(child_.nodeValue)
-		elif child_.nodeType == Node.CDATA_SECTION_NODE:  
-			object.appendTextContent('<![CDATA['+child_.nodeValue+']]>')          
-		elif child_.nodeType == Node.COMMENT_NODE:  
-			object.appendTextContent('<!-- '+child_.nodeValue+' -->')          
+		elif child_.nodeType == Node.CDATA_SECTION_NODE:
+			object.appendTextContent('<![CDATA['+child_.nodeValue+']]>')
+		elif child_.nodeType == Node.COMMENT_NODE:
+			object.appendTextContent('<!-- '+child_.nodeValue+' -->')
 		else:
 			print(child_.nodeType)
 			print("Some node:"+nodeName_+" value: "+child_.nodeValue)
@@ -246,7 +246,7 @@ def include_additional(svg, additional_data, page_size):
 			scale = 1
 			if ("scale" in ad):
 				scale = ad["scale"]
-			
+
 			ad_group = G(**kwargs_helper([("id", ad["name"]), ("transform", "translate(" + str(ad_origin[0]) + ", " + str(ad_origin[1]) + ") scale(" + str(scale) + ")")]))
 			if ("mozaic" in ad):
 				if (ad["mozaic"] == True):
@@ -290,6 +290,8 @@ def include_additional(svg, additional_data, page_size):
 				scale = ad["scale"]
 			factory = qrcode.image.svg.SvgImage
 			img = qrcode.make(ad["data"], image_factory=factory)
+			if (not os.path.exists("temp")):
+				os.mkdir("temp")
 			img.save("temp/qr.svg")
 			qrcode_svg = parse("temp/qr.svg")
 			qr_origin = origin_helper(ad["origin"], page_size)
@@ -322,12 +324,12 @@ def include_additional(svg, additional_data, page_size):
 			banner_group.addElement(banner_text)
 			svg.addElement(banner_group)
 			pass
-			
+
 
 def include_font_file(font_file, output_file):
 	with open(font_file, 'rb') as file:
 		ttf_content = file.read()
-	
+
 	encoded_tff = base64.b64encode(ttf_content).decode('utf-8')
 
 	header_defs = "<defs>\r\t<style>\r\t\t@font-face {\r\t\t\tfont-family: Inconsolata;\r\t\t\tsrc: url(\"data:application/font-woff;base64,"
