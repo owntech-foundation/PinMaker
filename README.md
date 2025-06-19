@@ -58,7 +58,9 @@ By default the output file is **pinout.json**
 
 `-os` or `--omit_styles` followed by the desired omitted style.
 
-`-oc` or `--omit_categories` followed by the desired omitted category.
+`-oc` or `--omit_categories` followed by the desired omitted category. 
+Possible categories are listed in the input file. 
+`alternate` and ̀extended` are possible arguments.
 
 `-l` or `--legend` enable the **legend**
 
