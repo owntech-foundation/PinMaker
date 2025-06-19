@@ -61,3 +61,14 @@ By default the output file is **pinout.json**
 `-oc` or `--omit_categories` followed by the desired omitted category.
 
 `-l` or `--legend` enable the **legend**
+
+`-f` or `--font`
+Path to a font file to embed in the SVG output (e.g., for using a custom font).
+
+`-ps` or `--paper_size`
+Paper size to use for the SVG canvas. Supported values: `A3`, `A4`, `A5`.
+Default is `A4`.
+
+`-po` or `--paper_orientation`
+Paper orientation for the canvas. Supported values: `Portrait`, `Landscape`.
+Default is `Portrait`.
