@@ -11,6 +11,11 @@ install the dependencies with `python3 -m pip install -r requirements.txt`
 
 ### Install the font
 Download the recommended font right here ```https://fonts.google.com/specimen/Inconsolata```
+For Linux : 
+1. `sudo cp Inconsolata-VariableFont_wdth,wght.ttf /usr/share/fonts/truetype/`
+2. `sudo fc-cache -fv `
+3. Check it is installed : ` fc-list | grep -i "Inconsolata" `
+
 
 ### Adding Inkscape to your path (Optional)
 If you work on Mac, chances are high that your Inkscape is not in your path.
